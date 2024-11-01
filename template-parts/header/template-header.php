@@ -7,9 +7,11 @@ $top_nav_links = get_field('top_nav_links', 'option');
 ?>
 
 <header>
-    <?php if ($site_logo): ?>
+<?php if ($site_logo): ?>
+    <a href="<?php echo esc_url(home_url('/')); ?>">
         <img src="<?php echo esc_url($site_logo['url']); ?>" alt="<?php echo esc_attr($site_logo['alt']); ?>" />
-    <?php endif; ?>
+    </a>
+<?php endif; ?>
 
     <?php if ($company_email): ?>
         <p>Email: <?php echo esc_html($company_email); ?></p>
