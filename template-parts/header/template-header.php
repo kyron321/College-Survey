@@ -30,4 +30,14 @@ $top_nav_links = get_field('top_nav_links', 'option');
         </a>
     <?php endif; ?>
 
+    <nav class="footer-menu">
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'main-menu',
+            'menu_id'        => 'main-menu',
+            'container'      => false,
+        ));
+        ?>
+    </nav>
+
 </header>
