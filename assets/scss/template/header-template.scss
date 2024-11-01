@@ -1,0 +1,59 @@
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Container styling */
+nav.top-navigation {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the end of the container */
+  align-items: center; /* Aligns items vertically */
+  padding: 10px 0; /* Adds padding to the top and bottom */
+}
+
+/* Styling for the nav list */
+.nav-list {
+  display: flex;
+  flex-direction: row; /* Ensures items are in a row */
+  list-style: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for each nav item */
+.nav-item {
+  margin-left: 15px; /* Adds spacing between items */
+}
+
+/* Styling for links */
+.nav-link {
+  text-decoration: none;
+  color: #333; /* Replace with your desired color */
+  font-size: 16px;
+}
+
+/* Styling for icons */
+.nav-icon {
+  margin-right: 2px; /* Adds space between icon and text */
+  vertical-align: middle;
+}
+
+/* Style for the link wrapping the logo */
+.site-logo-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px; /* Adjust padding as needed */
+}
+
+/* Style for the logo image */
+.site-logo-img {
+  max-width: 250px; /* Set the maximum width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Add a hover effect */
+}
+
+/* Hover effect for the logo */
+.site-logo-link:hover .site-logo-img {
+  transform: scale(1.05); /* Slightly enlarge the logo on hover */
+}
