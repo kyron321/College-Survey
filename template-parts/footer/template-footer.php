@@ -39,4 +39,14 @@ $instagram = get_field('instagram', 'option');
             </a>
         <?php endif; ?>
     </div>
+
+    <nav class="footer-menu">
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'main-menu',
+            'menu_id'        => 'footer-main-menu',
+            'container'      => false,
+        ));
+        ?>
+    </nav>
 </footer>
