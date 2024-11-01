@@ -17,6 +17,10 @@ const paths = {
     src: 'assets/scss/**/*.scss',
     dest: 'dist/css/',
   },
+  images: {
+    src: 'assets/images/socials/**/*',
+    dest: 'dist/images/socials/',
+  },
 };
 
 // Compile SCSS into CSS, with sourcemaps
@@ -44,19 +48,28 @@ function scripts() {
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
+// Copy images
+function images() {
+  return gulp
+    .src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dest));
+}
+
 // Watch files
 function watchFiles() {
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.images.src, images);
 }
 
 // Define complex tasks
-const build = gulp.series(gulp.parallel(styles, scripts));
+const build = gulp.series(gulp.parallel(styles, scripts, images));
 const watch = gulp.series(build, watchFiles);
 
 // Export tasks
 exports.styles = styles;
 exports.scripts = scripts;
+exports.images = images;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
