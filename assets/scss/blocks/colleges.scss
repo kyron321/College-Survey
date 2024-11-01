@@ -1,0 +1,39 @@
+.colleges {
+    .filters{
+        width: 10rem;
+    }
+    .accordion-content {
+        display: none;
+        padding-left: 20px;
+    }
+
+    .accordion-toggle {
+        display: none;
+    }
+
+    .accordion-label {
+        cursor: pointer;
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        position: relative;
+        padding-right: 20px; /* Space for the arrow */
+    }
+
+    .accordion-label::after {
+        content: '\25BC'; /* Down arrow */
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+    }
+
+    .accordion-toggle:checked + .accordion-label::after {
+        transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
+    }
+
+    .accordion-toggle:checked + .accordion-label + .accordion-content {
+        display: block;
+    }
+}
