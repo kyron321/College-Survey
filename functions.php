@@ -1,6 +1,6 @@
 <?php
-function theme_enqueue_assets() {
-    wp_enqueue_style('theme-style', get_template_directory_uri() . '/assets/css/style.css');
-    wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/assets/js/main.js', [], false, true);
+//Register function files		
+$functions = array_diff(scandir(get_template_directory() . '/functions'), array('.', '..', '.DS_Store'));
+foreach($functions as $function) {
+	include('functions/' . $function);
 }
-add_action('wp_enqueue_scripts', 'theme_enqueue_assets');

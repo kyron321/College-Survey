@@ -11,11 +11,11 @@ const cached = require('gulp-cached');
 const paths = {
   scripts: {
     src: 'assets/js/**/*.js',
-    dest: 'assets/js/',
+    dest: 'dist/js/',
   },
   styles: {
     src: 'assets/scss/**/*.scss',
-    dest: 'assets/css/',
+    dest: 'dist/css/',
   },
 };
 
