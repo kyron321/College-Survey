@@ -23,6 +23,16 @@ function register_acf_blocks()
             'icon'              => 'admin-comments',
             'keywords'          => array('two column', 'custom'),
         ));
+        // Register a colleges block.
+        acf_register_block_type(array(
+            'name'              => 'colleges',
+            'title'             => __('Colleges'),
+            'description'       => __('A custom colleges block.'),
+            'render_callback'   => 'theme_block_render_callback',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array('colleges', 'custom'),
+        ));
     }
 }
 
