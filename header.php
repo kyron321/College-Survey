@@ -10,4 +10,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <!-- Your theme's header content -->
+
+<?php get_template_part('template-parts/header/template', 'header'); ?>
