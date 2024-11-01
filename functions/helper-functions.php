@@ -15,3 +15,5 @@ function set_college_state_taxonomy($post_id) {
     }
 }
 add_action('save_post', 'set_college_state_taxonomy');
+
+add_theme_support( 'menus' );
