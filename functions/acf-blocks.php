@@ -12,10 +12,6 @@ function register_acf_blocks()
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
             'keywords'          => array('banner', 'custom'),
-            'enqueue_assets'    => function () {
-                wp_enqueue_style('banner-block', get_template_directory_uri() . '/blocks/banner.css', array(), '1.0.0');
-                wp_enqueue_script('banner-block', get_template_directory_uri() . '/blocks/banner.js', array(), '1.0.0', true);
-            },
         ));
         // Register a two column block.
         acf_register_block_type(array(
@@ -26,10 +22,6 @@ function register_acf_blocks()
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
             'keywords'          => array('two column', 'custom'),
-            'enqueue_assets'    => function () {
-                wp_enqueue_style('two-column-block', get_template_directory_uri() . '/blocks/two-column.css', array(), '1.0.0');
-                wp_enqueue_script('two-column-block', get_template_directory_uri() . '/blocks/two-column.js', array(), '1.0.0', true);
-            },
         ));
     }
 }
