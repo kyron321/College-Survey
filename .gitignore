@@ -5,8 +5,7 @@ yarn-error.log
 package-lock.json
 
 # Gulp generated files
-dist/css/
-dist/js/
+dist/*
 
 # Sass cache
 .sass-cache/
