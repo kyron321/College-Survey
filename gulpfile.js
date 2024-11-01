@@ -26,6 +26,7 @@ function styles() {
     .pipe(plumber())
     .pipe(cached('styles'))
     .pipe(sourcemaps.init())
+    .pipe(concat('style.scss')) // Concatenate all SCSS files into a single file
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest));
