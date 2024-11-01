@@ -28,7 +28,6 @@ $taxonomies = get_taxonomies(array('public' => true), 'objects');
                     <?php endif; ?>
                 <?php endif; ?>
             <?php endforeach; ?>
-            <button type="submit"><?php echo __('Apply Filters', 'textdomain'); ?></button>
         </form>
     </div>
 <?php endif; ?>
