@@ -11,31 +11,31 @@ $instagram = get_field('instagram', 'option');
     <div class="social-links">
         <?php if ($twitter_x): ?>
             <a href="<?php echo esc_url($twitter_x['url']); ?>" target="_blank" rel="noopener noreferrer">
-                Twitter / X
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/socials/twitter.svg'); ?>" alt="Twitter / X">
             </a>
         <?php endif; ?>
 
         <?php if ($facebook): ?>
             <a href="<?php echo esc_url($facebook['url']); ?>" target="_blank" rel="noopener noreferrer">
-                Facebook
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/socials/facebook.svg'); ?>" alt="Facebook">
             </a>
         <?php endif; ?>
 
         <?php if ($youtube): ?>
             <a href="<?php echo esc_url($youtube['url']); ?>" target="_blank" rel="noopener noreferrer">
-                YouTube
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/socials/youtube.svg'); ?>" alt="YouTube">
             </a>
         <?php endif; ?>
 
         <?php if ($linkedin): ?>
             <a href="<?php echo esc_url($linkedin['url']); ?>" target="_blank" rel="noopener noreferrer">
-                LinkedIn
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/socials/linkedin.svg'); ?>" alt="LinkedIn">
             </a>
         <?php endif; ?>
 
         <?php if ($instagram): ?>
             <a href="<?php echo esc_url($instagram['url']); ?>" target="_blank" rel="noopener noreferrer">
-                Instagram
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/socials/instagram.svg'); ?>" alt="Instagram">
             </a>
         <?php endif; ?>
     </div>
