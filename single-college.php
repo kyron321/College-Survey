@@ -26,32 +26,39 @@ get_header(); ?>
                 $accredited = get_field('accredited');
                 $presence = get_field('presence');
                 $notes = get_field('notes');
-
-                if ($state) {
-                    echo '<p>State: ' . esc_html(get_term($state)->name) . '</p>';
-                }
-                if ($college_link) {
-                    echo '<p>College Link: <a href="' . esc_url($college_link) . '">' . esc_html($college_link) . '</a></p>';
-                }
-                if ($type_1) {
-                    echo '<p>Type 1: ' . esc_html($type_1) . '</p>';
-                }
-                if ($type_2) {
-                    echo '<p>Type 2: ' . esc_html($type_2) . '</p>';
-                }
-                if ($religious) {
-                    echo '<p>Religious: ' . ($religious ? 'Yes' : 'No') . '</p>';
-                }
-                if ($accredited) {
-                    echo '<p>Accredited: ' . ($accredited ? 'Yes' : 'No') . '</p>';
-                }
-                if ($presence) {
-                    echo '<p>Presence: ' . esc_html($presence) . '</p>';
-                }
-                if ($notes) {
-                    echo '<p>Notes: ' . esc_html($notes) . '</p>';
-                }
                 ?>
+
+                <?php if ($state): ?>
+                    <p>State: <?php echo esc_html(get_term($state)->name); ?></p>
+                <?php endif; ?>
+                
+                <?php if ($college_link): ?>
+                    <p>College Link: <a href="<?php echo esc_url($college_link); ?>"><?php echo esc_html($college_link); ?></a></p>
+                <?php endif; ?>
+                
+                <?php if ($type_1): ?>
+                    <p>Type 1: <?php echo esc_html($type_1); ?></p>
+                <?php endif; ?>
+                
+                <?php if ($type_2): ?>
+                    <p>Type 2: <?php echo esc_html($type_2); ?></p>
+                <?php endif; ?>
+                
+                <?php if ($religious): ?>
+                    <p>Religious: <?php echo ($religious ? 'Yes' : 'No'); ?></p>
+                <?php endif; ?>
+                
+                <?php if ($accredited): ?>
+                    <p>Accredited: <?php echo ($accredited ? 'Yes' : 'No'); ?></p>
+                <?php endif; ?>
+                
+                <?php if ($presence): ?>
+                    <p>Presence: <?php echo esc_html($presence); ?></p>
+                <?php endif; ?>
+                
+                <?php if ($notes): ?>
+                    <p>Notes: <?php echo esc_html($notes); ?></p>
+                <?php endif; ?>
             </div>
         </article>
         <?php
