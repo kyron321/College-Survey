@@ -15,6 +15,7 @@ function ajax_filter_colleges() {
     $accredited_filter = isset($_POST['accredited']) ? $_POST['accredited'] : array();
     $presence_filter = isset($_POST['presence']) ? $_POST['presence'] : array();
     $sort_order = isset($_POST['sort_order']) ? $_POST['sort_order'] : 'a-z';
+    $search_query = isset($_POST['search']) ? sanitize_text_field($_POST['search']) : '';
 
     $args = array(
         'post_type' => 'college',
@@ -25,6 +26,7 @@ function ajax_filter_colleges() {
         'tax_query' => array(
             'relation' => 'AND',
         ),
+        's' => $search_query, // Add search query
     );
 
     if (!empty($state_filter)) {

@@ -1,10 +1,11 @@
 jQuery(document).ready(function($) {
     function filterColleges() {
         var filter = $('#filter-form, .sort-by form').serialize();
+        var searchQuery = $('#college-search').val();
 
         $.ajax({
             url: ajaxfilter.ajaxurl,
-            data: filter + '&action=filter_colleges',
+            data: filter + '&search=' + searchQuery + '&action=filter_colleges',
             type: 'POST',
             success: function(data) {
                 $('#main').html(data);
@@ -22,6 +23,11 @@ jQuery(document).ready(function($) {
 
     // Trigger filter on sort order change
     $('.sort-by').on('change', '#sort_order', function() {
+        filterColleges();
+    });
+
+    // Trigger filter on search input
+    $('#college-search').on('input', function() {
         filterColleges();
     });
 
