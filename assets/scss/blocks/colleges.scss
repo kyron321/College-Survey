@@ -1,4 +1,7 @@
 .colleges {
+    display: flex;
+    gap: 3rem;
+
     .filters{
         width: 10rem;
     }
@@ -36,5 +39,18 @@
 
     .accordion-toggle:checked + .accordion-label + .accordion-content {
         display: block;
+    }
+
+    .section {
+        .column-one {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .column-two {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
     }
 }

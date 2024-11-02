@@ -6,7 +6,7 @@ $hide_sort_by = get_field('hide_sort_by');
 ?>
 
 <section class="colleges">
-    <div>
+    <div class="column-one">
     <?php if (!$hide_search): ?>
         <?php get_template_part('template-parts/blocks/colleges/search'); ?>
     <?php endif; ?>
@@ -14,12 +14,12 @@ $hide_sort_by = get_field('hide_sort_by');
     <?php if (!$hide_filters): ?>
         <?php get_template_part('template-parts/blocks/colleges/filters'); ?>
     <?php endif; ?>
-
+    </div>
+    <div class="column-two">
     <?php if (!$hide_sort_by): ?>
         <?php get_template_part('template-parts/blocks/colleges/sort-by'); ?>
     <?php endif; ?>
-    </div>
-    <div>
-        <?php get_template_part('template-parts/blocks/colleges/colleges-list'); ?>
+
+    <?php get_template_part('template-parts/blocks/colleges/colleges-list'); ?>
     </div>
 </section>
