@@ -1,4 +1,7 @@
 .colleges {
+    display: flex;
+    gap: 3rem;
+
     .filters{
         width: 10rem;
     }
@@ -17,7 +20,8 @@
         margin-bottom: 10px;
         font-weight: bold;
         position: relative;
-        padding-right: 20px; /* Space for the arrow */
+        padding-right: 20px;
+        width: 10rem;
     }
 
     .accordion-label::after {
@@ -36,4 +40,31 @@
     .accordion-toggle:checked + .accordion-label + .accordion-content {
         display: block;
     }
+
+    .column-one {
+        width: 20%;
+        padding: 0;
+        margin: 0;
+    }
+    .column-two {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    article {
+        background-color: #fff; /* White background */
+        border: 1px solid #ddd; /* Light gray border */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 16px; /* Padding inside the card */
+        margin: 16px 0; /* Margin to separate the cards */
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effects */
+    }
+    
+    article:hover {
+        transform: translateY(-4px); /* Slight lift on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    }
+
 }
