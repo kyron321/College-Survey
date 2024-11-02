@@ -1,5 +1,6 @@
 <?php
-function enqueue_ajax_filter_scripts() {
+function enqueue_ajax_filter_scripts()
+{
     wp_enqueue_script('ajax-filter', get_template_directory_uri() . '/dist/js/main.js', array('jquery'), null, true);
     wp_localize_script('ajax-filter', 'ajaxfilter', array(
         'ajaxurl' => admin_url('admin-ajax.php'),
@@ -7,7 +8,8 @@ function enqueue_ajax_filter_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_ajax_filter_scripts');
 
-function ajax_filter_colleges() {
+function ajax_filter_colleges()
+{
     $state_filter = isset($_POST['state']) ? $_POST['state'] : array();
     $type_1_filter = isset($_POST['type_1']) ? $_POST['type_1'] : array();
     $type_2_filter = isset($_POST['type_2']) ? $_POST['type_2'] : array();
@@ -90,7 +92,7 @@ function ajax_filter_colleges() {
 
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post();
-            ?>
+?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h2 class="entry-title">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -140,17 +142,24 @@ function ajax_filter_colleges() {
                     <?php endif; ?>
 
                     <?php if ($notes): ?>
-                        <p>Notes: <?php echo esc_html($notes); ?></p>
+                        <?php $unique_id = uniqid('accordion-toggle-'); ?>
+                        <div class="accordion">
+                            <input type="checkbox" id="<?php echo $unique_id; ?>" class="accordion-toggle" />
+                            <label for="<?php echo $unique_id; ?>" class="accordion-label">Notes</label>
+                            <div class="accordion-content">
+                                <p><?php echo esc_html($notes); ?></p>
+                            </div>
+                        </div>
                     <?php endif; ?>
                 </div>
             </article>
-            <?php
+        <?php
         endwhile;
         wp_reset_postdata();
     else :
         ?>
         <p>No colleges found.</p>
-    <?php endif;
+<?php endif;
 
     wp_die();
 }

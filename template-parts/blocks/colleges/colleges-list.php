@@ -14,7 +14,7 @@ get_header(); ?>
 
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post();
-            ?>
+    ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h2 class="entry-title">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -65,11 +65,18 @@ get_header(); ?>
                     <?php endif; ?>
 
                     <?php if ($notes): ?>
-                        <p>Notes: <?php echo esc_html($notes); ?></p>
+                        <?php $unique_id = uniqid('accordion-toggle-'); ?>
+                        <div class="accordion">
+                            <input type="checkbox" id="<?php echo $unique_id; ?>" class="accordion-toggle" />
+                            <label for="<?php echo $unique_id; ?>" class="accordion-label">Notes</label>
+                            <div class="accordion-content">
+                                <p><?php echo esc_html($notes); ?></p>
+                            </div>
+                        </div>
                     <?php endif; ?>
                 </div>
             </article>
-            <?php
+        <?php
         endwhile;
         wp_reset_postdata();
     else :
