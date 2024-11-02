@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     function filterColleges() {
-        var filter = $('#filter-form').serialize();
+        var filter = $('#filter-form, .sort-by form').serialize();
 
         $.ajax({
             url: ajaxfilter.ajaxurl,
@@ -17,6 +17,11 @@ jQuery(document).ready(function($) {
 
     // Trigger filter on input change
     $('#filter-form').on('change', '.filter-input', function() {
+        filterColleges();
+    });
+
+    // Trigger filter on sort order change
+    $('.sort-by').on('change', '#sort_order', function() {
         filterColleges();
     });
 

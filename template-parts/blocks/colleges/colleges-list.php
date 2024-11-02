@@ -3,10 +3,12 @@ get_header(); ?>
 
 <main id="main" class="site-main" role="main">
     <?php
-    // Custom query to get all 'college' posts
+    // Custom query to get all 'college' posts in alphabetical order
     $args = array(
         'post_type' => 'college',
         'posts_per_page' => -1, // Adjust the number of posts as needed
+        'orderby' => 'title',
+        'order' => 'ASC',
     );
     $query = new WP_Query($args);
 

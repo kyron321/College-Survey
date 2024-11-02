@@ -14,6 +14,7 @@ function ajax_filter_colleges() {
     $religious_filter = isset($_POST['religious']) ? $_POST['religious'] : null;
     $accredited_filter = isset($_POST['accredited']) ? $_POST['accredited'] : array();
     $presence_filter = isset($_POST['presence']) ? $_POST['presence'] : array();
+    $sort_order = isset($_POST['sort_order']) ? $_POST['sort_order'] : 'a-z';
 
     $args = array(
         'post_type' => 'college',
@@ -72,6 +73,15 @@ function ajax_filter_colleges() {
             'value' => $presence_filter,
             'compare' => 'IN',
         );
+    }
+
+    // Add sorting parameters
+    if ($sort_order === 'a-z') {
+        $args['orderby'] = 'title';
+        $args['order'] = 'ASC';
+    } elseif ($sort_order === 'z-a') {
+        $args['orderby'] = 'title';
+        $args['order'] = 'DESC';
     }
 
     $query = new WP_Query($args);
