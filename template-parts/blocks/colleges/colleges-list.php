@@ -84,6 +84,3 @@ get_header(); ?>
         <p>No colleges found.</p>
     <?php endif; ?>
 </main>
-
-<?php
-get_footer();

@@ -1,70 +1,123 @@
 .colleges {
-    display: flex;
-    gap: 3rem;
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 2.5rem auto;
 
-    .filters{
-        width: 10rem;
-    }
-    .accordion-content {
-        display: none;
-        padding-left: 20px;
-    }
+  .filters {
+    width: 10rem;
+  }
+  .accordion-content {
+    display: none;
+    padding-left: 20px;
+  }
 
-    .accordion-toggle {
-        display: none;
-    }
+  .accordion-toggle {
+    display: none;
+  }
 
-    .accordion-label {
-        cursor: pointer;
-        display: block;
-        margin-bottom: 10px;
-        font-weight: bold;
-        position: relative;
-        padding-right: 20px;
-        width: 10rem;
-    }
+  .accordion-label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    padding-right: 20px;
+    width: 10rem;
+  }
 
-    .accordion-label::after {
-        content: '\25BC'; /* Down arrow */
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: transform 0.3s ease;
-    }
+  .accordion-label::after {
+    content: "\25BC"; /* Down arrow */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
 
-    .accordion-toggle:checked + .accordion-label::after {
-        transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
-    }
+  .accordion-toggle:checked + .accordion-label::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
+  }
 
-    .accordion-toggle:checked + .accordion-label + .accordion-content {
-        display: block;
-    }
+  .accordion-toggle:checked + .accordion-label + .accordion-content {
+    display: block;
+  }
 
-    .column-one {
-        width: 20%;
-        padding: 0;
-        margin: 0;
-    }
-    .column-two {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    
-    article {
-        background-color: #fff; /* White background */
-        border: 1px solid #ddd; /* Light gray border */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        padding: 16px; /* Padding inside the card */
-        margin: 16px 0; /* Margin to separate the cards */
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effects */
-    }
-    
-    article:hover {
-        transform: translateY(-4px); /* Slight lift on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-    }
+  .column-one {
+    width: 20%;
+    padding: 0;
+    margin: 0;
+  }
 
+  .search-form {
+    position: relative; /* Position for the search results */
+    max-width: 100%; /* Full width of its parent */
+    margin-bottom: 20px; /* Spacing below the form */
+  }
+
+  .search-form input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px 15px; /* Comfortable padding */
+    font-size: 1rem; /* Standard font size */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.2s, box-shadow 0.2s; /* Smooth transition */
+  }
+
+  .search-form input[type="text"]:focus {
+    border-color: #007bff; /* Highlight color on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Blue shadow for focus */
+  }
+
+  #search-results {
+    position: absolute; /* Position relative to the search form */
+    top: 100%; /* Directly below the input */
+    left: 0;
+    width: 100%; /* Full width of the input */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light border */
+    border-top: none; /* Remove top border to merge with input */
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it appears above other elements */
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Scroll if content overflows */
+  }
+
+  #search-results div {
+    padding: 10px 15px; /* Internal padding */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    border-bottom: 1px solid #f1f1f1; /* Light border for separation */
+  }
+
+  #search-results div:last-child {
+    border-bottom: none; /* Remove border on the last item */
+  }
+
+  #search-results div:hover {
+    background-color: #f8f9fa; /* Light gray background on hover */
+  }
+
+  .column-two {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  article {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 16px; /* Padding inside the card */
+    margin: 16px 0; /* Margin to separate the cards */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effects */
+  }
+
+  article:hover {
+    transform: translateY(-4px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
 }

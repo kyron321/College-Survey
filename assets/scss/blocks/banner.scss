@@ -1,49 +1,69 @@
 .banner-block {
-  position: relative;
-  text-align: center;
-  color: white; /* Adjust as needed */
+  width: 100%; /* Ensures the block is full width */
 }
 
 .hero-section {
-  position: relative;
   background-size: cover;
   background-position: center;
-  height: 400px; /* Adjust the height as needed */
-  width: 100%;
-}
-
-.hero-banner {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.banner-block h1,
-.banner-block p,
-.banner-buttons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  margin: 0;
-}
-
-.banner-buttons {
-  top: 65%; /* Adjust this value to position the buttons below the text */
+  background-attachment: fixed;
+  height: 700px; /* Adjust the height as needed */
+  width: 100%; /* Ensures full width */
   display: flex;
-  gap: 10px; /* Adjust spacing between buttons */
+  justify-content: center; /* Centers the text container */
+  align-items: center; /* Centers vertically */
+}
+
+.text-container {
+  max-width: 1200px; /* Limits the width of the text */
+  width: 100%; /* Ensures responsiveness */
+  padding: 0 20px; /* Optional padding for spacing */
+  text-align: left; /* Aligns text to the left */
+  color: white; /* Adjust as needed */
+}
+
+.text-container h1 {
+  font-size: 2.5rem; /* Large heading for main attention */
+  font-weight: 700; /* Bold for emphasis */
+  line-height: 1.2; /* Tighter line spacing for headings */
+  margin: 20px 0; /* Vertical margin */
+}
+
+// .text-container p {
+//   font-size: 1.25rem; /* Comfortable size for body text */
+//   font-weight: 400; /* Normal weight for readability */
+//   line-height: 1.6; /* Adequate spacing between lines */
+//   margin: 20px 0; /* Vertical margin */
+// }
+
+.banner-paragraph {
+  font-size: 1.5rem; /* Slightly larger for introductory paragraphs */
+  font-weight: 300; /* Lighter weight for elegance */
+  line-height: 1.5; /* Balanced line height for readability */
+}
+
+.banner-paragraph2 {
+  font-size: 1.2rem; /* Smaller for secondary paragraphs */
+  font-weight: 300; /* Lighter weight for less emphasis */
+  line-height: 1.6; /* Keeps spacing airy */
+}
+
+.banner-buttons {
+  display: flex;
+  justify-content: flex-start; /* Aligns buttons to the left */
+  gap: 10px; /* Spacing between buttons */
+  margin-top: 20px; /* Adjusts the distance from the text above */
 }
 
 .button {
-  width: 150px; /* Set the desired button width */
+  width: 150px;
   padding: 10px 20px;
   background-color: #000; /* Button color */
-  color: #333;
+  color: #333; /* Text color */
   text-align: center;
   text-decoration: none;
   border-radius: 5px; /* Rounded corners */
-  font-size: 16px;
+  font-size: 1rem; /* Good size for buttons */
+  font-weight: 500; /* Medium weight for clear call-to-action */
 }
 
 .button:hover {
@@ -60,4 +80,25 @@
 
 #red {
   background-color: #ffa8a8; /* Pastel red */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-container h1 {
+    font-size: 2rem; /* Scales down for smaller screens */
+  }
+
+  .text-container p,
+  .banner-paragraph {
+    font-size: 1rem; /* Adjusts for readability on smaller devices */
+  }
+
+  .banner-paragraph2 {
+    font-size: 0.9rem; /* Smaller for better fit */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Adjust button text for smaller screens */
+    padding: 8px 16px; /* Adjust button padding */
+  }
 }

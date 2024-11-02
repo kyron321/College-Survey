@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
     <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
-    <?php echo '<!-- Header loaded -->'; ?>
 </head>
 
 <body <?php body_class(); ?>>

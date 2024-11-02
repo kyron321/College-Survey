@@ -24,6 +24,7 @@ nav.top-navigation {
 /* Styling for the nav list */
 .nav-list {
   display: flex;
+  gap: 20px;
   flex-direction: row; /* Ensures items are in a row */
   list-style: none;
   margin: 0;
@@ -31,9 +32,6 @@ nav.top-navigation {
 }
 
 /* Styling for each nav item */
-.nav-item {
-  margin-left: 15px;
-}
 
 /* Styling for links */
 .nav-link {
@@ -83,7 +81,7 @@ nav.top-navigation {
 
 /* Styling for individual menu items */
 #main-menu li {
-  margin: 0 15px;
+  margin-left: 20px;
 }
 
 /* Styling for menu links */
