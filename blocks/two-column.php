@@ -4,9 +4,10 @@ $paragraph = get_field('paragraph');
 $image = get_field('image');
 $flip_block = get_field('flip_block');
 $image_to_text_ratio = get_field('image_to_text_ratio');
+$background_colour = get_field('background_colour');
 ?>
 
-<div class="two-column-block<?php echo $flip_block ? ' '.'flip' : ''; ?> ratio-<?php echo esc_attr($image_to_text_ratio); ?>">
+<div class="two-column-block<?php echo $flip_block ? ' flip' : ''; ?> ratio-<?php echo esc_attr($image_to_text_ratio); ?> bg-<?php echo esc_attr($background_colour); ?>">
     <div class="column column-text">
         <?php if ($paragraph): ?>
             <p><?php echo esc_html($paragraph); ?></p>
