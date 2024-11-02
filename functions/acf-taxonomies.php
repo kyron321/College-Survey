@@ -21,6 +21,8 @@ function register_state_taxonomy() {
         'show_admin_column' => true,
         'query_var'         => true,
         'rewrite'           => array('slug' => 'state'),
+        'public'            => false, 
+        'publicly_queryable'=> false,
     );
 
     register_taxonomy('state', array('college'), $args);
