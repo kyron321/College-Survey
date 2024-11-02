@@ -6,7 +6,7 @@ $flip_block = get_field('flip_block');
 $image_to_text_ratio = get_field('image_to_text_ratio');
 ?>
 
-<div class="two-column-block<?php echo $flip_block ? ' '.'flip' : ''; ?> ratio-<?php echo esc_attr($image_to_text_ratio); ?>">
+<!-- <div class="two-column-block<?php echo $flip_block ? ' ' . 'flip' : ''; ?> ratio-<?php echo esc_attr($image_to_text_ratio); ?>">
     <div class="column column-text">
         <?php if ($paragraph): ?>
             <p><?php echo esc_html($paragraph); ?></p>
@@ -17,4 +17,4 @@ $image_to_text_ratio = get_field('image_to_text_ratio');
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
         <?php endif; ?>
     </div>
-</div>
+</div> -->

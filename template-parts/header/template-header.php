@@ -24,20 +24,22 @@ $top_nav_links = get_field('top_nav_links', 'option');
         </nav>
     <?php endif; ?>
 
-    <?php if ($site_logo): ?>
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo-link">
-            <img src="<?php echo esc_url($site_logo['url']); ?>" alt="<?php echo esc_attr($site_logo['alt']); ?>" class="site-logo-img" />
-        </a>
-    <?php endif; ?>
+    <div class="logo-nav-wrapper">
+        <?php if ($site_logo): ?>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo-link">
+                <img src="<?php echo esc_url($site_logo['url']); ?>" alt="<?php echo esc_attr($site_logo['alt']); ?>" class="site-logo-img" />
+            </a>
+        <?php endif; ?>
 
-    <nav class="footer-menu">
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'main-menu',
-            'menu_id'        => 'main-menu',
-            'container'      => false,
-        ));
-        ?>
-    </nav>
+        <nav class="footer-menu">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'main-menu',
+                'menu_id'        => 'main-menu',
+                'container'      => false,
+            ));
+            ?>
+        </nav>
+    </div>
 
 </header>
