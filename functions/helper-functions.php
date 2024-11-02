@@ -50,7 +50,11 @@ function enqueue_google_fonts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_google_fonts');
 
-function register_main_menu() {
-    register_nav_menu('main-menu', __('Main Menu'));
+function register_my_menus() {
+    register_nav_menus(
+        array(
+            'main-menu' => __('Main Menu'),
+        )
+    );
 }
-add_action('init', 'register_main_menu');
+add_action('init', 'register_my_menus');

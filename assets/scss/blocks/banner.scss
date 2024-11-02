@@ -1,0 +1,63 @@
+.banner-block {
+  position: relative;
+  text-align: center;
+  color: white; /* Adjust as needed */
+}
+
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust the height as needed */
+  width: 100%;
+}
+
+.hero-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-block h1,
+.banner-block p,
+.banner-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin: 0;
+}
+
+.banner-buttons {
+  top: 65%; /* Adjust this value to position the buttons below the text */
+  display: flex;
+  gap: 10px; /* Adjust spacing between buttons */
+}
+
+.button {
+  width: 150px; /* Set the desired button width */
+  padding: 10px 20px;
+  background-color: #000; /* Button color */
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #333; /* Hover color */
+}
+
+#green {
+  background-color: #b7e4c7; /* Pastel green */
+}
+
+#orange {
+  background-color: #fff3b0; /* Pastel orange */
+}
+
+#red {
+  background-color: #ffa8a8; /* Pastel red */
+}

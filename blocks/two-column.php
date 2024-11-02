@@ -18,4 +18,4 @@ $background_colour = get_field('background_colour');
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
         <?php endif; ?>
     </div>
-</div>
+</div> -->
