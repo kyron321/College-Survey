@@ -1,5 +1,4 @@
 <?php
-// Get the ACF fields
 $site_logo = get_field('site_logo', 'option');
 $company_email = get_field('company_email', 'option');
 $company_number = get_field('company_number', 'option');
@@ -31,7 +30,7 @@ $top_nav_links = get_field('top_nav_links', 'option');
             </a>
         <?php endif; ?>
 
-        <nav class="footer-menu">
+        <nav class="header-menu">
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'main-menu',

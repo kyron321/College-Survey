@@ -7,21 +7,28 @@ $hide_sort_by = get_field('hide_sort_by');
 
 <section class="colleges">
     <div class="column-one">
-        <p>Filters</p>
-        <?php if (!$hide_search): ?>
-            <?php get_template_part('template-parts/blocks/colleges/search'); ?>
-        <?php endif; ?>
+        <h3>Filters<h3>
+                <?php if (!$hide_search): ?>
+                    <?php get_template_part('template-parts/blocks/colleges/search'); ?>
+                <?php endif; ?>
 
-        <?php if (!$hide_filters): ?>
-            <?php get_template_part('template-parts/blocks/colleges/filters'); ?>
-        <?php endif; ?>
+                <?php if (!$hide_filters): ?>
+                    <?php get_template_part('template-parts/blocks/colleges/filters'); ?>
+                <?php endif; ?>
     </div>
 
     <div class="column-two">
-
         <?php if (!$hide_sort_by): ?>
             <?php get_template_part('template-parts/blocks/colleges/sort-by'); ?>
         <?php endif; ?>
+        <div class="college-info-container">
+            <p class="college-name">College</p>
+            <p class="type-one">Type I</p>
+            <p class="type-two">Type II</p>
+            <p class="religious">Religious</p>
+            <p class="accredited">Accredited</p>
+            <p class="presence">Presence</p>
+        </div>
 
         <?php get_template_part('template-parts/blocks/colleges/colleges-list'); ?>
     </div>

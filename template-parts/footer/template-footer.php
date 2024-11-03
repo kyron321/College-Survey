@@ -5,9 +5,27 @@ $facebook = get_field('facebook', 'option');
 $youtube = get_field('youtube', 'option');
 $linkedin = get_field('linkedin', 'option');
 $instagram = get_field('instagram', 'option');
+
 ?>
 
 <footer>
+    <div class="footer-logo">
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/socials/logo.png'); ?>" alt="Site Logo" class="site-logo-img">
+        </a>
+    </div>
+
+    <nav class="footer-menu">
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'main-menu',
+            'menu_id'        => 'main-menu',
+            'container'      => false,
+            'exclude_from_footer' => true,
+        ));
+        ?>
+    </nav>
+
     <div class="social-links">
         <?php if ($twitter_x): ?>
             <a href="<?php echo esc_url($twitter_x['url']); ?>" target="_blank" rel="noopener noreferrer">
@@ -40,13 +58,8 @@ $instagram = get_field('instagram', 'option');
         <?php endif; ?>
     </div>
 
-    <nav class="footer-menu">
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'main-menu',
-            'menu_id'        => 'main-menu',
-            'container'      => false,
-        ));
-        ?>
-    </nav>
+    <div class="privacy-policy">
+        <a href="<?php echo esc_url(home_url('/privacy-policy')); ?>">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">Genspect College Survey &copy; <?php echo date('Y'); ?></div>
 </footer>

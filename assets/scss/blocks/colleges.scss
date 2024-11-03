@@ -4,9 +4,55 @@
   max-width: 1200px;
   margin: 2.5rem auto;
 
+  .column-one {
+    width: 30%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .column-two {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
   .filters {
     width: 10rem;
   }
+
+  .search-form {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .search-form input[type="text"] {
+    width: 90%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .search-form input[type="text"]:focus {
+    border-color: #333333;
+  }
+
+  #search-results div {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  #search-results div:last-child {
+    border-bottom: none;
+  }
+
+  #search-results div:hover {
+    background-color: #f8f9fa;
+  }
+
   .accordion-content {
     display: none;
     padding-left: 20px;
@@ -27,7 +73,7 @@
   }
 
   .accordion-label::after {
-    content: "\25BC"; /* Down arrow */
+    content: "\25BC";
     position: absolute;
     right: 0;
     top: 50%;
@@ -36,88 +82,179 @@
   }
 
   .accordion-toggle:checked + .accordion-label::after {
-    transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
+    transform: translateY(-50%) rotate(180deg);
   }
 
   .accordion-toggle:checked + .accordion-label + .accordion-content {
     display: block;
   }
 
-  .column-one {
-    width: 20%;
-    padding: 0;
+  .college-info-container {
+    display: flex;
+    margin: 1rem 0;
+  }
+
+  .college-info-container p {
     margin: 0;
+    font-size: 14px;
   }
 
-  .search-form {
-    position: relative; /* Position for the search results */
-    max-width: 100%; /* Full width of its parent */
-    margin-bottom: 20px; /* Spacing below the form */
+  .college-name {
+    width: 30%;
+    font-weight: bold;
   }
 
-  .search-form input[type="text"] {
-    width: 100%; /* Full width */
-    padding: 10px 15px; /* Comfortable padding */
-    font-size: 1rem; /* Standard font size */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    outline: none; /* Remove default outline */
-    transition: border-color 0.2s, box-shadow 0.2s; /* Smooth transition */
-  }
-
-  .search-form input[type="text"]:focus {
-    border-color: #007bff; /* Highlight color on focus */
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Blue shadow for focus */
-  }
-
-  #search-results {
-    position: absolute; /* Position relative to the search form */
-    top: 100%; /* Directly below the input */
-    left: 0;
-    width: 100%; /* Full width of the input */
-    background-color: #fff; /* White background */
-    border: 1px solid #ccc; /* Light border */
-    border-top: none; /* Remove top border to merge with input */
-    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    z-index: 1000; /* Ensure it appears above other elements */
-    max-height: 200px; /* Limit height */
-    overflow-y: auto; /* Scroll if content overflows */
-  }
-
-  #search-results div {
-    padding: 10px 15px; /* Internal padding */
-    cursor: pointer; /* Pointer cursor for interactivity */
-    border-bottom: 1px solid #f1f1f1; /* Light border for separation */
-  }
-
-  #search-results div:last-child {
-    border-bottom: none; /* Remove border on the last item */
-  }
-
-  #search-results div:hover {
-    background-color: #f8f9fa; /* Light gray background on hover */
-  }
-
-  .column-two {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  .type-one,
+  .type-two,
+  .religious,
+  .accredited,
+  .presence {
+    width: 14%;
   }
 
   article {
-    background-color: #fff; /* White background */
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 16px; /* Padding inside the card */
-    margin: 16px 0; /* Margin to separate the cards */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effects */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 20px;
   }
 
-  article:hover {
-    transform: translateY(-4px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  .college-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  .column {
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .entry-title a {
+    color: inherit;
+  }
+
+  .entry-title a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .college-row {
+      flex-wrap: wrap;
+    }
+    .column {
+      width: 100%;
+    }
+  }
+
+  .college-summary {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .details-toggle {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  select:hover {
+    border-color: #888;
+  }
+
+  .college-details {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+
+  article.expanded .college-details {
+    display: block;
+  }
+
+  .details-toggle:hover {
+    color: #0073aa;
+  }
+
+  .filter-group {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+    margin-bottom: 15px;
+  }
+
+  .accordion-label {
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: #2c3e50;
+    width: 100%;
+  }
+
+  .accordion-label::after {
+    font-size: 14px;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-toggle:checked + .accordion-label::after {
+    transform: rotate(180deg);
+  }
+
+  .accordion-content {
+    padding-top: 10px;
+  }
+
+  .accordion-toggle:checked + .accordion-label + .accordion-content {
+    display: block;
+    padding-left: 15px;
+    color: #5a5a5a;
+  }
+
+  .checkbox {
+    margin-bottom: 8px;
+  }
+
+  .checkbox label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .checkbox input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .accordion-label {
+      font-size: 16px;
+    }
+
+    .accordion-content {
+      padding-left: 10px;
+    }
   }
 }

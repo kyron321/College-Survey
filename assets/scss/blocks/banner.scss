@@ -1,104 +1,96 @@
 .banner-block {
-  width: 100%; /* Ensures the block is full width */
+  width: 100%;
 }
 
 .hero-section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 700px; /* Adjust the height as needed */
-  width: 100%; /* Ensures full width */
+  height: 700px;
+  width: 100%;
   display: flex;
-  justify-content: center; /* Centers the text container */
-  align-items: center; /* Centers vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .text-container {
-  max-width: 1200px; /* Limits the width of the text */
-  width: 100%; /* Ensures responsiveness */
-  padding: 0 20px; /* Optional padding for spacing */
-  text-align: left; /* Aligns text to the left */
-  color: white; /* Adjust as needed */
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: left;
+  color: white;
 }
 
 .text-container h1 {
-  font-size: 2.5rem; /* Large heading for main attention */
-  font-weight: 700; /* Bold for emphasis */
-  line-height: 1.2; /* Tighter line spacing for headings */
-  margin: 20px 0; /* Vertical margin */
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 20px 0;
 }
 
-// .text-container p {
-//   font-size: 1.25rem; /* Comfortable size for body text */
-//   font-weight: 400; /* Normal weight for readability */
-//   line-height: 1.6; /* Adequate spacing between lines */
-//   margin: 20px 0; /* Vertical margin */
-// }
-
 .banner-paragraph {
-  font-size: 1.5rem; /* Slightly larger for introductory paragraphs */
-  font-weight: 300; /* Lighter weight for elegance */
-  line-height: 1.5; /* Balanced line height for readability */
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 .banner-paragraph2 {
-  font-size: 1.2rem; /* Smaller for secondary paragraphs */
-  font-weight: 300; /* Lighter weight for less emphasis */
-  line-height: 1.6; /* Keeps spacing airy */
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 .banner-buttons {
   display: flex;
-  justify-content: flex-start; /* Aligns buttons to the left */
-  gap: 10px; /* Spacing between buttons */
-  margin-top: 20px; /* Adjusts the distance from the text above */
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .button {
   width: 150px;
   padding: 10px 20px;
-  background-color: #000; /* Button color */
-  color: #333; /* Text color */
+  background-color: #000;
+  color: #333;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1rem; /* Good size for buttons */
-  font-weight: 500; /* Medium weight for clear call-to-action */
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .button:hover {
-  background-color: #333; /* Hover color */
+  background-color: #333;
 }
 
 #green {
-  background-color: #b7e4c7; /* Pastel green */
+  background-color: #b7e4c7;
 }
 
 #orange {
-  background-color: #fff3b0; /* Pastel orange */
+  background-color: #fff3b0;
 }
 
 #red {
-  background-color: #ffa8a8; /* Pastel red */
+  background-color: #ffa8a8;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .text-container h1 {
-    font-size: 2rem; /* Scales down for smaller screens */
+    font-size: 2rem;
   }
 
   .text-container p,
   .banner-paragraph {
-    font-size: 1rem; /* Adjusts for readability on smaller devices */
+    font-size: 1rem;
   }
 
   .banner-paragraph2 {
-    font-size: 0.9rem; /* Smaller for better fit */
+    font-size: 0.9rem;
   }
 
   .button {
-    font-size: 0.9rem; /* Adjust button text for smaller screens */
-    padding: 8px 16px; /* Adjust button padding */
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }
