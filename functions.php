@@ -15,4 +15,5 @@ function exclude_menu_item($items, $args)
 	}
 	return $items;
 }
+
 add_filter('wp_nav_menu_objects', 'exclude_menu_item', 10, 2);

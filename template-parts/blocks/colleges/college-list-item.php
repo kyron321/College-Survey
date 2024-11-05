@@ -1,45 +1,47 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('college-row'); ?>>
+<article id="post-516" class="college-row post-516 college type-college status-publish hentry">
     <div class="college-name column">
-        <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+        <h4 class="entry-title"><a href="http://test.local/college/adams-state-university/">Adams State University</a></h4>
     </div>
 
     <div class="column type-one">
-        <?php if ($type_1): ?>
-            <p><?php echo esc_html($type_1); ?></p>
-        <?php else: ?>
-            <p>N/A</p>
-        <?php endif; ?>
+        <p>public</p>
     </div>
 
     <div class="column type-two">
-        <?php if ($type_2): ?>
-            <p><?php echo esc_html($type_2); ?></p>
-        <?php else: ?>
-            <p>N/A</p>
-        <?php endif; ?>
+        <p>4-Year</p>
     </div>
 
     <div class="column religious">
-        <?php if ($religious !== null): ?>
-            <p><?php echo $religious ? 'Yes' : 'No'; ?></p>
-        <?php else: ?>
-            <p>N/A</p>
-        <?php endif; ?>
+        <p>No</p>
     </div>
 
     <div class="column accredited">
-        <?php if ($accredited !== null): ?>
-            <p><?php echo $accredited ? 'Yes' : 'No'; ?></p>
-        <?php else: ?>
-            <p>N/A</p>
-        <?php endif; ?>
+        <p>Yes</p>
     </div>
 
     <div class="column presence">
-        <?php if ($presence): ?>
-            <p><?php echo esc_html($presence); ?></p>
-        <?php else: ?>
-            <p>N/A</p>
-        <?php endif; ?>
+        <p>none</p>
+    </div>
+
+    <div class="college-details">
+        <div class="column type-one">
+            <p>Additional Type 1 Information</p>
+        </div>
+
+        <div class="column type-two">
+            <p>Additional Type 2 Information</p>
+        </div>
+
+        <div class="column religious">
+            <p>Additional Religious Information</p>
+        </div>
+
+        <div class="column accredited">
+            <p>Additional Accredited Information</p>
+        </div>
+
+        <div class="column presence">
+            <p>Additional Presence Information</p>
+        </div>
     </div>
 </article>

@@ -1,5 +1,6 @@
 <?php
-function register_colleges_cpt() {
+function register_colleges_cpt()
+{
     $labels = array(
         'name'                  => _x('Colleges', 'Post type general name', 'textdomain'),
         'singular_name'         => _x('College', 'Post type singular name', 'textdomain'),
@@ -40,7 +41,7 @@ function register_colleges_cpt() {
         'hierarchical'       => false,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-welcome-learn-more',
-        'supports'           => array('title', 'thumbnail', 'revisions', 'custom-fields'),
+        'supports'           => array('title', 'thumbnail', 'revisions', 'custom-fields', 'comments'),
         'show_in_rest'       => false,
     );
 
