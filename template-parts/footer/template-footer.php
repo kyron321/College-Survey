@@ -44,7 +44,7 @@ $instagram = get_field('instagram', 'option');
         <?php
         wp_nav_menu(array(
             'theme_location' => 'main-menu',
-            'menu_id'        => 'footer-main-menu',
+            'menu_id'        => 'main-menu',
             'container'      => false,
         ));
         ?>
