@@ -11,7 +11,7 @@ $instagram = get_field('instagram', 'option');
 <footer>
     <div class="footer-logo">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/socials/footer-logo.png'); ?>" alt="Site Logo" class="site-logo-img">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/socials/footer-logo.svg'); ?>" alt="Site Logo" class="site-logo-img">
         </a>
     </div>
 
