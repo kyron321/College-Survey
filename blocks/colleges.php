@@ -23,9 +23,10 @@ $hide_sort_by = get_field('hide_sort_by');
         <?php endif; ?>
         <div class="college-info-container">
             <p class="college-name">College</p>
-            <p class="type-one">Type I</p>
+            <p class="type-one">Type</p>
             <p class="religious">Religious</p>
-            <p class="accredited">Accredited</p>
+            <!-- <p class="accredited">Accredited</p> -->
+            <p class="state">State</p>
             <p class="presence">Presence</p>
         </div>
 

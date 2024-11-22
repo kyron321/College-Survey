@@ -11,7 +11,7 @@
         <?php endif; ?>
     </div>
 
-  
+
 
     <div class="column religious">
         <?php if ($religious !== null): ?>
@@ -21,14 +21,24 @@
         <?php endif; ?>
     </div>
 
-    <div class="column accredited">
+    <!-- <div class="column accredited">
         <?php if ($accredited !== null): ?>
             <p><?php echo $accredited ? 'Yes' : 'No'; ?></p>
         <?php else: ?>
             <p>N/A</p>
         <?php endif; ?>
-    </div>
+    </div> -->
 
+    <div class="column state">
+        <?php
+        $state = get_field('state', get_the_ID());
+        if ($state) {
+            echo '<p>' . esc_html(get_term($state)->name) . '</p>';
+        } else {
+            echo '<p>N/A</p>';
+        }
+        ?>
+    </div>
     <div class="column presence">
         <?php if ($presence): ?>
             <p><?php echo esc_html($presence); ?></p>
@@ -36,4 +46,6 @@
             <p>N/A</p>
         <?php endif; ?>
     </div>
+
+
 </article>

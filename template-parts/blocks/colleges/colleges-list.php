@@ -1,7 +1,4 @@
 <?php
-get_header(); ?>
-
-<?php
 /*
 Template Name: College List
 */
@@ -25,9 +22,9 @@ get_header(); ?>
             $state = get_field('state', get_the_ID());
             $college_link = get_field('college_link', get_the_ID());
             $type_1 = get_field('type_1', get_the_ID());
-            $type_2 = get_field('type_2', get_the_ID());
+            // $type_2 = get_field('type_2', get_the_ID());
             $religious = get_field('religious', get_the_ID());
-            $accredited = get_field('accredited', get_the_ID());
+            // $accredited = get_field('accredited', get_the_ID());
             $presence = get_field('presence', get_the_ID());
             $notes = get_field('notes', get_the_ID());
 

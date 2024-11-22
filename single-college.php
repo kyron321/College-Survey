@@ -21,7 +21,6 @@ get_header(); ?>
                 $state = get_field('state');
                 $college_link = get_field('college_link');
                 $type_1 = get_field('type_1');
-                $type_2 = get_field('type_2');
                 $religious = get_field('religious');
                 $accredited = get_field('accredited');
                 $presence = get_field('presence');
@@ -37,7 +36,7 @@ get_header(); ?>
                 <?php endif; ?>
 
                 <?php if ($type_1): ?>
-                    <p>Type 1: <?php echo esc_html($type_1); ?></p>
+                    <p>Type: <?php echo esc_html($type_1); ?></p>
                 <?php endif; ?>
 
                 <?php if ($religious): ?>

@@ -14,7 +14,7 @@ function ajax_filter_colleges()
     $type_1_filter = isset($_POST['type_1']) ? $_POST['type_1'] : array();
     $type_2_filter = isset($_POST['type_2']) ? $_POST['type_2'] : array();
     $religious_filter = isset($_POST['religious']) ? $_POST['religious'] : null;
-    $accredited_filter = isset($_POST['accredited']) ? $_POST['accredited'] : array();
+    // $accredited_filter = isset($_POST['accredited']) ? $_POST['accredited'] : array();
     $presence_filter = isset($_POST['presence']) ? $_POST['presence'] : array();
     $sort_order = isset($_POST['sort_order']) ? $_POST['sort_order'] : 'a-z';
     $search_query = isset($_POST['search']) ? sanitize_text_field($_POST['search']) : '';
@@ -63,13 +63,13 @@ function ajax_filter_colleges()
         );
     }
 
-    if (!empty($accredited_filter)) {
-        $args['meta_query'][] = array(
-            'key' => 'accredited',
-            'value' => $accredited_filter,
-            'compare' => 'IN',
-        );
-    }
+    // if (!empty($accredited_filter)) {
+    //     $args['meta_query'][] = array(
+    //         'key' => 'accredited',
+    //         'value' => $accredited_filter,
+    //         'compare' => 'IN',
+    //     );
+    // }
 
     if (!empty($presence_filter)) {
         $args['meta_query'][] = array(
@@ -98,7 +98,7 @@ function ajax_filter_colleges()
             $type_1 = get_field('type_1', get_the_ID());
             $type_2 = get_field('type_2', get_the_ID());
             $religious = get_field('religious', get_the_ID());
-            $accredited = get_field('accredited', get_the_ID());
+            // $accredited = get_field('accredited', get_the_ID());
             $presence = get_field('presence', get_the_ID());
             $notes = get_field('notes', get_the_ID());
 

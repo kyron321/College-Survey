@@ -35,17 +35,17 @@ if (defined('WP_CLI') && WP_CLI) {
             // Create a new post for each row
             $post_id = wp_insert_post([
                 'post_type' => 'college',
-                'post_title' => $row['College Name'],  // Replace with your CSV column
+                'post_title' => $row['NAME'],  // Use the 'NAME' column for the post title
                 'post_status' => 'publish'
             ]);
 
             if (is_wp_error($post_id)) {
-                WP_CLI::warning("Failed to insert post for {$row['College Name']}");
+                WP_CLI::warning("Failed to insert post for {$row['NAME']}");
                 continue;
             }
 
-            // Format the state name to match the taxonomy term
-            $state_name = ucwords(strtolower($row['State']));
+            // Format the state name: capitalize the first letter and lowercase the rest
+            $state_name = ucfirst(strtolower($row['STATE']));
             $state_term = get_term_by('name', $state_name, 'state'); // Replace 'state' with the correct taxonomy name
 
             if ($state_term) {
@@ -59,16 +59,16 @@ if (defined('WP_CLI') && WP_CLI) {
             }
 
             // Update other ACF fields
-            update_field('type_1', $row['Type I'], $post_id);
-            update_field('type_2', $row['Type II'], $post_id);
-            update_field('religious', $row['Religious'], $post_id);
-            update_field('accredited', $row['Accredited'], $post_id);
-            update_field('presence', $row['Presence'], $post_id);
-            update_field('notes', $row['Notes'], $post_id);
+            update_field('type_1', $row['TYPE'], $post_id); // Update 'TYPE'
+            update_field('religious', $row['RELIGIOUS'], $post_id); // Update 'RELIGIOUS'
+            update_field('presence', $row['IDEOLOGY PRESENCE'], $post_id); // Update 'IDEOLOGY PRESENCE'
+            update_field('notes', $row['NOTES'], $post_id); // Update 'NOTES'
+            update_field('college_link', $row['WEBSITE'], $post_id); // Update 'WEBSITE'
 
-            WP_CLI::success("Imported {$row['College Name']} successfully.");
+            WP_CLI::success("Imported {$row['NAME']} successfully.");
         }
 
         fclose($handle);
     });
 }
+
