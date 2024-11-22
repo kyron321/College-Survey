@@ -40,10 +40,6 @@ get_header(); ?>
                     <p>Type 1: <?php echo esc_html($type_1); ?></p>
                 <?php endif; ?>
 
-                <?php if ($type_2): ?>
-                    <p>Type 2: <?php echo esc_html($type_2); ?></p>
-                <?php endif; ?>
-
                 <?php if ($religious): ?>
                     <p>Religious: <?php echo ($religious ? 'Yes' : 'No'); ?></p>
                 <?php endif; ?>

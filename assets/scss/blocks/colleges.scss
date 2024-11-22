@@ -92,17 +92,20 @@
   .college-info-container {
     display: flex;
     margin: 1rem 0;
+    align-items: center;
   }
 
   .college-info-container p {
     margin: 0;
     font-size: 14px;
+    text-align: left;
   }
 
   .college-name {
     width: 30%;
     font-weight: bold;
-  }
+   padding: 0 10px 0 10px }
+
 
   .type-one,
   .type-two,
@@ -110,6 +113,7 @@
   .accredited,
   .presence {
     width: 14%;
+    padding: 0px 10px;
   }
 
   article {
