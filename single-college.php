@@ -2,16 +2,12 @@
 get_header(); ?>
 
 <main id="main" class="site-main" role="main">
-    <?php
-    while (have_posts()) :
-        the_post();
-    ?>
+    <?php while (have_posts()):
+        the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <?php
-            if (has_post_thumbnail()) {
+            <?php if (has_post_thumbnail()) {
                 the_post_thumbnail('full');
-            }
-            ?>
+            } ?>
             <h1 class="entry-title"><?php the_title(); ?></h1>
 
             <div class="entry-content">
@@ -27,11 +23,15 @@ get_header(); ?>
                 ?>
 
                 <?php if ($state): ?>
-                    <p>State: <?php echo esc_html(get_term($state)->name); ?></p>
+                    <p>State: <?php echo esc_html(
+                        get_term($state)->name
+                    ); ?></p>
                 <?php endif; ?>
 
                 <?php if ($college_link): ?>
-                    <p>College Link: <a href="<?php echo esc_url($college_link); ?>"><?php echo esc_html($college_link); ?></a></p>
+                    <p>College Link: <a href="<?php echo esc_url(
+                        $college_link
+                    ); ?>"><?php echo esc_html($college_link); ?></a></p>
                 <?php endif; ?>
 
                 <?php if ($type_1): ?>
@@ -39,7 +39,7 @@ get_header(); ?>
                 <?php endif; ?>
 
                 <?php if ($religious): ?>
-                    <p>Religious: <?php echo ($religious ? 'Yes' : 'No'); ?></p>
+                    <p>Religious: <?php echo $religious ? 'Yes' : 'No'; ?></p>
                 <?php endif; ?>
 
                 <?php if ($presence): ?>
@@ -53,14 +53,11 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </article>
-    <?php
-        if (comments_open() || get_comments_number()) {
-            comments_template();
-        }
-    endwhile;
-    ?>
+    <?php if (comments_open() || get_comments_number()) {
+        comments_template();
+    }
+    endwhile; ?>
     
 </main>
 
-<?php
-get_footer();
+<?php get_footer();

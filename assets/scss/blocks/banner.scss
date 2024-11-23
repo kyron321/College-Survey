@@ -1,96 +1,96 @@
 .banner-block {
-  width: 100%;
+    width: 100%;
 }
 
 .hero-section {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 550px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 550px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 20px;
-  text-align: left;
-  color: white;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: left;
+    color: white;
 }
 
 .text-container h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 20px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 20px 0;
 }
 
 .banner-paragraph {
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 1.5;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
 }
 
 .banner-paragraph2 {
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
 }
 
 .banner-buttons {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-  margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .button {
-  width: 150px;
-  padding: 10px 20px;
-  background-color: #000;
-  color: #333;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 500;
+    width: 150px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .button:hover {
-  background-color: #333;
+    background-color: #333;
 }
 
 #green {
-  background-color: #b7e4c7;
+    background-color: #b7e4c7;
 }
 
 #orange {
-  background-color: #fff3b0;
+    background-color: #fff3b0;
 }
 
 #red {
-  background-color: #ffa8a8;
+    background-color: #ffa8a8;
 }
 
 @media (max-width: 768px) {
-  .text-container h1 {
-    font-size: 2rem;
-  }
+    .text-container h1 {
+        font-size: 2rem;
+    }
 
-  .text-container p,
-  .banner-paragraph {
-    font-size: 1rem;
-  }
+    .text-container p,
+    .banner-paragraph {
+        font-size: 1rem;
+    }
 
-  .banner-paragraph2 {
-    font-size: 0.9rem;
-  }
+    .banner-paragraph2 {
+        font-size: 0.9rem;
+    }
 
-  .button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
+    .button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }

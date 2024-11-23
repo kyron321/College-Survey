@@ -1,48 +1,46 @@
 .colleges {
-  display: flex;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 2.5rem auto;
-
-  .column-one {
-    width: 30%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .column-two {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .college-info-container {
     display: flex;
-    margin: 1rem 0;
-    align-items: center;
-  }
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2.5rem auto;
 
-  .college-info-container p {
-    margin: 0;
-    font-size: 14px;
-    text-align: left;
-  }
+    .column-one {
+        width: 30%;
+        padding: 0;
+        margin: 0;
+    }
 
-  .college-name {
-    width: 30%;
-    font-weight: bold;
-   padding: 0 10px 0 10px }
+    .column-two {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 
+    .college-info-container {
+        display: flex;
+        margin: 1rem 0;
+        align-items: center;
+    }
 
-  .type-one,
-  .type-two,
-  .religious,
-  .state,
-  .accredited,
-  .presence
-  .more-info {
-    width: 14%;
-    padding: 0px 10px;
-  }
+    .college-info-container p {
+        margin: 0;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .college-name {
+        width: 30%;
+        font-weight: bold;
+        padding: 0 10px 0 10px;
+    }
+
+    .type-one,
+    .type-two,
+    .religious,
+    .state,
+    .accredited,
+    .presence .more-info {
+        width: 14%;
+        padding: 0px 10px;
+    }
 }
-

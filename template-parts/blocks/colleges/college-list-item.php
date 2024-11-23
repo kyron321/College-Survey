@@ -30,7 +30,7 @@
         ?>
     </div>
     <div class="column presence">
-    <?php 
+    <?php
     $presence = get_field('presence', get_the_ID());
     if ($presence) {
         echo '<p>' . esc_html($presence) . '</p>';

@@ -1,6 +1,10 @@
 <?php
 // Load additional functions dynamically from a "functions" folder
-$functions = array_diff(scandir(get_template_directory() . '/functions'), array('.', '..', '.DS_Store'));
+$functions = array_diff(scandir(get_template_directory() . '/functions'), [
+    '.',
+    '..',
+    '.DS_Store',
+]);
 foreach ($functions as $function) {
     if (pathinfo($function, PATHINFO_EXTENSION) === 'php') {
         include get_template_directory() . '/functions/' . $function;
@@ -8,8 +12,12 @@ foreach ($functions as $function) {
 }
 
 // Exclude a specific menu item from the footer
-function exclude_menu_item($items, $args) {
-    if (isset($args->exclude_from_footer) && $args->exclude_from_footer === true) {
+function exclude_menu_item($items, $args)
+{
+    if (
+        isset($args->exclude_from_footer) &&
+        $args->exclude_from_footer === true
+    ) {
         foreach ($items as $key => $item) {
             if ($item->ID == 541) {
                 unset($items[$key]);
@@ -21,7 +29,8 @@ function exclude_menu_item($items, $args) {
 add_filter('wp_nav_menu_objects', 'exclude_menu_item', 10, 2);
 
 // Add "Role" dropdown to the comment form
-function add_custom_role_field_to_comment_form($comment_field) {
+function add_custom_role_field_to_comment_form($comment_field)
+{
     $custom_field = '
     <p class="comment-form-role">
         <label for="user_role">Your Role:</label>
@@ -34,10 +43,14 @@ function add_custom_role_field_to_comment_form($comment_field) {
     </p>';
     return $comment_field . $custom_field;
 }
-add_filter('comment_form_field_comment', 'add_custom_role_field_to_comment_form');
+add_filter(
+    'comment_form_field_comment',
+    'add_custom_role_field_to_comment_form'
+);
 
 // Save the "Role" field when a comment is posted
-function save_custom_role_field($comment_id) {
+function save_custom_role_field($comment_id)
+{
     if (isset($_POST['user_role']) && !empty($_POST['user_role'])) {
         $role = sanitize_text_field($_POST['user_role']);
         add_comment_meta($comment_id, 'user_role', $role, true);
@@ -46,17 +59,25 @@ function save_custom_role_field($comment_id) {
 add_action('comment_post', 'save_custom_role_field');
 
 // Append the user role to the comment text
-function append_role_to_comment_text($comment_text, $comment) {
+function append_role_to_comment_text($comment_text, $comment)
+{
     $role = get_comment_meta($comment->comment_ID, 'user_role', true);
     if ($role) {
-        $comment_text .= '<p class="comment-role"><strong>Role:</strong> ' . esc_html(ucfirst($role)) . '</p>';
+        $comment_text .=
+            '<p class="comment-role"><strong>Role:</strong> ' .
+            esc_html(ucfirst($role)) .
+            '</p>';
     }
     return $comment_text;
 }
 add_filter('comment_text', 'append_role_to_comment_text', 10, 2);
 
 // Load Font Awesome
-function load_font_awesome() {
-    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+function load_font_awesome()
+{
+    wp_enqueue_style(
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'
+    );
 }
 add_action('wp_enqueue_scripts', 'load_font_awesome');
