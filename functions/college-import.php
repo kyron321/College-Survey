@@ -46,26 +46,38 @@ if (defined('WP_CLI') && WP_CLI) {
 
             // Format the state name: capitalize the first letter and lowercase the rest
             $state_name = ucfirst(strtolower($row['STATE']));
-            $state_term = get_term_by('name', $state_name, 'state'); // Replace 'state' with the correct taxonomy name
+$state_term = get_term_by('name', $state_name, 'state'); // Replace 'state' with the correct taxonomy name
 
-            if ($state_term) {
-                // Update the ACF field with the term ID
-                update_field('state', $state_term->term_id, $post_id);
-                
-                // Set the taxonomy term on the post
-                wp_set_post_terms($post_id, [$state_term->term_id], 'state');
-            } else {
-                WP_CLI::warning("State '{$state_name}' not found in taxonomy.");
-            }
+if ($state_term) {
+    // Update the ACF field with the term ID
+    update_field('state', $state_term->term_id, $post_id);
+    
+    // Set the taxonomy term on the post
+    wp_set_post_terms($post_id, [$state_term->term_id], 'state');
+} else {
+    WP_CLI::warning("State '{$state_name}' not found in taxonomy.");
+}
 
-            // Update other ACF fields
-            update_field('type_1', $row['TYPE'], $post_id); // Update 'TYPE'
-            update_field('religious', $row['RELIGIOUS'], $post_id); // Update 'RELIGIOUS'
-            update_field('presence', $row['IDEOLOGY PRESENCE'], $post_id); // Update 'IDEOLOGY PRESENCE'
-            update_field('notes', $row['NOTES'], $post_id); // Update 'NOTES'
-            update_field('college_link', $row['WEBSITE'], $post_id); // Update 'WEBSITE'
+// Update other ACF fields
+update_field('type_1', $row['TYPE'], $post_id); // Update 'TYPE'
+$religious_value = strtolower($row['RELIGIOUS']) === 'yes' ? true : false;
+update_field('religious', $religious_value, $post_id); // Update 'RELIGIOUS'
 
-            WP_CLI::success("Imported {$row['NAME']} successfully.");
+// Map CSV values to ACF select field options for 'presence'
+$presence_mapping = [
+    'Poor' => 'Poor',
+    'Moderate' => 'Moderate',
+    'Excellent' => 'Excellent'
+];
+
+$presence_value = $row['FREEDOM FROM TRANS IDEOLOGY'];
+$presence_acf_value = isset($presence_mapping[$presence_value]) ? $presence_mapping[$presence_value] : 'N/A';
+update_field('presence', $presence_acf_value, $post_id); // Update 'IDEOLOGY PRESENCE'
+
+update_field('notes', $row['NOTES'], $post_id); // Update 'NOTES'
+update_field('college_link', $row['WEBSITE'], $post_id); // Update 'WEBSITE'
+
+WP_CLI::success("Imported {$row['NAME']} successfully.");
         }
 
         fclose($handle);

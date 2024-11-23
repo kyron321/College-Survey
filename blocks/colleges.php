@@ -26,7 +26,7 @@ $hide_sort_by = get_field('hide_sort_by');
             <p class="type-one">Type</p>
             <p class="religious">Religious</p>
             <p class="state">State</p>
-            <p class="presence">Presence</p>
+            <p class="presence">Freedom</p>
             <p class="more-info"></p>
         </div>
 

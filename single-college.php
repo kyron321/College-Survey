@@ -43,7 +43,9 @@ get_header(); ?>
                 <?php endif; ?>
 
                 <?php if ($presence): ?>
-                    <p>Presence: <?php echo esc_html($presence); ?></p>
+                <p>Freedom: <?php echo esc_html($presence); ?></p>
+                <?php else: ?>
+                    <p>Freedom: N/A</p>
                 <?php endif; ?>
 
                 <?php if ($notes): ?>

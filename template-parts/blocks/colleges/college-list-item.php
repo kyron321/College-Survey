@@ -30,12 +30,15 @@
         ?>
     </div>
     <div class="column presence">
-        <?php if ($presence): ?>
-            <p><?php echo esc_html($presence); ?></p>
-        <?php else: ?>
-            <p>N/A</p>
-        <?php endif; ?>
-    </div>
+    <?php 
+    $presence = get_field('presence', get_the_ID());
+    if ($presence) {
+        echo '<p>' . esc_html($presence) . '</p>';
+    } else {
+        echo '<p>N/A</p>';
+    }
+    ?>
+</div>
     <div class="column more-info">
     <div onclick="toggleDropdown(<?php the_ID(); ?>)" style="cursor: pointer;">
         <i id="chevron-<?php the_ID(); ?>" class="fa fa-chevron-down"></i> <!-- Chevron starts as down -->
@@ -48,3 +51,6 @@
 
 </article>
 
+<script>
+   
+</script>
