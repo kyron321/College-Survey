@@ -57,26 +57,6 @@
         </div>
     </div>
 
-    <!-- Accredited Filter -->
-    <!-- <div class="filter-group">
-        <input type="checkbox" id="toggle-accredited" class="accordion-toggle">
-        <label for="toggle-accredited" class="accordion-label">Accredited</label>
-        <div class="accordion-content">
-            <div class="checkbox">
-                <label for="accredited_yes">
-                    <input type="checkbox" name="accredited[]" class="filter-input" id="accredited_yes" value="1">
-                    Yes
-                </label>
-            </div>
-            <div class="checkbox">
-                <label for="accredited_no">
-                    <input type="checkbox" name="accredited[]" class="filter-input" id="accredited_no" value="0">
-                    No
-                </label>
-            </div>
-        </div>
-    </div> -->
-
     <!-- Presence Filter -->
     <div class="filter-group">
         <input type="checkbox" id="toggle-presence" class="accordion-toggle">

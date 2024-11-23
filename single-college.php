@@ -22,7 +22,6 @@ get_header(); ?>
                 $college_link = get_field('college_link');
                 $type_1 = get_field('type_1');
                 $religious = get_field('religious');
-                $accredited = get_field('accredited');
                 $presence = get_field('presence');
                 $notes = get_field('notes');
                 ?>
@@ -43,10 +42,6 @@ get_header(); ?>
                     <p>Religious: <?php echo ($religious ? 'Yes' : 'No'); ?></p>
                 <?php endif; ?>
 
-                <?php if ($accredited): ?>
-                    <p>Accredited: <?php echo ($accredited ? 'Yes' : 'No'); ?></p>
-                <?php endif; ?>
-
                 <?php if ($presence): ?>
                     <p>Presence: <?php echo esc_html($presence); ?></p>
                 <?php endif; ?>
@@ -57,12 +52,12 @@ get_header(); ?>
             </div>
         </article>
     <?php
-        // Display comments section
         if (comments_open() || get_comments_number()) {
             comments_template();
         }
     endwhile;
     ?>
+    
 </main>
 
 <?php

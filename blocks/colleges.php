@@ -1,5 +1,5 @@
 <?php
-// Get the ACF fields
+
 $hide_filters = get_field('hide_filters');
 $hide_search = get_field('hide_search');
 $hide_sort_by = get_field('hide_sort_by');
@@ -25,7 +25,6 @@ $hide_sort_by = get_field('hide_sort_by');
             <p class="college-name">College</p>
             <p class="type-one">Type</p>
             <p class="religious">Religious</p>
-            <!-- <p class="accredited">Accredited</p> -->
             <p class="state">State</p>
             <p class="presence">Presence</p>
         </div>

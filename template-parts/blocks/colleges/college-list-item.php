@@ -11,8 +11,6 @@
         <?php endif; ?>
     </div>
 
-
-
     <div class="column religious">
         <?php if ($religious !== null): ?>
             <p><?php echo $religious ? 'Yes' : 'No'; ?></p>
@@ -20,14 +18,6 @@
             <p>N/A</p>
         <?php endif; ?>
     </div>
-
-    <!-- <div class="column accredited">
-        <?php if ($accredited !== null): ?>
-            <p><?php echo $accredited ? 'Yes' : 'No'; ?></p>
-        <?php else: ?>
-            <p>N/A</p>
-        <?php endif; ?>
-    </div> -->
 
     <div class="column state">
         <?php
