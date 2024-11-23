@@ -1,4 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('college-row'); ?>>
+    <div class="container-one">
     <div class="college-name column">
         <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
     </div>
@@ -29,28 +30,24 @@
         }
         ?>
     </div>
+
     <div class="column presence">
-    <?php
-    $presence = get_field('presence', get_the_ID());
-    if ($presence) {
-        echo '<p>' . esc_html($presence) . '</p>';
-    } else {
-        echo '<p>N/A</p>';
-    }
-    ?>
+        <?php if ($presence): ?>
+            <p><?php echo esc_html($presence); ?></p>
+        <?php else: ?>
+            <p>N/A</p>
+        <?php endif; ?>
 </div>
-    <div class="column more-info">
-    <div onclick="toggleDropdown(<?php the_ID(); ?>)" style="cursor: pointer;">
-        <i id="chevron-<?php the_ID(); ?>" class="fa fa-chevron-down"></i> <!-- Chevron starts as down -->
+<div class="column more-info">
+        <div onclick="toggleDropdown(<?php the_ID(); ?>)" style="cursor: pointer;">
+            <i id="chevron-<?php the_ID(); ?>" class="fa fa-chevron-down"></i> <!-- Chevron starts as down -->
+        </div>
     </div>
+</div>
+<div class="dropdown-container">
     <div id="dropdown-<?php the_ID(); ?>" class="dropdown-content" style="display: none;">
-        <p>Additional information about the college goes here.</p>
-        <!-- Add more details as needed -->
+    <p>Additional information about the college goes here.</p>
     </div>
 </div>
 
 </article>
-
-<script>
-   
-</script>

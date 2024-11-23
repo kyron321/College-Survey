@@ -5,6 +5,15 @@ article {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 16px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-one {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .college-row {
@@ -26,4 +35,9 @@ article {
 
 .entry-title a:hover {
     text-decoration: underline;
+}
+
+.column.more-info {
+    flex-grow: 1;
+    text-align: right;
 }
