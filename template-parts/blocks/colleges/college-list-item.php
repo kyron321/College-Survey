@@ -1,7 +1,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('college-row'); ?>>
     <div class="container-one">
     <div class="college-name column">
-        <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                         <h4 class="entry-title">
+                <a href="<?php echo esc_url(
+                    $college_link ? $college_link : get_permalink()
+                ); ?>" target="_blank">
+                    <?php the_title(); ?>
+                </a>
+            </h4>
     </div>
 
     <div class="column type-one">
