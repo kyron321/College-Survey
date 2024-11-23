@@ -1,0 +1,32 @@
+
+article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .college-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  .column {
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .entry-title a {
+    color: inherit;
+  }
+
+  .entry-title a:hover {
+    text-decoration: underline;
+  }
+
+

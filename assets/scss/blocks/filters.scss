@@ -1,0 +1,159 @@
+.filters {
+    width: 10rem;
+  }
+
+  .search-form {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .search-form input[type="text"] {
+    width: 90%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .search-form input[type="text"]:focus {
+    border-color: #333333;
+  }
+
+  #search-results div {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  #search-results div:last-child {
+    border-bottom: none;
+  }
+
+  #search-results div:hover {
+    background-color: #f8f9fa;
+  }
+
+  .accordion-content {
+    display: none;
+    padding-left: 20px;
+  }
+
+  .accordion-toggle {
+    display: none;
+  }
+
+  .accordion-label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    padding-right: 20px;
+    width: 10rem;
+  }
+
+  .accordion-label::after {
+    content: "\25BC";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-toggle:checked + .accordion-label::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .accordion-toggle:checked + .accordion-label + .accordion-content {
+    display: block;
+  }
+
+  .filter-group {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 5px 0;
+    margin-bottom: 5px;
+  }
+
+  .accordion-label {
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: #2c3e50;
+    width: 100%;
+  }
+
+  .accordion-label::after {
+    font-size: 14px;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+  }
+
+  .checkbox {
+    margin-bottom: 8px;
+  }
+
+  .checkbox label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    appearance: none; /* Remove default checkbox styling */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+}
+
+.checkbox input[type="checkbox"]::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.checkbox input[type="checkbox"]:checked::before {
+    background-color: #af2244; /* Change to your desired color */
+}
+
+/* Add the tick mark */
+.checkbox input[type="checkbox"]:checked::after {
+    content: '✔'; /* Unicode character for the tick */
+    color: white; /* Tick color */
+    font-size: 12px; /* Adjust size */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 50%;
+  }
+  
+  select:hover {
+    border-color: #888;
+  }

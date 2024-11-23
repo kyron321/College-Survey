@@ -31,12 +31,6 @@ jQuery(document).ready(function($) {
         filterColleges();
     });
 
-    // Uncheck the other checkbox when one is selected for "accredited"
-    // $('#accredited_yes').on('change', function() {
-    //     if ($(this).is(':checked')) {
-    //         $('#accredited_no').prop('checked', false);
-    //     }
-    // });
 
     $('#accredited_no').on('change', function() {
         if ($(this).is(':checked')) {
