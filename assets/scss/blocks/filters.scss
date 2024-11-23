@@ -170,3 +170,42 @@ select {
 select:hover {
     border-color: #888;
 }
+
+.tooltip-text {
+    visibility: hidden;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+.tooltip-icon {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #888;
+    font-size: 14px;
+    position: relative;
+}
+
+.presence {
+    position: relative; 
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.presence:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
