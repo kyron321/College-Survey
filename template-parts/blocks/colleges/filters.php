@@ -2,7 +2,9 @@
     <!-- State Filter -->
     <div class="filter-group">
         <input type="checkbox" id="toggle-state" class="accordion-toggle">
-        <label for="toggle-state" class="accordion-label">State</label>
+        <label for="toggle-state" class="accordion-label">
+            State <i class="fa fa-chevron-down"></i>
+        </label>
         <div class="accordion-content">
             <?php $states = get_terms([
                 'taxonomy' => 'state',
@@ -30,7 +32,9 @@
     <!-- Type 1 Filter -->
     <div class="filter-group">
         <input type="checkbox" id="toggle-type_1" class="accordion-toggle">
-        <label for="toggle-type_1" class="accordion-label">Type</label>
+        <label for="toggle-type_1" class="accordion-label">
+            Type <i class="fa fa-chevron-down"></i>
+        </label>
         <div class="accordion-content">
             <?php $type_1_choices = [
                 'public' => 'Public',
@@ -52,7 +56,9 @@
     <!-- Religious Filter -->
     <div class="filter-group">
         <input type="checkbox" id="toggle-religious" class="accordion-toggle">
-        <label for="toggle-religious" class="accordion-label">Religious</label>
+        <label for="toggle-religious" class="accordion-label">
+            Religious <i class="fa fa-chevron-down"></i>
+        </label>
         <div class="accordion-content">
             <div class="checkbox">
                 <label for="religious_yes">
@@ -72,7 +78,9 @@
     <!-- Presence Filter -->
     <div class="filter-group">
         <input type="checkbox" id="toggle-presence" class="accordion-toggle">
-        <label for="toggle-presence" class="accordion-label">Presence</label>
+        <label for="toggle-presence" class="accordion-label">
+            Presence <i class="fa fa-chevron-down"></i>
+        </label>
         <div class="accordion-content">
             <?php $presence_choices = [
                 'none' => 'None',

@@ -1,3 +1,11 @@
+.accordion-content {
+    display: none;
+}
+
+.accordion-toggle:checked + .accordion-label + .accordion-content {
+    display: block;
+}
+
 .filters {
     width: 10rem;
 }
@@ -54,13 +62,18 @@
     width: 10rem;
 }
 
-.accordion-label::after {
-    content: '\25BC';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+
+.accordion-label i {
     transition: transform 0.3s ease;
+    font-size: 0.75rem;
+}
+
+.accordion-toggle:checked + .accordion-label i {
+    transform: rotate(180deg);
+}
+
+.accordion-toggle:checked + .accordion-label + .accordion-content {
+    display: block;
 }
 
 .accordion-toggle:checked + .accordion-label::after {
