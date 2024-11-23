@@ -27,6 +27,7 @@ $hide_sort_by = get_field('hide_sort_by');
             <p class="religious">Religious</p>
             <p class="state">State</p>
             <p class="presence">Presence</p>
+            <p class="more-info"></p>
         </div>
 
         <?php get_template_part('template-parts/blocks/colleges/colleges-list'); ?>
