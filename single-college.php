@@ -77,7 +77,11 @@ get_header(); ?>
                 }
                 ?>
                 <div id="comments-form" class="comment-form">
-            <?php comment_form(); ?>
+                <p>We’d love to hear about your experiences with <?php echo get_the_title(); ?> - <?php echo esc_html(
+     get_term(get_field('state'))->name
+ ); ?>. Please use this form to share any feedback, insights, or interactions you’ve had with this college.</p>
+
+                <?php comment_form(); ?>
         </div>
             </div>
             <?php

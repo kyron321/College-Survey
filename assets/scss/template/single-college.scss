@@ -69,49 +69,28 @@ article .wp-post-image {
     color: #a94442;
 }
 
-/* Comments section styling */
-.comments-area {
-    margin-top: 30px;
-    padding: 20px;
-    border-top: 2px solid #ddd;
+#comments-form p {
+    font-size: 14px; /* Slightly smaller font size for a subtle appearance */
+    color: #666; /* Neutral gray text color */
+    margin-bottom: 15px; /* Add space below the paragraph */
+    line-height: 1.6; /* Improve readability with increased line height */
+    text-align: left; /* Ensure the text aligns consistently with the form */
+    background-color: #f9f9f9; /* Light background to match the form */
+    padding: 10px; /* Add some padding for spacing */
+    border-left: 4px solid #ddd; /* Optional: Add a left border for emphasis */
+    border-radius: 5px; /* Rounded corners for a softer look */
 }
 
-.comments-area h3 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* Comment list */
-.comment-list {
-    margin: 0;
+#comments-form p.comment-form-author,
+#comments-form p.comment-form-email,
+#comments-form p.comment-form-url,
+#comments-form p.comment-form-cookies-consent,
+#comments-form .form-submit,
+#commentform > p.comment-form-role {
+    border-left: none;
     padding: 0;
-    list-style: none;
+   
 }
 
-.comment {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-#comments {
-    display: none;
-}
 
-/* Submit button styling */
-#submit {
-    background-color: #af2244;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#submit:hover {
-    background-color: #8c1b36;
-}
 }

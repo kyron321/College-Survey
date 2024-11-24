@@ -33,7 +33,6 @@ function add_custom_role_field_to_comment_form($comment_field)
 {
     $custom_field = '
     <p class="comment-form-role">
-        <label for="user_role">Your Role:</label>
         <select name="user_role" id="user_role" required>
             <option value="">Select your role</option>
             <option value="student">Student</option>
