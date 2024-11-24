@@ -35,7 +35,7 @@ $hide_sort_by = get_field('hide_sort_by');
             <p class="presence">
                 Freedom
                 <i class="fa fa-info-circle tooltip-icon" aria-hidden="true"></i>
-                <span class="tooltip-text">A rating for each college, ranging from Excellent to Moderate and Poor, based on how free students are from gender ideology.</span>
+                <span class="tooltip-text">A rating for each college, ranging from Excellent to Moderate to Poor, based on how free it is from gender ideology.</span>
             </p>
             <p class="more-info"></p>
         </div>

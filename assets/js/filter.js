@@ -37,18 +37,18 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    // Uncheck the other checkbox when one is selected for "religious"
-    $('#religious_yes').on('change', function () {
-        if ($(this).is(':checked')) {
-            $('#religious_no').prop('checked', false);
-        }
-    });
-
-    $('#religious_no').on('change', function () {
-        if ($(this).is(':checked')) {
-            $('#religious_yes').prop('checked', false);
-        }
-    });
+        // Uncheck the other checkbox when one is selected for "religious"
+        $('#religious_yes').on('change', function () {
+            if ($(this).is(':checked')) {
+                $('#religious_no').prop('checked', false);
+            }
+        });
+    
+        $('#religious_no').on('change', function () {
+            if ($(this).is(':checked')) {
+                $('#religious_yes').prop('checked', false);
+            }
+        });
 
     // Uncheck the other checkbox when one is selected for "type_1" (public/private)
     $('#type_1_public').on('change', function () {

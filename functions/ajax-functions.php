@@ -68,6 +68,7 @@ function ajax_filter_colleges()
             'key' => 'religious',
             'value' => $religious_filter,
             'compare' => '=',
+            'type' => 'NUMERIC',
         ];
     }
 

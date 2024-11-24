@@ -54,7 +54,7 @@
     </div>
 
     <!-- Religious Filter -->
-    <div class="filter-group">
+    <!-- <div class="filter-group">
         <input type="checkbox" id="toggle-religious" class="accordion-toggle">
         <label for="toggle-religious" class="accordion-label">
             Religious <i class="fa fa-chevron-down"></i>
@@ -62,13 +62,32 @@
         <div class="accordion-content">
             <div class="checkbox">
                 <label for="religious_yes">
-                    <input type="checkbox" name="religious" class="filter-input" id="religious_yes" value="yes">
+                    <input type="checkbox" name="religious[]" class="filter-input" id="religious_yes" value="1">
                     Yes
                 </label>
             </div>
             <div class="checkbox">
                 <label for="religious_no">
-                    <input type="checkbox" name="religious" class="filter-input" id="religious_no" value="no">
+                    <input type="checkbox" name="religious[]" class="filter-input" id="religious_no" value="0">
+                    No
+                </label>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="filter-group">
+        <input type="checkbox" id="toggle-religious" class="accordion-toggle">
+        <label for="toggle-religious" class="accordion-label">Religious <i class="fa fa-chevron-down"></i></label>
+        <div class="accordion-content">
+            <div class="checkbox">
+                <label for="religious_yes">
+                    <input type="checkbox" name="religious" class="filter-input" id="religious_yes" value="1">
+                    Yes
+                </label>
+            </div>
+            <div class="checkbox">
+                <label for="religious_no">
+                    <input type="checkbox" name="religious" class="filter-input" id="religious_no" value="0">
                     No
                 </label>
             </div>
@@ -83,9 +102,9 @@
         </label>
         <div class="accordion-content">
             <?php $presence_choices = [
-                'none' => 'None',
+                'poor' => 'Poor',
                 'moderate' => 'Moderate',
-                'strong' => 'Strong',
+                'excellent' => 'Excellent',
             ]; ?>
             <?php foreach ($presence_choices as $value => $label): ?>
                 <div class="checkbox">
