@@ -53,10 +53,36 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </article>
-    <?php if (comments_open() || get_comments_number()) {
-        comments_template();
-    }
+        <div class="comments-container">
+                <p>What people are saying:</p>
+                <?php
+                $comments = get_comments([
+                    'post_id' => get_the_ID(),
+                    'status' => 'approve',
+                ]);
+
+                if ($comments) {
+                    echo '<div class="comment-list">';
+                    wp_list_comments(
+                        [
+                            'style' => 'div',
+                            'short_ping' => true,
+                            'avatar_size' => 50,
+                        ],
+                        $comments
+                    );
+                    echo '</div>';
+                } else {
+                    echo '<p>No comments yet.</p>';
+                }
+                ?>
+                <div class="comment-form">
+            <?php comment_form(); ?>
+        </div>
+            </div>
+            <?php
     endwhile; ?>
+
     
 </main>
 
