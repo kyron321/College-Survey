@@ -1,5 +1,4 @@
 
-/* Style the form container */
 section .wpcf7 {
     max-width: 800px;
     margin: 0 auto;
@@ -10,7 +9,6 @@ section .wpcf7 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style individual form fields */
 section .wpcf7 input[type="text"],
 section .wpcf7 input[type="email"],
 section .wpcf7 textarea {
@@ -24,7 +22,6 @@ section .wpcf7 textarea {
     box-sizing: border-box;
 }
 
-/* Focus effect for form fields */
 section .wpcf7 input[type="text"]:focus,
 section .wpcf7 input[type="email"]:focus,
 section .wpcf7 textarea:focus {
@@ -32,7 +29,6 @@ section .wpcf7 textarea:focus {
     border-color: #af2244;
 }
 
-/* Style the labels */
 section .wpcf7 label {
     font-size: 1em;
     font-weight: bold;
@@ -41,7 +37,6 @@ section .wpcf7 label {
     color: #333;
 }
 
-/* Style the submit button */
 section .wpcf7 input[type="submit"] {
     background-color: #af2244;
     color: #fff;
@@ -53,27 +48,23 @@ section .wpcf7 input[type="submit"] {
     transition: background-color 0.3s;
 }
 
-/* Submit button hover effect */
 section .wpcf7 input[type="submit"]:hover {
     background-color: #8c1b36;
 }
 
-/* Style the spinner */
 section .wpcf7 .wpcf7-spinner {
     display: inline-block;
     margin-left: 10px;
     vertical-align: middle;
 }
 
-/* Style the response output */
 section .wpcf7 .wpcf7-response-output {
     margin-top: 15px;
     padding: 10px;
     border-radius: 5px;
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
-/* Success response styling */
 section .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok {
     display: block;
     background-color: #dff0d8;
@@ -81,7 +72,6 @@ section .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok {
     border: 1px solid #d6e9c6;
 }
 
-/* Error response styling */
 section .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ng {
     display: block;
     background-color: #f2dede;
@@ -89,7 +79,6 @@ section .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ng {
     border: 1px solid #ebccd1;
 }
 
-/* Accessibility: style screen reader response */
 section .wpcf7 .screen-reader-response {
     position: absolute;
     left: -9999px;
@@ -104,7 +93,6 @@ section h2 {
     margin-bottom: 10px;
 }
 
-/* Section blurb */
 section > p {
     font-size: 1em;
     color: #555;
@@ -114,7 +102,6 @@ section > p {
     margin: 0 auto 20px;
 }
 
-/* Reset alignment for the form */
 section .wpcf7 {
     text-align: left;
 }

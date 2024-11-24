@@ -7,9 +7,9 @@
 }
 
 .comment-form textarea {
-    width: 100%; /* Take up the full width of the container */
-    max-width: 100%; /* Prevent it from exceeding the container's width */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
+    width: 100%; 
+    max-width: 100%; 
+    box-sizing: border-box; 
     border-radius: 5px;
 }
 
@@ -17,7 +17,6 @@
     display: none;
 }		
 
-/* Style the entire comment block */
 .comment {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -26,7 +25,6 @@
     background-color: #f9f9f9;
 }
 
-/* Style the author section */
 .comment-author.vcard {
     font-weight: bold;
     font-size: 1.2em;
@@ -35,7 +33,7 @@
 }
 
 .comment-author .fn {
-    color: #0073aa; /* WordPress default link color */
+    color: #0073aa; 
 }
 
 .comment-author .says {
@@ -43,7 +41,7 @@
     color: #666;
 }
 
-/* Style the meta information */
+
 .comment-meta {
     font-size: 0.9em;
     color: #999;
@@ -59,26 +57,24 @@
     text-decoration: underline;
 }
 
-/* Style the comment text */
+
 .comment p {
     line-height: 1.6;
     color: #333;
     margin: 0;
 }
 
-/* Highlight staff signature */
+
 .comment p strong {
-    color: #af2244; /* Bootstrap red color for emphasis */
+    color: #af2244; 
     font-weight: bold;
 }
 
-/* Add spacing between comments */
+
 .comment + .comment {
     margin-top: 30px;
 }
 
-
-/* Submit button styling */
 #submit {
     background-color: #af2244;
     color: #fff;
@@ -97,51 +93,46 @@
     display: none;
 }
 
-/* Apply Montserrat to the entire comment form */
+
 #commentform {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Apply Montserrat to the textarea (comment box) */
 #commentform textarea {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px; /* Adjust the font size */
-    color: #333; /* Change the color if needed */
+    font-size: 16px; 
+    color: #333; 
 }
 
-/* Apply Montserrat to input fields (e.g., name, email, website) */
+
 #commentform input[type="text"],
 #commentform input[type="email"],
 #commentform input[type="url"] {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px; /* Adjust the font size */
-    color: #444; /* Change the color if needed */
+    font-size: 14px; 
+    color: #444; 
 }
 
-//select
 #commentform select {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px; /* Adjust the font size */
-    color: #444; /* Change the color if needed */
+    font-size: 14px; 
+    color: #444; 
 }
 
-
-/* Change focus outline for the comment textarea */
 #commentform textarea:focus {
-    outline: 0.5px solid #af2244; /* Sets the desired outline color and thickness */
-    border-color: #af2244; /* Optionally change the border color as well */
+    outline: 0.5px solid #af2244; 
+    border-color: #af2244; 
 }
 
-/* Change focus outline for input fields */
 #commentform input[type="text"]:focus,
 #commentform input[type="email"]:focus,
 #commentform input[type="url"]:focus {
-    outline: 2px solid #af2244; /* Sets the desired outline color and thickness */
-    border-color: #af2244; /* Optionally change the border color as well */
+    outline: 2px solid #af2244; 
+    border-color: #af2244; 
 }
 
-//select focus
+
 #commentform select:focus {
-    outline: 0.5px solid #af2244; /* Sets the desired outline color and thickness */
-    border-color: #af2244; /* Optionally change the border color as well */
+    outline: 0.5px solid #af2244; 
+    border-color: #af2244; 
 }

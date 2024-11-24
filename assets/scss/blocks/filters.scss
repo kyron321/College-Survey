@@ -226,19 +226,19 @@ select:hover {
 }
 
 .feedback-button {
-    background-color: #f5f5f5; /* Light gray background */
-    color: #af2244; /* Same primary color as the other button for consistency */
-    padding: 8px 16px; /* Slightly smaller padding for subtlety */
-    font-size: 14px; /* Same font size for cohesion */
-    font-weight: normal; /* Normal weight to distinguish from bold buttons */
-    border-radius: 5px; /* Matches the other button */
-    text-decoration: none; /* No underline */
+    background-color: #f5f5f5; 
+    color: #af2244; 
+    padding: 8px 16px; 
+    font-size: 14px; 
+    font-weight: normal;
+    border-radius: 5px; 
+    text-decoration: none; 
     display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .feedback-button:hover {
-    background-color: #e0e0e0; /* Slightly darker gray on hover */
-    color: #8c1b36; /* Match hover color of the other button */
+    background-color: #e0e0e0; 
+    color: #8c1b36; 
 }
 

@@ -1,6 +1,6 @@
 .single-college  {
 .site-main {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 10px auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -9,7 +9,6 @@
     
 }
 
-/* Post thumbnail styling */
 article .wp-post-image {
     width: 100%;
     height: auto;
@@ -17,7 +16,6 @@ article .wp-post-image {
     margin-bottom: 20px;
 }
 
-/* Post title styling */
 .entry-title {
     font-size: 2em;
     font-weight: bold;
@@ -26,14 +24,12 @@ article .wp-post-image {
     text-align: center;
 }
 
-/* Content container styling */
 .entry-content {
     font-size: 1em;
     line-height: 1.6;
     color: #555;
 }
 
-/* Individual field styling */
 .entry-content p {
     margin: 10px 0;
     padding: 10px;
@@ -42,13 +38,11 @@ article .wp-post-image {
     border-radius: 5px;
 }
 
-/* Field labels */
 .entry-content p:first-child::before {
     font-weight: bold;
     color: #0073aa;
 }
 
-/* Links */
 .entry-content a {
     color: #0073aa;
     text-decoration: none;
@@ -58,7 +52,6 @@ article .wp-post-image {
     text-decoration: underline;
 }
 
-/* Freedom field highlight */
 .entry-content p:contains("Freedom: Yes") {
     background-color: #dff0d8;
     color: #3c763d;
@@ -70,15 +63,15 @@ article .wp-post-image {
 }
 
 #comments-form p {
-    font-size: 14px; /* Slightly smaller font size for a subtle appearance */
-    color: #666; /* Neutral gray text color */
-    margin-bottom: 15px; /* Add space below the paragraph */
-    line-height: 1.6; /* Improve readability with increased line height */
-    text-align: left; /* Ensure the text aligns consistently with the form */
-    background-color: #f9f9f9; /* Light background to match the form */
-    padding: 10px; /* Add some padding for spacing */
-    border-left: 4px solid #ddd; /* Optional: Add a left border for emphasis */
-    border-radius: 5px; /* Rounded corners for a softer look */
+    font-size: 14px; 
+    color: #666; 
+    margin-bottom: 15px; 
+    line-height: 1.6; 
+    text-align: left; 
+    background-color: #f9f9f9; 
+    padding: 10px; 
+    border-left: 4px solid #ddd; 
+    border-radius: 5px; 
 }
 
 #comments-form p.comment-form-author,
