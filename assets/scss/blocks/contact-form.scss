@@ -6,7 +6,7 @@ section .wpcf7 {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
 }
 
 section .wpcf7 input[type="text"],
@@ -20,11 +20,32 @@ section .wpcf7 textarea {
     font-size: 1em;
     color: #333;
     box-sizing: border-box;
+    font-family:  'Montserrat', sans-serif;
+}
+
+//select font-family
+
+section .wpcf7 select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
+    font-family:  'Montserrat', sans-serif;
 }
 
 section .wpcf7 input[type="text"]:focus,
 section .wpcf7 input[type="email"]:focus,
 section .wpcf7 textarea:focus {
+    outline: none;
+    border-color: #af2244;
+}
+
+//select focus
+section .wpcf7 select:focus {
     outline: none;
     border-color: #af2244;
 }
@@ -104,4 +125,20 @@ section > p {
 
 section .wpcf7 {
     text-align: left;
+}
+
+section .wpcf7 input[type=submit] {
+    padding: 10px;
+    border: none;
+    background-color: #af2244;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section .wpcf7 input[type=submit]:hover {
+    background-color: #8c1b36;
 }
