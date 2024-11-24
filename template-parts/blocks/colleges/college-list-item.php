@@ -52,6 +52,12 @@
 </div>
 <div class="dropdown-container">
     <div id="dropdown-<?php the_ID(); ?>" class="dropdown-content" style="display: none;">
+    <div class="freedom">
+    <p>Freedom from gender ideology:</p>
+    <p class="<?php echo strtolower($presence); ?>">
+        <?php echo esc_html($presence); ?>
+    </p>
+</div>
         <div class ="notes" >
         <p>Notes:</p>
         <p><?= $notes ?></p>
