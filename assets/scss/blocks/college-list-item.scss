@@ -47,6 +47,7 @@ article {
 }
 
 .notes {
+    box-sizing: border-box;
     position: relative; 
     margin-bottom: 10px; 
     text-align: left;
@@ -145,21 +146,54 @@ article {
     margin-right: 10px;
 }
 
+.navigate-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.feedback-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
+    width: 50%;
+}
+
+.feedback-text a {
+    color: #0073aa; /* Matches link styles in other sections */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.feedback-text a:hover {
+    text-decoration: underline;
+}
+
 .navigate-button {
-    text-align: right; 
-    margin:10px 10px; 
+    text-align: right;
 }
 
 .navigate-button .button {
-    background-color: #af2244; 
-    color: white; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    border-radius: 5px; 
+    background-color: #af2244;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
     text-decoration: none;
-    display: inline-block; 
-    transition: background-color 0.3s ease; 
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
+
+.navigate-button .button:hover {
+    background-color: #8c1b36;
+}
+
 
 .navigate-button .button:hover {
     background-color: #8c1b36; 

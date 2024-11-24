@@ -58,10 +58,25 @@
         <?php echo esc_html($presence); ?>
     </p>
 </div>
-        <div class ="notes" >
-        <p>Notes:</p>
-        <p><?= $notes ?></p>
-        </div>
+<div class="notes">
+    <p>Notes:</p>
+    <ul>
+        <?php
+        // Process the notes
+        $notesArray = explode(';', $notes); // Split notes into sentences based on semicolons
+        foreach ($notesArray as $note) {
+            $note = trim($note); // Remove extra whitespace
+            if (!empty($note)) {
+                // Only display non-empty notes
+                // Capitalize the first letter and ensure it ends with a period
+                $formattedNote = ucfirst(rtrim($note, '.')) . '.';
+                echo '<li>' . htmlspecialchars($formattedNote) . '</li>';
+            }
+        }
+        ?>
+    </ul>
+</div>
+
         <div class="comments-container">
                 <p>What people are saying:</p>
                 <?php
@@ -86,9 +101,21 @@
                 }
                 ?>
             </div>
+            <div class="navigate-container">
+    <p class="feedback-text">
+    If you have noticed any misrepresentations or missing information for this college, or if you have links or resources you'd like us to review, please share the details
+    <a href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(
+        get_the_title()
+    ); ?>&state=<?php echo urlencode(
+    get_term($state)->name
+); ?>" target="_blank">here</a>
+    .
+    </p>
     <div class="navigate-button">
             <a href="<?php the_permalink(); ?>" class="button">Leave Feedback</a>
-        </div>
+</div>
+
+
     </div>
 </div>
 
