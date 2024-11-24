@@ -52,7 +52,7 @@
 </div>
 <div class="dropdown-container">
     <div id="dropdown-<?php the_ID(); ?>" class="dropdown-content" style="display: none;">
-    <p>Additional information about the college goes here.</p>
+        <p><?= $notes ?></p>
     </div>
 </div>
 

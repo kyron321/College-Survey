@@ -118,4 +118,5 @@
             <?php endforeach; ?>
         </div>
     </div>
+    <button  id="clear-filters" type="submit" class="button">Clear all filters</button>
 </form>
