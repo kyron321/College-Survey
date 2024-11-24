@@ -46,13 +46,43 @@
 </div>
 <div class="column more-info">
         <div onclick="toggleDropdown(<?php the_ID(); ?>)" style="cursor: pointer;">
-            <i id="chevron-<?php the_ID(); ?>" class="fa fa-chevron-down"></i> <!-- Chevron starts as down -->
+            <i id="chevron-<?php the_ID(); ?>" class="fa fa-chevron-down"></i> 
         </div>
     </div>
 </div>
 <div class="dropdown-container">
     <div id="dropdown-<?php the_ID(); ?>" class="dropdown-content" style="display: none;">
+        <div class ="notes" >
+        <p>Notes:</p>
         <p><?= $notes ?></p>
+        </div>
+        <div class="comments-container">
+                <p>What people are saying:</p>
+                <?php
+                $comments = get_comments([
+                    'post_id' => get_the_ID(),
+                    'status' => 'approve',
+                ]);
+
+                if ($comments) {
+                    echo '<div class="comment-list">';
+                    wp_list_comments(
+                        [
+                            'style' => 'div',
+                            'short_ping' => true,
+                            'avatar_size' => 50,
+                        ],
+                        $comments
+                    );
+                    echo '</div>';
+                } else {
+                    echo '<p>No comments yet.</p>';
+                }
+                ?>
+            </div>
+    <div class="navigate-button">
+            <a href="<?php the_permalink(); ?>" class="button">Leave Feedback</a>
+        </div>
     </div>
 </div>
 

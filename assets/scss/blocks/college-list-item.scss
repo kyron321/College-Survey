@@ -11,7 +11,6 @@ article {
 
 .container-one {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -40,4 +39,132 @@ article {
 .column.more-info {
     flex-grow: 1;
     text-align: right;
+}
+
+.dropdown-container{
+    width: 100%;
+   
+}
+
+.notes {
+    position: relative; 
+    margin-bottom: 10px; 
+    text-align: left;
+    width: 100%;
+    padding: 0 10px;
+    padding-bottom: 10px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 50%; 
+        border-bottom: 1px solid #d3d3d3; 
+        position: absolute;
+        bottom: 0;
+        left: 25%; 
+    }
+}
+
+.notes p:first-child {
+    font-weight: bold;
+}
+
+.comments-container{
+    padding: 0 10px;
+
+}
+
+.comments-container p:first-child {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.navigate-button {
+    text-align: right; 
+    margin:10px 10px; 
+}
+
+.navigate-button .button {
+    background-color: #af2244; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    text-decoration: none;
+    display: inline-block; 
+    transition: background-color 0.3s ease; 
+}
+
+.navigate-button .button:hover {
+    background-color: #8c1b36; 
+}
+
+.comment-author.vcard {
+    display: none;
+}		
+
+/* Style the entire comment block */
+.comment {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+/* Style the author section */
+.comment-author.vcard {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.comment-author .fn {
+    color: #0073aa; /* WordPress default link color */
+}
+
+.comment-author .says {
+    font-style: italic;
+    color: #666;
+}
+
+/* Style the meta information */
+.comment-meta {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.comment-meta a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.comment-meta a:hover {
+    text-decoration: underline;
+}
+
+/* Style the comment text */
+.comment p {
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+/* Highlight staff signature */
+.comment p strong {
+    color: #af2244; /* Bootstrap red color for emphasis */
+    font-weight: bold;
+}
+
+/* Add spacing between comments */
+.comment + .comment {
+    margin-top: 30px;
+}
+
+.comment-meta a {
+    text-decoration: none;
+    color: inherit; /* Matches the surrounding text */
+    pointer-events: none; /* Disables clicking */
 }

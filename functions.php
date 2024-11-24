@@ -63,10 +63,7 @@ function append_role_to_comment_text($comment_text, $comment)
 {
     $role = get_comment_meta($comment->comment_ID, 'user_role', true);
     if ($role) {
-        $comment_text .=
-            '<p class="comment-role"><strong>Role:</strong> ' .
-            esc_html(ucfirst($role)) .
-            '</p>';
+        $comment_text .= ' ~ <strong>' . esc_html(ucfirst($role)) . '</strong>';
     }
     return $comment_text;
 }

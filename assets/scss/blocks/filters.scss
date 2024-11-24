@@ -126,9 +126,9 @@
     border-radius: 3px;
     position: relative;
     cursor: pointer;
-    appearance: none; /* Remove default checkbox styling */
-    -webkit-appearance: none; /* For Safari */
-    -moz-appearance: none; /* For Firefox */
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
 }
 
 .checkbox input[type='checkbox']::before {
@@ -142,14 +142,14 @@
 }
 
 .checkbox input[type='checkbox']:checked::before {
-    background-color: #af2244; /* Change to your desired color */
+    background-color: #af2244; 
 }
 
-/* Add the tick mark */
+
 .checkbox input[type='checkbox']:checked::after {
-    content: '✔'; /* Unicode character for the tick */
-    color: white; /* Tick color */
-    font-size: 12px; /* Adjust size */
+    content: '✔'; 
+    color: white; 
+    font-size: 12px; 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -181,7 +181,7 @@ select:hover {
     padding: 10px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Position above the icon */
+    bottom: 125%; 
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -201,7 +201,6 @@ select:hover {
 
 .presence {
     position: relative; 
-    cursor: pointer;
     padding: 0 10px;
 }
 
@@ -211,14 +210,14 @@ select:hover {
 }
 
 #clear-filters {
-    background-color: #af2244; ; /* Blue background */
-    color: white; /* White text */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Add some padding */
-    font-size: 16px; /* Increase font size */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    background-color: #af2244; ; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 #clear-filters:hover {

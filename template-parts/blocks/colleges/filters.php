@@ -51,29 +51,7 @@
                 </div>
             <?php endforeach; ?>
         </div>
-    </div>
-
-    <!-- Religious Filter -->
-    <!-- <div class="filter-group">
-        <input type="checkbox" id="toggle-religious" class="accordion-toggle">
-        <label for="toggle-religious" class="accordion-label">
-            Religious <i class="fa fa-chevron-down"></i>
-        </label>
-        <div class="accordion-content">
-            <div class="checkbox">
-                <label for="religious_yes">
-                    <input type="checkbox" name="religious[]" class="filter-input" id="religious_yes" value="1">
-                    Yes
-                </label>
-            </div>
-            <div class="checkbox">
-                <label for="religious_no">
-                    <input type="checkbox" name="religious[]" class="filter-input" id="religious_no" value="0">
-                    No
-                </label>
-            </div>
-        </div>
-    </div> -->
+    </div>      
 
     <div class="filter-group">
         <input type="checkbox" id="toggle-religious" class="accordion-toggle">

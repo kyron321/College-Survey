@@ -16,17 +16,16 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    // Trigger filter on input change
     $('#filter-form').on('change', '.filter-input', function () {
         filterColleges();
     });
 
-    // Trigger filter on sort order change
+
     $('.sort-by').on('change', '#sort_order', function () {
         filterColleges();
     });
 
-    // Trigger filter on search input
+
     $('#college-search').on('input', function () {
         filterColleges();
     });
@@ -37,7 +36,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    // Uncheck the other checkbox when one is selected for "religious"
+
     $('#religious_yes').on('change', function () {
         if ($(this).is(':checked')) {
             $('#religious_no').prop('checked', false);
@@ -50,7 +49,6 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    // Uncheck the other checkbox when one is selected for "type_1" (public/private)
     $('#type_1_public').on('change', function () {
         if ($(this).is(':checked')) {
             $('#type_1_private').prop('checked', false);
@@ -63,7 +61,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    // Clear filters and trigger filterColleges
+
     $('#clear-filters').on('click', function (e) {
         e.preventDefault();
         $('#filter-form')[0].reset();
