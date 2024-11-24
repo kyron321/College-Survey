@@ -77,30 +77,39 @@
     </ul>
 </div>
 
-        <div class="comments-container">
-                <p>What people are saying:</p>
-                <?php
-                $comments = get_comments([
-                    'post_id' => get_the_ID(),
-                    'status' => 'approve',
-                ]);
+<div class="comments-container">
+    <p>What people are saying:</p>
+    <?php
+    $comments = get_comments([
+        'post_id' => get_the_ID(),
+        'status' => 'approve',
+        'number' => 2, // Limit to first 2 comments
+    ]);
 
-                if ($comments) {
-                    echo '<div class="comment-list">';
-                    wp_list_comments(
-                        [
-                            'style' => 'div',
-                            'short_ping' => true,
-                            'avatar_size' => 50,
-                        ],
-                        $comments
-                    );
-                    echo '</div>';
-                } else {
-                    echo '<p>No comments yet.</p>';
-                }
-                ?>
-            </div>
+    if ($comments) {
+        echo '<div class="comment-list">';
+        wp_list_comments(
+            [
+                'style' => 'div',
+                'short_ping' => true,
+                'avatar_size' => 50,
+            ],
+            $comments
+        );
+        echo '</div>';
+    } else {
+        echo '<p>No comments yet.</p>';
+    }
+    //show more comments link
+    $comments_count = get_comments_number();
+    if ($comments_count > 2) {
+        echo '<a href="' .
+            get_permalink() .
+            '#comments" class="feedback-button">View all feedback</a>';
+    }
+    ?>
+</div>
+
             <div class="navigate-container">
     <p class="feedback-text">
     If you have noticed any misrepresentations or missing information for this college, or if you have links or resources you'd like us to review, please share the details
