@@ -4,3 +4,7 @@ Author: Kyron Smith
 Description: A theme for the Genspect College Survey Website
 Version: 1.00
 */
+
+html {
+    scroll-behavior: smooth;
+}

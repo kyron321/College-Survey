@@ -103,9 +103,11 @@
     //show more comments link
     $comments_count = get_comments_number();
     if ($comments_count > 2) {
+        $comments_link = get_permalink() . '#all-comments';
+
         echo '<a href="' .
-            get_permalink() .
-            '#comments" class="feedback-button">View all feedback</a>';
+            esc_url($comments_link) .
+            '" class="feedback-button">View all feedback</a>';
     }
     ?>
 </div>
@@ -121,7 +123,9 @@
     .
     </p>
     <div class="navigate-button">
-            <a href="<?php the_permalink(); ?>" class="button">Leave Feedback</a>
+    <a href="<?php echo esc_url(
+        get_permalink() . '#comments-form'
+    ); ?>" class="button">Leave Feedback</a>
 </div>
 
 

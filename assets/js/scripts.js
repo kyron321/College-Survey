@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
     userRoleDropdown.addEventListener("change", function () {
         if (this.value === "Other") {
             otherRoleContainer.style.display = "block";
-            otherRoleInput.required = true; // Make the text field required
+            otherRoleInput.required = true; 
         } else {
             otherRoleContainer.style.display = "none";
-            otherRoleInput.required = false; // Remove the requirement for other text
-            otherRoleInput.value = ""; // Clear the text field
+            otherRoleInput.required = false; 
+            otherRoleInput.value = ""; 
         }
     });
 });

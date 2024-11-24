@@ -53,7 +53,7 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </article>
-        <div class="comments-container">
+        <div  id="all-comments" class="comments-container" >
                 <p>What people are saying:</p>
                 <?php
                 $comments = get_comments([
@@ -76,7 +76,7 @@ get_header(); ?>
                     echo '<p>No comments yet.</p>';
                 }
                 ?>
-                <div class="comment-form">
+                <div id="comments-form" class="comment-form">
             <?php comment_form(); ?>
         </div>
             </div>
