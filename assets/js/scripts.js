@@ -27,10 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 otherRoleInput.value = ""; 
             }
         });
-    } else {
-        console.error("One or more elements not found in the DOM.");
-    }
+    } 
 });
+
 
 jQuery(document).ready(function ($) {
     let isSubmitting = false; 
@@ -68,5 +67,65 @@ jQuery(document).ready(function ($) {
         return false; 
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openFiltersButton = document.querySelector('.open-filters-button');
+    const closeFiltersButton = document.querySelector('.close-filters-button');
+    const filtersModal = document.getElementById('filters-modal');
+
+    // Ensure elements exist before adding event listeners
+    if (openFiltersButton && closeFiltersButton && filtersModal) {
+        // Function to show the modal
+        function showModal() {
+            filtersModal.style.display = 'block'; // Make the modal visible
+            setTimeout(() => {
+                filtersModal.classList.add('show'); // Trigger the slide-in animation
+            }, 10); // Small delay to allow the browser to register the display change
+        }
+
+        // Function to hide the modal
+        function hideModal() {
+            filtersModal.classList.remove('show'); // Trigger the slide-out animation
+            setTimeout(() => {
+                filtersModal.style.display = 'none'; // Hide the modal after animation
+            }, 800); // Match this to your CSS transition duration (0.8s)
+        }
+
+        // Open modal when the button is clicked
+        openFiltersButton.addEventListener('click', showModal);
+
+        // Close modal when the close button is clicked
+        closeFiltersButton.addEventListener('click', hideModal);
+
+        // Optional: Close modal when clicking outside of the modal content
+        window.addEventListener('click', function (event) {
+            if (event.target === filtersModal) {
+                hideModal();
+            }
+        });
+    } 
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const controls = document.querySelector('.controls');
+
+    // Check if the controls element exists before proceeding
+    if (controls) {
+        window.addEventListener('scroll', () => {
+            const controlsTop = controls.getBoundingClientRect().top;
+
+            if (controlsTop <= 0) {
+                controls.classList.add('sticky');
+            } else {
+                controls.classList.remove('sticky');
+            }
+        });
+    }
+});
+
+
+
+
 
 

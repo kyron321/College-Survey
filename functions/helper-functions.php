@@ -49,16 +49,6 @@ function remove_default_post_type($args, $postType)
 }
 add_filter('register_post_type_args', 'remove_default_post_type', 0, 2);
 
-function enqueue_google_fonts()
-{
-    wp_enqueue_style(
-        'google-fonts',
-        'https://fonts.googleapis.com/css2?family=Your+Font+Name:wght@400;700&display=swap',
-        false
-    );
-}
-add_action('wp_enqueue_scripts', 'enqueue_google_fonts');
-
 function register_my_menus()
 {
     register_nav_menus([

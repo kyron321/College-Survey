@@ -76,18 +76,6 @@ function redirect_after_comment_submission($location)
     return add_query_arg('feedback_submitted', '1', $location) . '#commentform';
 }
 add_filter('comment_post_redirect', 'redirect_after_comment_submission');
-
-function enqueue_comment_submission_script()
-{
-    wp_enqueue_script(
-        'comment-feedback-js',
-        get_template_directory_uri() . '/js/comment-feedback.js',
-        ['jquery'],
-        null,
-        true
-    );
-}
-add_action('wp_enqueue_scripts', 'enqueue_comment_submission_script');
 ?>
 
 
