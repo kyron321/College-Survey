@@ -28,6 +28,16 @@ function exclude_menu_item($items, $args)
 }
 add_filter('wp_nav_menu_objects', 'exclude_menu_item', 10, 2);
 
+function custom_enqueue_fonts()
+{
+    wp_enqueue_style(
+        'custom-google-fonts',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap',
+        false
+    );
+}
+add_action('wp_enqueue_scripts', 'custom_enqueue_fonts');
+
 // Add "Role" dropdown to the comment form
 function add_custom_role_field_to_comment_form($comment_field)
 {
