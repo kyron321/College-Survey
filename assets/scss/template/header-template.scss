@@ -2,13 +2,17 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 20px;
 }
 
 nav.top-navigation {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 0;
+    width: 100%;
 }
 
 .logo-nav-wrapper {
@@ -16,6 +20,7 @@ nav.top-navigation {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .nav-list {
@@ -28,7 +33,6 @@ nav.top-navigation {
 
 .nav-item {
     margin-left: 20px;
-    cursor: pointer;
 }
 
 .nav-link {
@@ -79,6 +83,10 @@ nav.top-navigation {
 #main-menu li {
     margin-left: 20px;
     cursor: pointer;
+}
+
+#menu-item-103{
+    margin: 0;
 }
 
 #main-menu li a {
@@ -157,7 +165,7 @@ nav.top-navigation {
 
 #menu-item-103 {
     display: inline-block; 
-    margin: 0 10px; 
+    margin: 0; 
 }
 
 #menu-item-103 a {

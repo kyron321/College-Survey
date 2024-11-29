@@ -10,8 +10,11 @@ article {
 }
 
 .container-one {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 25% 15% 15% 25% 15% 5%;
+    align-items: center ;
+    justify-content: space-between;
+    padding: 0px 5px;
     width: 100%;
 }
 
@@ -165,7 +168,7 @@ article {
 }
 
 .feedback-text a {
-    color: #0073aa; /* Matches link styles in other sections */
+    color: #0073aa; 
     text-decoration: none;
     font-weight: bold;
 }

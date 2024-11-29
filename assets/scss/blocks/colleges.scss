@@ -1,46 +1,55 @@
+body {
+    background-color: #f9f9f9;
+}
+
 .colleges {
-    display: flex;
-    gap: 3rem;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
     max-width: 1200px;
-    margin: 2.5rem auto;
+}
 
-    .column-one {
-        width: 30%;
-        padding: 0;
-        margin: 0;
+.column-one {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+
+.column-two {
+   padding: 20px 0;
+    border-radius: 10px;
+}
+
+.college-info-container {
+    display: grid;
+    grid-template-columns: 25% 15% 15% 25% 15% 5%; /* Column layout for inner content */
+    padding: 20px 5px;
+}
+
+.college-info-container p {
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.college-name {
+    font-weight: bold;
+}
+
+/* Media Query */
+@media (min-width: 1024px) {
+    .colleges {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Two-column layout */
+        gap: 20px; /* Space between columns */
+        align-items: start;
     }
 
-    .column-two {
-        width: 100%;
-        padding: 0;
-        margin: 0;
+    .column-two{
+        padding: 20px;
     }
 
-    .college-info-container {
-        display: flex;
-        margin: 1rem 0;
-        align-items: center;
-    }
-
-    .college-info-container p {
-        margin: 0;
-        font-size: 14px;
-        text-align: left;
-    }
-
-    .college-name {
-        width: 30%;
-        font-weight: bold;
-        padding: 0 10px 0 10px;
-    }
-
-    .type-one,
-    .type-two,
-    .religious,
-    .state,
-    .accredited,
-    .presence .more-info {
-        width: 14%;
-        padding: 0px 10px;
-    }
 }
