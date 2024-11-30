@@ -32,7 +32,7 @@ function custom_enqueue_fonts()
 {
     wp_enqueue_style(
         'custom-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap',
         false
     );
 }
