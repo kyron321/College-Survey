@@ -1,6 +1,12 @@
-body {
-    font-family: 'Montserrat', sans-serif;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 h1,
@@ -24,11 +30,7 @@ h1 {
         font-size: 2.5rem;
         font-weight: 700;
     }
-}
-
-p {
-    font-family: 'Montserrat', sans-serif;
-}
+}   
 
 .acf-field .acf-label {
     display: none;

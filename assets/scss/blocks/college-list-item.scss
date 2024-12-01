@@ -3,18 +3,17 @@ article {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin-bottom: 20px;
+   margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
 
 .container-one {
     display: grid;
-    grid-template-columns: 25% 15% 15% 25% 15% 5%;
-    align-items: center ;
-    justify-content: space-between;
-    padding: 0px 5px;
+    grid-template-columns: 30% 30% 35% 5%; 
+    align-items: center; 
+    justify-content: center;
+    padding: 20px 5px;
     width: 100%;
 }
 
@@ -22,13 +21,12 @@ article {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
 }
 
 .column {
-    padding: 5px 10px;
+    // padding: 5px 10px;
     text-align: left;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .entry-title a {
@@ -40,9 +38,11 @@ article {
 }
 
 .column.more-info {
-    flex-grow: 1;
-    text-align: right;
+    /* Styles for the element with both classes */
+    background-color: #f0f0f0;
+    text-align: left !important;
 }
+
 
 .dropdown-container{
     width: 100%;
@@ -202,3 +202,25 @@ article {
     background-color: #8c1b36; 
 }
 
+
+@media (min-width: 1024px) {
+    .article{
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+    .container-one {
+        grid-template-columns: 25% 10% 15% 25% 20% 5%; 
+        padding: 20px 5px;
+    }
+
+    .column {
+        font-size: 14px;
+         padding: 5px 10px;
+    }
+
+    .more-info{
+        text-align: right;
+    }
+
+   
+}
