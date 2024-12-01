@@ -129,11 +129,12 @@ article {
 
 .container-one {
   display: grid;
-  grid-template-columns: 30% 30% 35% 5%;
+  grid-template-columns: 30% 25% 35% 5%;
   align-items: center;
   justify-content: center;
   padding: 20px 5px;
   width: 100%;
+  gap: 5px;
 }
 
 .college-row {
@@ -153,12 +154,6 @@ article {
 
 .entry-title a:hover {
   text-decoration: underline;
-}
-
-.column.more-info {
-  /* Styles for the element with both classes */
-  background-color: #f0f0f0;
-  text-align: left !important;
 }
 
 .dropdown-container {
@@ -319,7 +314,7 @@ article {
   }
   .container-one {
     grid-template-columns: 25% 10% 15% 25% 20% 5%;
-    padding: 20px 5px;
+    padding: 20px 20px;
   }
   .column {
     font-size: 14px;
@@ -336,7 +331,7 @@ body {
 .colleges {
   margin: 0 auto;
   gap: 20px;
-  padding: 20px;
+  padding: 5px;
   max-width: 1200px;
 }
 
@@ -359,7 +354,7 @@ body {
 
 .college-info-container {
   display: grid;
-  grid-template-columns: 25% 30% 40% 5%;
+  grid-template-columns: 25% 25% 40% 5%;
   padding: 20px 5px;
 }
 
@@ -381,11 +376,13 @@ body {
   .colleges {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    padding: 20px;
     gap: 20px;
     align-items: start;
   }
   .college-info-container {
     grid-template-columns: 25% 10% 15% 25% 20% 5%;
+    padding: 20px 20px;
   }
   .college-info-container p {
     font-size: 14px;

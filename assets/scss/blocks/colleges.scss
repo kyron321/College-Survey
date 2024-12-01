@@ -5,7 +5,7 @@ body {
 .colleges {
     margin: 0 auto;
     gap: 20px;
-    padding: 20px;
+    padding: 5px;
     max-width: 1200px;
 }
 
@@ -29,7 +29,7 @@ body {
 
 .college-info-container {
     display: grid;
-    grid-template-columns: 25% 30% 40% 5%; 
+    grid-template-columns: 25% 25% 40% 5%; 
     padding: 20px 5px;
 }
 
@@ -50,13 +50,15 @@ body {
 @media (min-width: 1024px) {
     .colleges {
         display: grid;
-        grid-template-columns: 1fr 2fr; 
+        grid-template-columns: 1fr 2fr;
+        padding: 20px;
         gap: 20px; 
         align-items: start;
     }
 
     .college-info-container{
         grid-template-columns: 25% 10% 15% 25% 20% 5%; 
+        padding: 20px 20px;
     }
 
     .college-info-container p {
