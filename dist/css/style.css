@@ -348,14 +348,17 @@ body {
 }
 
 .column-two {
+  display: flex;
+  flex-direction: column;
   padding: 20px 0;
   border-radius: 10px;
 }
 
 .college-info-container {
   display: grid;
-  grid-template-columns: 25% 25% 40% 5%;
+  grid-template-columns: 30% 25% 35% 5%;
   padding: 20px 5px;
+  gap: 5px;
 }
 
 .college-info-container p {
@@ -824,18 +827,50 @@ section .wpcf7 input[type=submit]:hover {
   font-weight: bold;
 }
 
-select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.sort-by {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+form {
+  display: contents;
+  width: 100%;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.styled-dropdown {
   font-size: 14px;
-  background-color: #fff;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease;
+  outline: none;
   cursor: pointer;
   width: 50%;
 }
 
-select:hover {
+.styled-dropdown:hover {
+  background-color: #f1f1f1;
   border-color: #888;
+}
+
+.styled-dropdown:focus {
+  border-color: #af2244;
+}
+
+.styled-dropdown option {
+  padding: 5px;
 }
 
 .tooltip-text {
