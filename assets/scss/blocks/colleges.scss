@@ -2,6 +2,15 @@ body {
     background-color: #f9f9f9;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
 .colleges {
     margin: 0 auto;
     gap: 20px;
@@ -10,11 +19,101 @@ body {
 }
 
 .column-one {
+    display: none;
+}
+
+#filtersModal > h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#openModalBtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #af2244; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin: 10px 0 0px 10px;
+}
+
+#openModalBtn i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+#openModalBtn:hover {
+    background-color: #931b3a; /* Darker background color on hover */
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
     background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transform: translateX(-100%); /* Start off-screen to the right */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    opacity: 0; /* Invisible initially */
+    visibility: hidden; /* Hidden initially */
+}
+
+.modal.show {
+    transform: translateX(0); /* Move into view */
+    opacity: 1; /* Fully visible */
+    visibility: visible;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: fit-content;
+}
+
+.modal.hide {
+    transform: translateX(-100%); /* Move off-screen to the left */
+    opacity: 0; /* Fade out */
+    visibility: hidden;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #af2244;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.modal-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-overlay.hide {
+    opacity: 0;
 }
 
 .column-one h3{
@@ -25,7 +124,7 @@ body {
 .column-two {
     display: flex;
     flex-direction: column;
-   padding: 20px 0;
+   padding: 10px 10px;
     border-radius: 10px;
 }
 
@@ -57,6 +156,26 @@ body {
         padding: 20px;
         gap: 20px; 
         align-items: start;
+    }
+
+    .column-one {
+        display: block;
+    }
+
+    .column-one h3 {
+        margin-bottom: 10px;
+    }
+
+    .modal {
+        display: none;
+    }
+
+    #openModalBtn {
+        display: none;
+    }
+
+    .search-section{
+        display: none;
     }
 
     .college-info-container{

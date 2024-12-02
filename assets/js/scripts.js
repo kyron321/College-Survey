@@ -106,23 +106,46 @@ document.addEventListener('DOMContentLoaded', function () {
     } 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const filtersModal = document.getElementById('filtersModal');
+    const modalOverlay = document.getElementById('modalOverlay');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const controls = document.querySelector('.controls');
-
-    // Check if the controls element exists before proceeding
-    if (controls) {
-        window.addEventListener('scroll', () => {
-            const controlsTop = controls.getBoundingClientRect().top;
-
-            if (controlsTop <= 0) {
-                controls.classList.add('sticky');
-            } else {
-                controls.classList.remove('sticky');
-            }
-        });
+    // Function to show the modal
+    function showModal() {
+        filtersModal.classList.remove('hide'); // Remove the hide class if it exists
+        filtersModal.style.display = 'block'; // Ensure modal is displayed
+        modalOverlay.style.display = 'block'; // Show overlay
+        document.body.classList.add('no-scroll'); // Disable scrolling
+        console.log('Added no-scroll class');
+        setTimeout(() => {
+            filtersModal.classList.add('show'); // Add show class to animate in
+            modalOverlay.classList.add('show');
+        }, 10); // Delay to ensure styles are applied
     }
+
+    // Function to hide the modal (translate to the left)
+    function hideModal() {
+        filtersModal.classList.remove('show'); // Remove show class
+        filtersModal.classList.add('hide'); // Add hide class to animate out
+        modalOverlay.classList.remove('show'); // Fade out overlay
+        document.body.classList.remove('no-scroll'); // Enable scrolling
+
+        // Delay hiding elements until animation ends
+        setTimeout(() => {
+            filtersModal.style.display = 'none'; // Hide modal after animation
+            modalOverlay.style.display = 'none'; // Hide overlay
+        }, 600); // Match CSS transition duration
+    }
+
+    // Event listeners
+    openModalBtn.addEventListener('click', showModal);
+    closeModalBtn.addEventListener('click', hideModal);
+    modalOverlay.addEventListener('click', hideModal);
 });
+
+
 
 
 
