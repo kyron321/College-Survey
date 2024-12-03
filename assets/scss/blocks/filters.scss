@@ -142,9 +142,9 @@
 }
 
 .checkbox input[type='checkbox']:checked::before {
-    background-color: #af2244; 
+    background-color: #af2244;
+    border-radius: 3px; /* Ensure the background color covers the entire checkbox */
 }
-
 
 .checkbox input[type='checkbox']:checked::after {
     content: '✔'; 
