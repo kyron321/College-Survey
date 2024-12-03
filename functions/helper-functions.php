@@ -1,4 +1,6 @@
 <?php
+add_theme_support('post-thumbnails');
+
 function set_college_state_taxonomy($post_id)
 {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
