@@ -1,5 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('college-row'); ?>>
-    <div class="container-one" onclick="toggleDropdown(<?php the_ID(); ?>); event.stopPropagation();" style="cursor: pointer;">
+    <div class="container-one" onclick="toggleDropdown(<?php the_ID(); ?>); event.stopPropagation();"
+        style="cursor: pointer;">
         <div class="college-name column">
             <h4 class="entry-title">
                 <a href="<?php echo esc_url(
@@ -12,17 +13,17 @@
 
         <div class="column type-one">
             <?php if ($type_1): ?>
-                <p><?php echo esc_html($type_1); ?></p>
+            <p><?php echo esc_html($type_1); ?></p>
             <?php else: ?>
-                <p>N/A</p>
+            <p>N/A</p>
             <?php endif; ?>
         </div>
 
         <div class="column religious">
             <?php if ($religious !== null): ?>
-                <p><?php echo $religious ? 'Yes' : 'No'; ?></p>
+            <p><?php echo $religious ? 'Yes' : 'No'; ?></p>
             <?php else: ?>
-                <p>N/A</p>
+            <p>N/A</p>
             <?php endif; ?>
         </div>
 
@@ -39,15 +40,15 @@
 
         <div class="column presence">
             <?php if ($presence): ?>
-                <p><?php echo esc_html($presence); ?></p>
+            <p><?php echo esc_html($presence); ?></p>
             <?php else: ?>
-                <p>N/A</p>
+            <p>N/A</p>
             <?php endif; ?>
         </div>
 
         <div class="column more-info">
             <div>
-                <i id="chevron-<?php the_ID(); ?>" class="fa fa-chevron-down"></i> 
+                <i id="chevron-<?php the_ID(); ?>" class="fa fa-chevron-down"></i>
             </div>
         </div>
     </div>
@@ -114,8 +115,9 @@
 
             <div class="navigate-container">
                 <p class="feedback-text">
-                    If you have noticed any misrepresentations or missing information for this college, or if you have links or resources you'd like us to review, please share the details
-                                        <a href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(
+                    If you have noticed any misrepresentations or missing information for this college, or if you have
+                    links or resources you'd like us to review, please share the details
+                    <a href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(
                                             get_the_title()
                                         ); ?>&state=<?php echo urlencode(
     get_term($state)->name
