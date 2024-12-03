@@ -115,16 +115,16 @@
             <div class="navigate-container">
                 <p class="feedback-text">
                     If you have noticed any misrepresentations or missing information for this college, or if you have links or resources you'd like us to review, please share the details
-                    <a href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(
-                        get_the_title()
-                    ); ?>&state=<?php echo urlencode(
+                                        <a href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(
+                                            get_the_title()
+                                        ); ?>&state=<?php echo urlencode(
     get_term($state)->name
-); ?>" target="_blank">here</a>.
+); ?>">here</a>.
                 </p>
                 <div class="navigate-button">
                     <a href="<?php echo esc_url(
                         get_permalink() . '#comments-form'
-                    ); ?>" class="button">Leave Feedback</a>
+                    ); ?>" class="button">College Details</a>
                 </div>
             </div>
         </div>
