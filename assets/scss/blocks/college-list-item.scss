@@ -8,6 +8,8 @@ article {
     flex-direction: column;
 }
 
+
+
 .container-one {
     display: grid;
     grid-template-columns: 30% 25% 35% 5%; 
@@ -18,6 +20,11 @@ article {
     gap: 5px;
 }
 
+.container-one:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
 .college-row {
     display: flex;
     align-items: center;
@@ -25,7 +32,6 @@ article {
 }
 
 .column {
-    // padding: 5px 10px;
     text-align: left;
     font-size: 12px;
 }
@@ -52,8 +58,7 @@ article {
     margin-bottom: 10px; 
     text-align: left;
     width: 100%;
-    padding: 0 10px;
-    padding-bottom: 10px;
+    padding: 20px 10px;
 
     &::after {
         content: '';
@@ -73,6 +78,7 @@ article {
 
 .notes li{
     margin-left: 12px;
+    padding-bottom: 10px;
 }
 
 .freedom {
@@ -96,7 +102,7 @@ article {
 
 .freedom p:first-child {
     font-weight: bold;
-    padding-bottom: 12px;
+    padding-bottom: 20px;
 }
 
 
@@ -143,8 +149,12 @@ article {
 }
 
 .comments-container{
-    padding: 0 10px;
+    padding: 20px 10px;
 
+}
+
+.comments-container p {
+    padding-bottom: 10px;
 }
 
 .comments-container p:first-child {
@@ -170,7 +180,6 @@ article {
     line-height: 1.6;
     color: #333;
     text-align: left;
-    padding: 10px;
 }
 
 .feedback-text a {
@@ -224,7 +233,7 @@ article {
 
     .column {
         font-size: 14px;
-         padding: 5px 10px;
+         padding: 10px 0px;
     }
 
     .more-info{
@@ -243,7 +252,7 @@ article {
 
    .dropdown-content{
          font-size: 14px;
-         padding: 10px;
+         padding:20px 10px;
    }
    
    .navigate-button{

@@ -131,6 +131,8 @@ body.no-scroll {
     grid-template-columns: 30% 25% 35% 5%;
     padding: 20px 5px;
     gap: 5px;
+    align-items: center; 
+    justify-content: center;
 }
 
 .college-info-container p {
@@ -178,7 +180,7 @@ body.no-scroll {
     }
 
     .college-info-container{
-        grid-template-columns: 25% 10% 15% 25% 20% 5%;
+        grid-template-columns: 25% 10% 15% 25% 20% 5%; 
         padding: 20px 20px;
     }
 
