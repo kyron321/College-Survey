@@ -1,93 +1,112 @@
 <?php
 get_header(); ?>
 
-<main id="main" class="site-main" role="main">
+<main id="main" class="site-main styled-layout" role="main">
     <?php while (have_posts()):
         the_post(); ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <?php if (has_post_thumbnail()) {
-                the_post_thumbnail('full');
-            } ?>
-            <h1 class="entry-title"><?php the_title(); ?></h1>
+        <section class="hero-section" style = "background-image: url('<?php echo esc_url(
+            'http://35.176.89.77/wp-content/uploads/2024/12/Untitled-design-3.png'
+        ); ?>');">
+            <div class="hero-text">
+                <h1 class="college-title"><?php the_title(); ?></h1>
+                <p class="college-subtitle">
+    <?php the_field('type_1'); ?> 
+    <?php
+    $is_religious = get_field('religious'); // Check if the college is religious
+    if ($is_religious):
+        echo 'Religious';
+    endif;
+    ?> 
+    College in <?php echo esc_html(get_term(get_field('state'))->name); ?>
+</p>
 
-            <div class="entry-content">
-                <?php
-                the_content();
-
-                $state = get_field('state');
-                $college_link = get_field('college_link');
-                $type_1 = get_field('type_1');
-                $religious = get_field('religious');
-                $presence = get_field('presence');
-                $notes = get_field('notes');
-                ?>
-
-                <?php if ($state): ?>
-                    <p>State: <?php echo esc_html(
-                        get_term($state)->name
-                    ); ?></p>
-                <?php endif; ?>
-
-                <?php if ($college_link): ?>
-                    <p>College Link: <a href="<?php echo esc_url(
-                        $college_link
-                    ); ?>"><?php echo esc_html($college_link); ?></a></p>
-                <?php endif; ?>
-
-                <?php if ($type_1): ?>
-                    <p>Type: <?php echo esc_html($type_1); ?></p>
-                <?php endif; ?>
-
-                <?php if ($religious): ?>
-                    <p>Religious: <?php echo $religious ? 'Yes' : 'No'; ?></p>
-                <?php endif; ?>
-
-                <?php if ($presence): ?>
-                <p>Freedom: <?php echo esc_html($presence); ?></p>
-                <?php else: ?>
-                    <p>Freedom: N/A</p>
-                <?php endif; ?>
-
-                <?php if ($notes): ?>
-                    <p>Notes: <?php echo esc_html($notes); ?></p>
-                <?php endif; ?>
+<div class="single-presence">
+              
+                <p class="<?php echo strtolower(get_field('presence')); ?>">
+    <?php echo esc_html(get_field('presence')); ?>
+</p>
             </div>
-        </article>
-        <div  id="all-comments" class="comments-container" >
-                <p>What people are saying:</p>
-                <?php
-                $comments = get_comments([
-                    'post_id' => get_the_ID(),
-                    'status' => 'approve',
-                ]);
+            </div>
+        </section>
 
-                if ($comments) {
-                    echo '<div class="comment-list">';
-                    wp_list_comments(
-                        [
-                            'style' => 'div',
-                            'short_ping' => true,
-                            'avatar_size' => 50,
-                        ],
-                        $comments
-                    );
-                    echo '</div>';
-                } else {
-                    echo '<p>No comments yet.</p>';
-                }
-                ?>
-                <div id="comments-form" class="comment-form">
-                <p>We’d love to hear about your experiences with <?php echo get_the_title(); ?> - <?php echo esc_html(
-     get_term(get_field('state'))->name
- ); ?>. Please use this form to share any feedback, insights, or interactions you’ve had with this college.</p>
+        <div class="content-grid">
+            <!-- Column 1 -->
+            <div class="column column-one">
+                <h2>About <?php the_title(); ?></h2>
+                <p><?php the_title(); ?> is a <?php the_field(
+     'type_1'
+ ); ?> <?php
+ $is_religious = get_field('religious'); // Check if the college is religious
+ if ($is_religious):
+     echo 'Religious';
+ endif;
+ ?>  college located in <?php echo esc_html(
+      get_term(get_field('state'))->name
+  ); ?>. <?php echo esc_html(get_field('description')); ?></p>
+    <div class="notes">
+                <p>Notes:</p>
+                <ul>
+                    <?php
+                    $notesArray = explode(';', get_field('notes'));
+                    foreach ($notesArray as $note) {
+                        $note = trim($note);
+                        if (!empty($note)) {
+                            $formattedNote = ucfirst(rtrim($note, '.')) . '.';
+                            echo '<li>' .
+                                htmlspecialchars($formattedNote) .
+                                '</li>';
+                        }
+                    }
+                    ?>
+                </ul>
+            </div>
+              <p><strong>Freedom from Gender Ideology:</strong></p>
+              <div class="single-presence-two">
+              
+              <p class="<?php echo strtolower(get_field('presence')); ?>">
+  <?php echo esc_html(get_field('presence')); ?>
+</p>
+          </div>
+            </div>
 
-                <?php comment_form(); ?>
+            <!-- Column 2 -->
+            <div class="column column-two">
+                <h2>What parents and students are saying:</h2>
+                <div class="comments-container">
+                    <?php
+                    $comments = get_comments([
+                        'post_id' => get_the_ID(),
+                        'status' => 'approve',
+                    ]);
+                    if ($comments) {
+                        echo '<div class="comment-list">';
+                        wp_list_comments(
+                            [
+                                'style' => 'div',
+                                'short_ping' => true,
+                                'avatar_size' => 50,
+                            ],
+                            $comments
+                        );
+                        echo '</div>';
+                    } else {
+                        echo '<p>No comments yet.</p>';
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
-            </div>
-            <?php
-    endwhile; ?>
 
-    
+        <!-- Feedback Form -->
+        <div class="feedback-form-container">
+            <h2>Leave Feedback for <?php the_title(); ?></h2>
+            <p>We’d love to hear about your experiences with <?php the_title(); ?>. Please use this form to share feedback, insights, or interactions you’ve had with this college.</p>
+            <div class="feedback-form">
+                <?php comment_form(); ?>
+            </div>
+        </div>
+    <?php
+    endwhile; ?>
 </main>
 
-<?php get_footer();
+<?php get_footer(); ?>

@@ -969,7 +969,6 @@ section .wpcf7 input[type=submit]:hover {
 
 .checkbox input[type=checkbox]:checked::before {
   background-color: #af2244;
-  border-radius: 3px; /* Ensure the background color covers the entire checkbox */
 }
 
 .checkbox input[type=checkbox]:checked::after {
@@ -981,6 +980,7 @@ section .wpcf7 input[type=submit]:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
+  line-height: 1; /* Ensure the tick is centered */
 }
 
 .sort-by {
@@ -1423,76 +1423,163 @@ nav.top-navigation {
 #menu-item-103 a:hover {
   background-color: #931b3a;
 }
-.single-college .site-main {
-  max-width: 1000px;
-  margin: 10px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+/* General Layout */
+.styled-layout .hero-section {
+  position: relative;
+  text-align: center;
+  color: white;
 }
-.single-college article .wp-post-image {
+
+.styled-layout .hero-image img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  object-fit: cover;
 }
-.single-college .entry-title {
-  font-size: 2em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
+
+.styled-layout .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
 }
-.single-college .entry-content {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #555;
+
+.styled-layout .hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
 }
-.single-college .entry-content p {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+
+.styled-layout .hero-text .college-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
-.single-college .entry-content p:first-child::before {
+
+.styled-layout .hero-text .college-rating {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #0073aa;
 }
-.single-college .entry-content a {
-  color: #0073aa;
-  text-decoration: none;
+
+.single-presence {
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
-.single-college .entry-content a:hover {
-  text-decoration: underline;
+
+.single-presence-two {
+  padding: 20px 0;
 }
-.single-college .entry-content p:contains("Freedom: Yes") {
-  background-color: #dff0d8;
+
+.single-presence, .single-presence-two .excellent {
   color: #3c763d;
-}
-.single-college .entry-content p:contains("Freedom: No") {
-  background-color: #f2dede;
-  color: #a94442;
-}
-.single-college #comments-form p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  text-align: left;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-left: 4px solid #ddd;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  width: 150px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
   border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
 }
-.single-college #comments-form p.comment-form-author,
-.single-college #comments-form p.comment-form-email,
-.single-college #comments-form p.comment-form-url,
-.single-college #comments-form p.comment-form-cookies-consent,
-.single-college #comments-form .form-submit,
-.single-college #commentform > p.comment-form-role {
-  border-left: none;
-  padding: 0;
+
+/* Yellow for moderate */
+.single-presence, .single-presence-two .moderate {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  width: 150px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Red for poor */
+.single-presence, .single-presence-two .poor {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  width: 150px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Content Grid */
+.styled-layout .content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.styled-layout .content-grid .column {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.styled-layout .content-grid .column h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Feedback Form */
+.feedback-form-container {
+  background-color: white;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form-container h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.feedback-form-container p {
+  margin-bottom: 20px;
+}
+
+.feedback-form-container .comment-form {
+  padding: 10px 0;
+}
+
+#reply-title {
+  display: none;
+}
+
+#user_role {
+  width: 25%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .styled-layout .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .styled-layout .hero-text {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

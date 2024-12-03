@@ -142,8 +142,7 @@
 }
 
 .checkbox input[type='checkbox']:checked::before {
-    background-color: #af2244;
-    border-radius: 3px; /* Ensure the background color covers the entire checkbox */
+    background-color: #af2244; 
 }
 
 .checkbox input[type='checkbox']:checked::after {
@@ -155,6 +154,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
+    line-height: 1; /* Ensure the tick is centered */
 }
 
 .sort-by {
