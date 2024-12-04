@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
 <?php
-$background_url = get_the_post_thumbnail_url(get_the_ID(), 'full')
-    ?: '/wp-content/uploads/2024/12/Untitled-design-3.png';
+$background_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+if (!$background_url) {
+    $background_url = '/wp-content/uploads/2024/12/Untitled-design-3.png';
+}
 ?>
 
 <main id="main" class="site-main styled-layout" role="main">
