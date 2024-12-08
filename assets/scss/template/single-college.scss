@@ -154,6 +154,32 @@
     color: #333;
 }
 
+.social-sharing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px; /* Space between icons */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #0073aa; /* Change to your desired hover color */
+    color: #fff;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .styled-layout .content-grid {

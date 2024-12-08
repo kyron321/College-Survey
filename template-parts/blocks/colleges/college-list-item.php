@@ -13,7 +13,7 @@
 
         <div class="column type-one">
             <?php if ($type_1): ?>
-                <p><?php echo esc_html($type_1); ?></p>
+                <p><?php echo ucfirst(strtolower(esc_html($type_1))); ?></p>
             <?php else: ?>
                 <p>N/A</p>
             <?php endif; ?>
@@ -40,7 +40,7 @@
 
         <div class="column presence">
             <?php if ($presence): ?>
-                <p><?php echo esc_html($presence); ?></p>
+                <p><?php echo ucfirst(strtolower(esc_html($presence))); ?></p>
             <?php else: ?>
                 <p>N/A</p>
             <?php endif; ?>
@@ -57,8 +57,8 @@
             <div class="freedom">
                 <p>Freedom from Trans Ideology:</p>
                 <p class="<?php echo strtolower($presence); ?>">
-                    <?php echo esc_html($presence); ?>
-                </p>
+    <?php echo ucfirst(strtolower(esc_html($presence))); ?>
+</p>
             </div>
             <div class="notes">
                 <p>Notes:</p>
