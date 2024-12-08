@@ -1,0 +1,138 @@
+.acf-field .acf-label label {
+    display: none !important;
+}
+
+.comment-notes {
+    display: none;
+}
+
+.comment-form textarea {
+    width: 100%; 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    border-radius: 5px;
+}
+
+.comment-author.vcard {
+    display: none;
+}		
+
+.comment {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.comment-author.vcard {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.comment-author .fn {
+    color: #0073aa; 
+}
+
+.comment-author .says {
+    font-style: italic;
+    color: #666;
+}
+
+
+.comment-meta {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.comment-meta a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.comment-meta a:hover {
+    text-decoration: underline;
+}
+
+
+.comment p {
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+
+.comment p strong {
+    color: #af2244; 
+    font-weight: bold;
+}
+
+
+.comment + .comment {
+    margin-top: 30px;
+}
+
+#submit {
+    background-color: #af2244;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;}
+
+#submit:hover {
+    background-color: #8c1b36;
+}
+
+.comment-meta.commentmetadata time {
+    display: none;
+}
+
+
+#commentform {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#commentform textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; 
+    color: #333; 
+}
+
+
+#commentform input[type="text"],
+#commentform input[type="email"],
+#commentform input[type="url"] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; 
+    color: #444; 
+}
+
+#commentform select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; 
+    color: #444; 
+}
+
+#commentform textarea:focus {
+    outline: 0.5px solid #af2244; 
+    border-color: #af2244; 
+}
+
+#commentform input[type="text"]:focus,
+#commentform input[type="email"]:focus,
+#commentform input[type="url"]:focus {
+    outline: 2px solid #af2244; 
+    border-color: #af2244; 
+}
+
+
+#commentform select:focus {
+    outline: 0.5px solid #af2244; 
+    border-color: #af2244; 
+}

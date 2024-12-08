@@ -1,70 +1,198 @@
+body {
+    background-color: #f9f9f9;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
 .colleges {
+    margin: 0 auto;
+    gap: 20px;
+    padding: 5px;
+    max-width: 1200px;
+}
+
+.column-one {
+    display: none;
+}
+
+#filtersModal > h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#openModalBtn {
     display: flex;
-    gap: 3rem;
+    align-items: center;
+    cursor: pointer;
+    background-color: #af2244;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin: 10px 0 0px 10px;
+}
 
-    .filters{
-        width: 10rem;
-    }
-    .accordion-content {
-        display: none;
-        padding-left: 20px;
-    }
+#openModalBtn i {
+    margin-right: 8px;
+}
 
-    .accordion-toggle {
-        display: none;
-    }
+#openModalBtn:hover {
+    background-color: #931b3a;
+}
 
-    .accordion-label {
-        cursor: pointer;
-        display: block;
-        margin-bottom: 10px;
-        font-weight: bold;
-        position: relative;
-        padding-right: 20px;
-        width: 10rem;
-    }
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
 
-    .accordion-label::after {
-        content: '\25BC'; /* Down arrow */
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: transform 0.3s ease;
-    }
+.modal.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    padding: 20px;
+}
 
-    .accordion-toggle:checked + .accordion-label::after {
-        transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
-    }
+.modal.hide {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
 
-    .accordion-toggle:checked + .accordion-label + .accordion-content {
-        display: block;
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #af2244;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.modal-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-overlay.hide {
+    opacity: 0;
+}
+
+.column-one h3{
+    margin-bottom: 10px;
+}
+
+.column-two {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.college-info-container {
+    display: grid;
+    grid-template-columns: 30% 25% 35% 5%;
+    padding: 20px 5px;
+    gap: 5px;
+    align-items: center; 
+    justify-content: center;
+}
+
+.college-info-container p {
+    margin: 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+.college-name {
+    font-weight: bold;
+}
+
+.type-one, .religious {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .colleges {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        padding: 20px;
+        gap: 20px;
+        align-items: start;
     }
 
     .column-one {
-        width: 20%;
-        padding: 0;
-        margin: 0;
-    }
-    .column-two {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    
-    article {
-        background-color: #fff; /* White background */
-        border: 1px solid #ddd; /* Light gray border */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        padding: 16px; /* Padding inside the card */
-        margin: 16px 0; /* Margin to separate the cards */
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effects */
-    }
-    
-    article:hover {
-        transform: translateY(-4px); /* Slight lift on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+        display: block;
+        padding: 20px 10px 0 0;
     }
 
+    .column-one h3 {
+        margin: 20px 0 10px 0;
+    }
+
+    .modal {
+        display: none;
+    }
+
+    #openModalBtn {
+        display: none;
+    }
+
+    .search-section{
+        display: none;
+    }
+
+    .college-info-container{
+        grid-template-columns: 25% 10% 15% 25% 20% 5%; 
+        padding: 20px 20px;
+    }
+
+    .college-info-container p {
+        font-size: 14px;
+    }
+
+    .column-two{
+        padding: 20px;
+    }
+
+    .type-one, .religious {
+        display: block;
+    }
 }

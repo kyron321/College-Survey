@@ -14,13 +14,13 @@ function enqueue_custom_admin_styles() {
 }
 add_action('admin_enqueue_scripts', 'enqueue_custom_admin_styles');
 
-function custom_login_logo() {
+function custom_login_logo()
+{
     // Get the site logo URL from ACF options
     $site_logo = get_field('site_logo', 'option'); // Adjust the field name and options page as needed
 
     if ($site_logo) {
-        $logo_url = esc_url($site_logo['url']);
-        ?>
+        $logo_url = esc_url($site_logo['url']); ?>
         <style type="text/css">
             body.login h1 a {
                 background-image: url('<?php echo $logo_url; ?>');

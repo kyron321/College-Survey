@@ -1,145 +1,183 @@
-/* Base styling for header */
 .header {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-/* Container styling for top navigation */
 nav.top-navigation {
-  display: flex;
-  justify-content: flex-end; /* Aligns items to the end of the container */
-  align-items: center;
-  padding: 10px 0;
-}
-
-/* Styling for the logo and navigation wrapper */
-.logo-nav-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-}
-
-/* Styling for the nav list */
-.nav-list {
-  display: flex;
-  flex-direction: row; /* Ensures items are in a row */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Styling for each nav item */
-.nav-item {
-  margin-left: 15px;
-}
-
-/* Styling for links */
-.nav-link {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-}
-
-/* Styling for icons */
-.nav-icon {
-  margin-right: 2px;
-  vertical-align: middle;
-}
-
-/* Style for the link wrapping the logo */
-.site-logo-link {
-  display: inline-block;
-  text-decoration: none;
-  padding: 5px;
-}
-
-/* Style for the logo image */
-.site-logo-img {
-  max-width: 250px;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Hover effect for the logo */
-.site-logo-link:hover .site-logo-img {
-  transform: scale(1.05);
-}
-
-/* Styling for footer menu */
-.footer-menu {
-  text-align: center;
-}
-
-/* Styling for the main menu */
-#main-menu {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Styling for individual menu items */
-#main-menu li {
-  margin: 0 15px;
-}
-
-/* Styling for menu links */
-#main-menu li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-/* Hover effect for menu links */
-#main-menu li a:hover {
-  color: #af2244;
-}
-
-/* Responsive styling */
-@media (max-width: 768px) {
-  .header {
-    padding: 0; /* Reduce padding for smaller screens */
-  }
-  .logo-nav-wrapper {
-    flex-direction: column; /* Stack logo and navigation vertically */
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  nav.top-navigation {
+    display: flex;
     justify-content: flex-end;
-    padding: 0;
-  }
-
-  .nav-list {
     align-items: center;
-  }
+    width: 100%;
+    padding-bottom: 20px;
+}
 
-  .nav-item {
-    margin: 10px 10px; /* Add vertical margin for spacing */
-  }
+.logo-nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-  .site-logo-img {
-    max-width: 180px; /* Reduce logo size for smaller screens */
-  }
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #af2244;
+}
+
+.nav-icon {
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.site-logo-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.site-logo-img {
+    max-width: 250px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.site-logo-link:hover .site-logo-img {
+    transform: scale(1.05);
+}
+
+.footer-menu {
+    text-align: center;
+}
+
+#main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-menu li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#menu-item-103{
+    margin: 0;
+}
+
+#main-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+#main-menu li a:hover {
+    color: #af2244;
+}
+
+.menu-item.menu-item-4916 {
+    display: inline-block;
+    background-color: #af2244;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item.menu-item-4916 a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.menu-item.menu-item-4916 a:hover {
+    background-color: #931b3a;
 }
 
 @media (max-width: 768px) {
-  .nav-link {
-    display: none; /* Hides the text */
-  }
+    .header {
+        padding: 0;
+    }
+
+    .logo-nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    nav.top-navigation {
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .nav-list {
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 10px 10px;
+    }
+
+    .site-logo-img {
+        max-width: 180px;
+    }
+
+    .nav-link {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
-  .nav-link {
-    font-size: 14px; /* Reduce font size for very small screens */
-  }
+    .nav-link {
+        font-size: 14px;
+    }
 
-  .nav-item {
-    margin: 8px 10px;
-  }
+    .nav-item {
+        margin: 8px 10px;
+    }
+}
+
+#menu-item-103 {
+    display: inline-block; 
+    margin: 0; 
+}
+
+#menu-item-103 a {
+    display: inline-block; 
+    background-color: #af2244; 
+    color: white !important;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+}
+
+#menu-item-103 a:hover {
+    background-color:  #931b3a;
 }

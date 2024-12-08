@@ -1,9 +1,18 @@
-html body :where(.wp-block){
+html body :where(.wp-block) {
     margin-bottom: 0 !important;
     margin-top: 0 !important;
 }
 
-html body .acf-block-body .acf-fields>.acf-field.acf-accordion .acf-accordion-title, .acf-block-fields:has(>.acf-error-message) .acf-fields>.acf-field.acf-accordion .acf-accordion-title {
+html
+    body
+    .acf-block-body
+    .acf-fields
+    > .acf-field.acf-accordion
+    .acf-accordion-title,
+.acf-block-fields:has(> .acf-error-message)
+    .acf-fields
+    > .acf-field.acf-accordion
+    .acf-accordion-title {
     padding: 1.5rem 1.25rem;
 }
 

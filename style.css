@@ -5,3 +5,6 @@ Description: A theme for the Genspect College Survey Website
 Version: 1.0.0
 */
 
+html {
+    scroll-behavior: smooth;
+}

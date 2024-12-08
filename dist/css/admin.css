@@ -1,0 +1,18 @@
+html body :where(.wp-block) {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+html body .acf-block-body .acf-fields > .acf-field.acf-accordion .acf-accordion-title,
+.acf-block-fields:has(> .acf-error-message) .acf-fields > .acf-field.acf-accordion .acf-accordion-title {
+  padding: 1.5rem 1.25rem;
+}
+
+html body .block-editor-block-list__layout {
+  margin-top: 1rem;
+}
+
+html body .theme-overlay .screenshot:after {
+  padding-top: 60%;
+}
+/*# sourceMappingURL=admin.css.map */

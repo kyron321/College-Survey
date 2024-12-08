@@ -1,0 +1,267 @@
+article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.container-one {
+    display: grid;
+    grid-template-columns: 30% 25% 35% 5%; 
+    align-items: center; 
+    justify-content: center;
+    padding: 20px 5px;
+    width: 100%;
+    gap: 5px;
+}
+
+.container-one:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.college-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.column {
+    text-align: left;
+    font-size: 12px;
+}
+
+.entry-title a {
+    color: inherit;
+}
+
+.entry-title a:hover {
+    text-decoration: underline;
+}
+
+.dropdown-container{
+    width: 100%;   
+}
+
+.dropdown-content{
+    font-size: 12px;
+}
+
+.notes {
+    box-sizing: border-box;
+    position: relative; 
+    margin-bottom: 10px; 
+    text-align: left;
+    width: 100%;
+    padding: 20px 10px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 50%; 
+        border-bottom: 1px solid #d3d3d3; 
+        position: absolute;
+        bottom: 0;
+        left: 25%; 
+    }
+}
+
+.notes p:first-child {
+    font-weight: bold;
+    padding: 12px 0;
+}
+
+.notes li{
+    margin-left: 12px;
+    padding-bottom: 10px;
+}
+
+.freedom {
+    position: relative; 
+    margin-bottom: 10px; 
+    text-align: left;
+    width: 100%;
+    padding: 0 10px;
+    padding-bottom: 10px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 50%; 
+        border-bottom: 1px solid #d3d3d3; 
+        position: absolute;
+        bottom: 0;
+        left: 25%; 
+    }
+}
+
+.freedom p:first-child {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+
+
+.freedom .excellent {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    width: 150px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Yellow for moderate */
+.freedom .moderate {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    width: 150px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Red for poor */
+.freedom .poor {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    width: 150px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.comments-container{
+    padding: 20px 10px;
+
+}
+
+.comments-container p {
+    padding-bottom: 10px;
+}
+
+.comments-container p:first-child {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.navigate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    width: 100%;
+    gap: 10px;
+}
+
+.feedback-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
+}
+
+.feedback-text a {
+    color: #0073aa; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.feedback-text a:hover {
+    text-decoration: underline;
+}
+
+.navigate-button {
+    text-align: right;
+    width: 100%;
+}
+
+.navigate-button .button {
+    background-color: #af2244;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    display: flex ;
+    justify-content: center;
+}
+
+.navigate-button .button:hover {
+    background-color: #8c1b36;
+}
+
+
+.navigate-button .button:hover {
+    background-color: #8c1b36; 
+}
+
+
+@media (min-width: 1024px) {
+    .article{
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+    .container-one {
+        grid-template-columns: 25% 10% 15% 25% 20% 5%; 
+        padding: 20px 20px;
+    }
+
+    .column {
+        font-size: 14px;
+         padding: 10px 0px;
+    }
+
+    .more-info{
+        text-align: right;
+    }
+
+    .navigate-container {
+     
+        flex-direction: row;
+        
+    }
+
+    .feedback-text {
+        width: 75%;
+    }
+
+   .dropdown-content{
+         font-size: 14px;
+         padding:20px 10px;
+   }
+   
+   .navigate-button{
+         width: 50%;
+         display: inline-flex;
+        justify-content: flex-end;
+   }
+
+  
+
+   
+}

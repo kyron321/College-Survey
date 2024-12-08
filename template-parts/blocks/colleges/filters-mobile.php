@@ -1,8 +1,8 @@
 <form id="filter-form" method="GET" action="">
     <!-- State Filter -->
     <div class="filter-group">
-        <input type="checkbox" id="toggle-state" class="accordion-toggle">
-        <label for="toggle-state" class="accordion-label">
+        <input type="checkbox" id="mobile-toggle-state" class="accordion-toggle">
+        <label for="mobile-toggle-state" class="accordion-label">
             State <i class="fa fa-chevron-down"></i>
         </label>
         <div class="accordion-content">
@@ -26,8 +26,8 @@
 
     <!-- Type 1 Filter -->
     <div class="filter-group">
-        <input type="checkbox" id="toggle-type_1" class="accordion-toggle">
-        <label for="toggle-type_1" class="accordion-label">
+        <input type="checkbox" id="mobile-toggle-type_1" class="accordion-toggle">
+        <label for="mobile-toggle-type_1" class="accordion-label">
             Type <i class="fa fa-chevron-down"></i>
         </label>
         <div class="accordion-content">
@@ -49,8 +49,9 @@
 
     <!-- Religious Filter -->
     <div class="filter-group">
-        <input type="checkbox" id="toggle-religious" class="accordion-toggle">
-        <label for="toggle-religious" class="accordion-label">Religious <i class="fa fa-chevron-down"></i></label>
+        <input type="checkbox" id="mobile-toggle-religious" class="accordion-toggle">
+        <label for="mobile-toggle-religious" class="accordion-label">Religious <i
+                class="fa fa-chevron-down"></i></label>
         <div class="accordion-content">
             <div class="checkbox">
                 <label for="religious_yes">
@@ -69,8 +70,8 @@
 
     <!-- Presence Filter -->
     <div class="filter-group">
-        <input type="checkbox" id="toggle-presence" class="accordion-toggle">
-        <label for="toggle-presence" class="accordion-label">
+        <input type="checkbox" id="mobile-toggle-presence" class="accordion-toggle">
+        <label for="mobile-toggle-presence" class="accordion-label">
             Presence <i class="fa fa-chevron-down"></i>
         </label>
         <div class="accordion-content">
@@ -81,7 +82,7 @@
             ]; ?>
             <?php foreach ($presence_choices as $value => $label): ?>
             <div class="checkbox">
-                <label for="presence_<?php echo esc_attr($value); ?>">
+                <label for="mobile-presence_<?php echo esc_attr($value); ?>">
                     <input type="checkbox" name="presence[]" class="filter-input"
                         id="presence_<?php echo esc_attr($value); ?>" value="<?php echo esc_attr($value); ?>">
                     <?php echo esc_html($label); ?>

@@ -5,7 +5,8 @@
   "scripts": {
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build && rm -rf node_modules"
+    "build": "gulp build && rm -rf node_modules",
+   "format": "prettier --write '**/*.{php,html,scss,js,css}'"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,14 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
+    "@prettier/plugin-php": "^0.22.2",
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "prettier": "^3.3.3",
     "sass": "^1.64.2",
     "sass-loader": "^12.6.0"
   },
