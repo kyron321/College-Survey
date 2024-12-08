@@ -573,6 +573,19 @@ body.no-scroll {
 .comment-author.vcard {
   display: none;
 }
+.comment-author.vcard {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
+}
+.comment-author.vcard .fn {
+  color: #0073aa;
+}
+.comment-author.vcard .says {
+  font-style: italic;
+  color: #666;
+}
 
 .comment {
   border: 1px solid #ddd;
@@ -581,49 +594,30 @@ body.no-scroll {
   margin: 20px 0;
   background-color: #f9f9f9;
 }
-
-.comment-author.vcard {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.comment-author .fn {
-  color: #0073aa;
-}
-
-.comment-author .says {
-  font-style: italic;
-  color: #666;
-}
-
-.comment-meta {
+.comment .comment-meta {
   font-size: 0.9em;
   color: #999;
   margin-bottom: 10px;
 }
-
-.comment-meta a {
+.comment .comment-meta a {
   text-decoration: none;
   color: #0073aa;
 }
-
-.comment-meta a:hover {
+.comment .comment-meta a:hover {
   text-decoration: underline;
 }
-
+.comment .comment-meta.commentmetadata time {
+  display: none;
+}
 .comment p {
   line-height: 1.6;
   color: #333;
   margin: 0;
 }
-
 .comment p strong {
   color: #af2244;
   font-weight: bold;
 }
-
 .comment + .comment {
   margin-top: 30px;
 }
@@ -638,25 +632,22 @@ body.no-scroll {
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
 }
-
 #submit:hover {
   background-color: #8c1b36;
-}
-
-.comment-meta.commentmetadata time {
-  display: none;
 }
 
 #commentform {
   font-family: "Montserrat", sans-serif;
 }
-
 #commentform textarea {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #333;
 }
-
+#commentform textarea:focus {
+  outline: 0.5px solid #af2244;
+  border-color: #af2244;
+}
 #commentform input[type=text],
 #commentform input[type=email],
 #commentform input[type=url] {
@@ -664,25 +655,17 @@ body.no-scroll {
   font-size: 14px;
   color: #444;
 }
-
-#commentform select {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  color: #444;
-}
-
-#commentform textarea:focus {
-  outline: 0.5px solid #af2244;
-  border-color: #af2244;
-}
-
 #commentform input[type=text]:focus,
 #commentform input[type=email]:focus,
 #commentform input[type=url]:focus {
   outline: 2px solid #af2244;
   border-color: #af2244;
 }
-
+#commentform select {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #444;
+}
 #commentform select:focus {
   outline: 0.5px solid #af2244;
   border-color: #af2244;
@@ -951,7 +934,8 @@ section > p {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  line-height: 1; /* Ensure the tick is centered */
+  line-height: 1;
+  /* Ensure the tick is centered */
 }
 
 .sort-by {
