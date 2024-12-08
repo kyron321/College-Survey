@@ -2,21 +2,21 @@
     position: relative;
     display: flex;
     align-items: center;
-}
 
-#college-search {
-    width: 100%;
-    padding: 10px;
-    padding-left: 35px;
-    box-sizing: border-box;
-}
+    #college-search {
+        width: 100%;
+        padding: 10px;
+        padding-left: 35px;
+        box-sizing: border-box;
 
-.search-icon {
-    position: absolute;
-    left: 10px;
-    color: #efeded;
-}
+        &:focus+.search-icon {
+            color: #333;
+        }
+    }
 
-#college-search:focus + .search-icon {
-    color: #333;
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        color: #efeded;
+    }
 }

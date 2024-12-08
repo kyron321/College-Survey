@@ -1131,22 +1131,19 @@ label {
   display: flex;
   align-items: center;
 }
-
-#college-search {
+.search-box #college-search {
   width: 100%;
   padding: 10px;
   padding-left: 35px;
   box-sizing: border-box;
 }
-
-.search-icon {
+.search-box #college-search:focus + .search-icon {
+  color: #333;
+}
+.search-box .search-icon {
   position: absolute;
   left: 10px;
   color: #efeded;
-}
-
-#college-search:focus + .search-icon {
-  color: #333;
 }
 .two-column-block {
   display: flex;
