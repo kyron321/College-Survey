@@ -1171,7 +1171,8 @@ label {
 .two-column-block .two-column-block-container.flip {
   flex-direction: row-reverse;
 }
-.two-column-block.ratio-50-50 .column-text, .two-column-block.ratio-50-50 .column-image {
+.two-column-block.ratio-50-50 .column-text,
+.two-column-block.ratio-50-50 .column-image {
   flex: 1;
 }
 .two-column-block.ratio-30-70 .column-text {

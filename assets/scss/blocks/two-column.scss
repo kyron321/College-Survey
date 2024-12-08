@@ -7,12 +7,12 @@
 
     &.bg-white {
         background-color: #ffffff;
-        color: #333333; 
+        color: #333333;
     }
 
     &.bg-gray {
         background-color: #f0f0f0;
-        color: #333333; 
+        color: #333333;
     }
 
     .two-column-block-container {
@@ -25,25 +25,32 @@
         }
     }
 
-    &.ratio-50-50 .column-text,
-    &.ratio-50-50 .column-image {
-        flex: 1;
+    &.ratio-50-50 {
+
+        .column-text,
+        .column-image {
+            flex: 1;
+        }
     }
 
-    &.ratio-30-70 .column-text {
-        flex: 3;
+    &.ratio-30-70 {
+        .column-text {
+            flex: 3;
+        }
+
+        .column-image {
+            flex: 7;
+        }
     }
 
-    &.ratio-30-70 .column-image {
-        flex: 7;
-    }
+    &.ratio-70-30 {
+        .column-text {
+            flex: 7;
+        }
 
-    &.ratio-70-30 .column-text {
-        flex: 7;
-    }
-
-    &.ratio-70-30 .column-image {
-        flex: 3;
+        .column-image {
+            flex: 3;
+        }
     }
 
     .column {
@@ -52,7 +59,7 @@
         &.column-text {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; 
+            align-items: flex-start;
             justify-content: center;
             text-align: left;
 
@@ -63,9 +70,7 @@
             }
 
             p {
-               
                 font-size: 16px;
-            
             }
         }
 
@@ -87,11 +92,10 @@
             display: flex;
         }
 
-        .column-text h2 {
-            font-size: 2rem !important;
+        .column-text {
+            h2 {
+                font-size: 2rem !important;
+            }
         }
-
     }
-
 }
-
