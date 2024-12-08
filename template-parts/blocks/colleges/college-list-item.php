@@ -13,17 +13,17 @@
 
         <div class="column type-one">
             <?php if ($type_1): ?>
-                <p><?php echo ucfirst(strtolower(esc_html($type_1))); ?></p>
+            <p><?php echo ucfirst(strtolower(esc_html($type_1))); ?></p>
             <?php else: ?>
-                <p>N/A</p>
+            <p>N/A</p>
             <?php endif; ?>
         </div>
 
         <div class="column religious">
             <?php if ($religious !== null): ?>
-                <p><?php echo $religious ? 'Yes' : 'No'; ?></p>
+            <p><?php echo $religious ? 'Yes' : 'No'; ?></p>
             <?php else: ?>
-                <p>N/A</p>
+            <p>N/A</p>
             <?php endif; ?>
         </div>
 
@@ -40,9 +40,9 @@
 
         <div class="column presence">
             <?php if ($presence): ?>
-                <p><?php echo ucfirst(strtolower(esc_html($presence))); ?></p>
+            <p><?php echo ucfirst(strtolower(esc_html($presence))); ?></p>
             <?php else: ?>
-                <p>N/A</p>
+            <p>N/A</p>
             <?php endif; ?>
         </div>
 
@@ -57,8 +57,8 @@
             <div class="freedom">
                 <p>Freedom from Trans Ideology:</p>
                 <p class="<?php echo strtolower($presence); ?>">
-    <?php echo ucfirst(strtolower(esc_html($presence))); ?>
-</p>
+                    <?php echo ucfirst(strtolower(esc_html($presence))); ?>
+                </p>
             </div>
             <div class="notes">
                 <p>Notes:</p>
@@ -84,7 +84,7 @@
                 $comments = get_comments([
                     'post_id' => get_the_ID(),
                     'status' => 'approve',
-                    'number' => 2, // Limit to first 2 comments
+                    'number' => 2,
                 ]);
 
                 if ($comments) {
@@ -101,7 +101,6 @@
                 } else {
                     echo '<p>No comments yet.</p>';
                 }
-                // Show more comments link
                 $comments_count = get_comments_number();
                 if ($comments_count > 2) {
                     $comments_link = get_permalink() . '#all-comments';
@@ -117,16 +116,15 @@
                 <p class="feedback-text">
                     If you have noticed any misrepresentations or missing information for this college, or if you have
                     links or resources you'd like us to review, please share the details
-                    <a href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(
-                                                                                            get_the_title()
-                                                                                        ); ?>&state=<?php echo urlencode(
-                                                        get_term($state)->name
-                                                    ); ?>">here</a>.
+                    <a
+                        href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(get_the_title()); ?>&state=<?php echo urlencode(get_term($state)->name); ?>">
+                        here
+                    </a>.
                 </p>
                 <div class="navigate-button">
-                    <a href="<?php echo esc_url(
-                                    get_permalink() . '#comments-form'
-                                ); ?>" class="button">College Details</a>
+                    <a href="<?php echo esc_url(get_permalink() . '#comments-form'); ?>" class="button">
+                        College Details
+                    </a>
                 </div>
             </div>
         </div>
