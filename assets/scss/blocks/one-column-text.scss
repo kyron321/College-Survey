@@ -1,12 +1,12 @@
 .one-column-text {
     &.bg-white {
         background-color: #f9f9f9;
-        color: #333333; 
+        color: #333333;
     }
 
     &.bg-gray {
         background-color: #f0f0f0;
-        color: #333333; 
+        color: #333333;
     }
 
     .container {
@@ -22,10 +22,11 @@
             font-size: 1.5rem;
         }
     }
-@media(min-width: 1024px) {
-    h2{
-        font-size: 2rem !important;
+
+    @media(min-width: 1024px) {
+        h2 {
+            font-size: 2rem !important;
+        }
+
     }
-    
 }
-}   
