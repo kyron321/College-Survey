@@ -120,15 +120,15 @@
             text-align: center;
             transition: background-color 0.3s ease;
 
+            &:hover {
+                background-color: #931b3a;
+            }
+
             a {
                 color: #ffffff !important;
                 text-decoration: none;
                 font-size: 14px;
                 display: block;
-
-                &:hover {
-                    background-color: #931b3a;
-                }
             }
         }
     }

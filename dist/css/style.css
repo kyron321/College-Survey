@@ -1382,14 +1382,14 @@ footer .footer-copy {
   text-align: center;
   transition: background-color 0.3s ease;
 }
+.header #main-menu .menu-item.menu-item-4916:hover {
+  background-color: #931b3a;
+}
 .header #main-menu .menu-item.menu-item-4916 a {
   color: #ffffff !important;
   text-decoration: none;
   font-size: 14px;
   display: block;
-}
-.header #main-menu .menu-item.menu-item-4916 a:hover {
-  background-color: #931b3a;
 }
 @media (max-width: 768px) {
   .header {
