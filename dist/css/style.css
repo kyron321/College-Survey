@@ -368,11 +368,6 @@ article {
 body {
   background-color: #f9f9f9;
 }
-
-body.no-scroll {
-  overflow: hidden;
-}
-
 body.no-scroll {
   overflow: hidden;
 }
@@ -383,9 +378,76 @@ body.no-scroll {
   padding: 5px;
   max-width: 1200px;
 }
-
-.column-one {
+.colleges .column-one {
   display: none;
+}
+.colleges .column-one h3 {
+  margin-bottom: 10px;
+}
+.colleges .column-two {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.colleges .college-info-container {
+  display: grid;
+  grid-template-columns: 30% 25% 35% 5%;
+  padding: 20px 5px;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.colleges .college-info-container p {
+  margin: 0;
+  font-size: 12px;
+  text-align: left;
+}
+.colleges .college-info-container .college-name {
+  font-weight: bold;
+}
+.colleges .type-one,
+.colleges .religious {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .colleges {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    padding: 20px;
+    gap: 20px;
+    align-items: start;
+  }
+  .colleges .column-one {
+    display: block;
+    padding: 20px 10px 0 0;
+  }
+  .colleges .column-one h3 {
+    margin: 20px 0 10px 0;
+  }
+  .colleges .modal {
+    display: none;
+  }
+  .colleges #openModalBtn {
+    display: none;
+  }
+  .colleges .search-section {
+    display: none;
+  }
+  .colleges .college-info-container {
+    grid-template-columns: 25% 10% 15% 25% 20% 5%;
+    padding: 20px 20px;
+  }
+  .colleges .college-info-container p {
+    font-size: 14px;
+  }
+  .colleges .column-two {
+    padding: 20px;
+  }
+  .colleges .type-one,
+  .colleges .religious {
+    display: block;
+  }
 }
 
 #filtersModal > h3 {
@@ -408,11 +470,9 @@ body.no-scroll {
   transition: background-color 0.3s ease;
   margin: 10px 0 0px 10px;
 }
-
 #openModalBtn i {
   margin-right: 8px;
 }
-
 #openModalBtn:hover {
   background-color: #931b3a;
 }
@@ -431,21 +491,18 @@ body.no-scroll {
   opacity: 0;
   visibility: hidden;
 }
-
 .modal.show {
   transform: translateX(0);
   opacity: 1;
   visibility: visible;
   padding: 20px;
 }
-
 .modal.hide {
   transform: translateX(-100%);
   opacity: 0;
   visibility: hidden;
 }
-
-.close-modal {
+.modal .close-modal {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -455,8 +512,7 @@ body.no-scroll {
   cursor: pointer;
   color: #333;
 }
-
-.close-modal:hover {
+.modal .close-modal:hover {
   color: #af2244;
 }
 
@@ -472,87 +528,12 @@ body.no-scroll {
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
 }
-
 .modal-overlay.show {
   display: block;
   opacity: 1;
 }
-
 .modal-overlay.hide {
   opacity: 0;
-}
-
-.column-one h3 {
-  margin-bottom: 10px;
-}
-
-.column-two {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 10px;
-  border-radius: 10px;
-}
-
-.college-info-container {
-  display: grid;
-  grid-template-columns: 30% 25% 35% 5%;
-  padding: 20px 5px;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
-}
-
-.college-info-container p {
-  margin: 0;
-  font-size: 12px;
-  text-align: left;
-}
-
-.college-name {
-  font-weight: bold;
-}
-
-.type-one, .religious {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .colleges {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    padding: 20px;
-    gap: 20px;
-    align-items: start;
-  }
-  .column-one {
-    display: block;
-    padding: 20px 10px 0 0;
-  }
-  .column-one h3 {
-    margin: 20px 0 10px 0;
-  }
-  .modal {
-    display: none;
-  }
-  #openModalBtn {
-    display: none;
-  }
-  .search-section {
-    display: none;
-  }
-  .college-info-container {
-    grid-template-columns: 25% 10% 15% 25% 20% 5%;
-    padding: 20px 20px;
-  }
-  .college-info-container p {
-    font-size: 14px;
-  }
-  .column-two {
-    padding: 20px;
-  }
-  .type-one, .religious {
-    display: block;
-  }
 }
 .acf-field .acf-label label {
   display: none !important;
