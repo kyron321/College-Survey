@@ -148,3 +148,20 @@ add_action('pre_comment_on_post', function () {
     $_POST['author'] = 'Anonymous';
     $_POST['email'] = 'anonymous@example.com';
 });
+
+// Exclude a specific menu item from the footer
+function exclude_menu_item($items, $args)
+{
+    if (
+        isset($args->exclude_from_footer) &&
+        $args->exclude_from_footer === true
+    ) {
+        foreach ($items as $key => $item) {
+            if ($item->ID == 541) {
+                unset($items[$key]);
+            }
+        }
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_objects', 'exclude_menu_item', 10, 2);
