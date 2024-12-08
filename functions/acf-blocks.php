@@ -33,6 +33,16 @@ function register_acf_blocks()
             'icon' => 'admin-comments',
             'keywords' => ['colleges', 'custom'],
         ]);
+        // Register a one column text block.
+        acf_register_block_type([
+            'name' => 'one-column-text',
+            'title' => __('One Column Text'),
+            'description' => __('A custom one column text block.'),
+            'render_callback' => 'theme_block_render_callback',
+            'category' => 'formatting',
+            'icon' => 'admin-comments',
+            'keywords' => ['one column text', 'custom'],
+        ]);
     }
 }
 

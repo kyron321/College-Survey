@@ -4,8 +4,8 @@
         <div class="college-name column">
             <h4 class="entry-title">
                 <a href="<?php echo esc_url(
-                    $college_link ? $college_link : get_permalink()
-                ); ?>" target="_blank">
+                                $college_link ? $college_link : get_permalink()
+                            ); ?>" target="_blank">
                     <?php the_title(); ?>
                 </a>
             </h4>
@@ -13,17 +13,17 @@
 
         <div class="column type-one">
             <?php if ($type_1): ?>
-            <p><?php echo esc_html($type_1); ?></p>
+                <p><?php echo esc_html($type_1); ?></p>
             <?php else: ?>
-            <p>N/A</p>
+                <p>N/A</p>
             <?php endif; ?>
         </div>
 
         <div class="column religious">
             <?php if ($religious !== null): ?>
-            <p><?php echo $religious ? 'Yes' : 'No'; ?></p>
+                <p><?php echo $religious ? 'Yes' : 'No'; ?></p>
             <?php else: ?>
-            <p>N/A</p>
+                <p>N/A</p>
             <?php endif; ?>
         </div>
 
@@ -40,9 +40,9 @@
 
         <div class="column presence">
             <?php if ($presence): ?>
-            <p><?php echo esc_html($presence); ?></p>
+                <p><?php echo esc_html($presence); ?></p>
             <?php else: ?>
-            <p>N/A</p>
+                <p>N/A</p>
             <?php endif; ?>
         </div>
 
@@ -55,7 +55,7 @@
     <div class="dropdown-container">
         <div id="dropdown-<?php the_ID(); ?>" class="dropdown-content" style="display: none;">
             <div class="freedom">
-                <p>Freedom from Gender Ideology:</p>
+                <p>Freedom from Trans Ideology:</p>
                 <p class="<?php echo strtolower($presence); ?>">
                     <?php echo esc_html($presence); ?>
                 </p>
@@ -118,15 +118,15 @@
                     If you have noticed any misrepresentations or missing information for this college, or if you have
                     links or resources you'd like us to review, please share the details
                     <a href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(
-                                            get_the_title()
-                                        ); ?>&state=<?php echo urlencode(
-    get_term($state)->name
-); ?>">here</a>.
+                                                                                            get_the_title()
+                                                                                        ); ?>&state=<?php echo urlencode(
+                                                        get_term($state)->name
+                                                    ); ?>">here</a>.
                 </p>
                 <div class="navigate-button">
                     <a href="<?php echo esc_url(
-                        get_permalink() . '#comments-form'
-                    ); ?>" class="button">College Details</a>
+                                    get_permalink() . '#comments-form'
+                                ); ?>" class="button">College Details</a>
                 </div>
             </div>
         </div>
