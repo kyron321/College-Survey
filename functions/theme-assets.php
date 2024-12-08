@@ -1,27 +1,16 @@
 <?php
+// Define theme version
+define('THEME_VERSION', '1.0.0');
+
 // Enqueue assets
-function theme_enqueue_assets()
-{
-    wp_enqueue_style(
-        'theme-style',
-        get_template_directory_uri() . '/dist/css/style.css'
-    );
-    wp_enqueue_script(
-        'theme-scripts',
-        get_template_directory_uri() . '/dist/js/main.js',
-        [],
-        false,
-        true
-    );
+function theme_enqueue_assets() {
+    wp_enqueue_style('theme-style', get_template_directory_uri() . '/dist/css/style.css', [], THEME_VERSION);
+    wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/dist/js/main.js', [], THEME_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_assets');
 
-function enqueue_custom_admin_styles()
-{
-    wp_enqueue_style(
-        'custom-admin-style',
-        get_template_directory_uri() . '/dist/css/admin.css'
-    );
+function enqueue_custom_admin_styles() {
+    wp_enqueue_style('custom-admin-style', get_template_directory_uri() . '/dist/css/admin.css', [], THEME_VERSION);
 }
 add_action('admin_enqueue_scripts', 'enqueue_custom_admin_styles');
 
