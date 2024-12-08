@@ -28,16 +28,6 @@ function save_custom_role_field($comment_id)
 }
 add_action('comment_post', 'save_custom_role_field');
 
-// Save the "Role" field when a comment is posted
-function save_custom_role_field($comment_id)
-{
-    if (isset($_POST['user_role']) && !empty($_POST['user_role'])) {
-        $role = sanitize_text_field($_POST['user_role']);
-        add_comment_meta($comment_id, 'user_role', $role, true);
-    }
-}
-add_action('comment_post', 'save_custom_role_field');
-
 // Append the user role to the comment text
 function append_role_to_comment_text($comment_text, $comment)
 {
