@@ -98,7 +98,7 @@ jQuery(document).ready(function ($) {
     });
 
 
-    $('#college-search').on('input', function () {
+    $('#college-search-mobile').on('input', function () {
         filterColleges();
     });
 
@@ -140,5 +140,3 @@ jQuery(document).ready(function ($) {
         filterColleges();
     });
 });
-
-console.log('filter.js skibid loaded');
