@@ -93,7 +93,7 @@ if (!$background_url) {
                         ?>
                 </ul>
             </div>
-            <p><strong>Freedom from Trans Ideology:</strong></p>
+            <p><strong>Freedom from Trans Activism:</strong></p>
             <div class="single-presence-two">
                 <p class="<?php echo strtolower(get_field('presence')); ?>">
                     <?php echo ucfirst(esc_html(get_field('presence'))); ?>
