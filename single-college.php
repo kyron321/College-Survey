@@ -62,7 +62,7 @@ if (!$background_url) {
         <!-- Column 1 -->
         <div class="column column-one">
             <h2>About <?php the_title(); ?></h2>
-            <p> <?php echo strtolower(get_the_title()); ?> is a <?php echo strtolower(get_field('type_1')); ?>
+            <p> <?php echo (get_the_title()); ?> is a <?php echo strtolower(get_field('type_1')); ?>
                 <?php
                     $is_religious = get_field('religious');
                     if ($is_religious):

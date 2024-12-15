@@ -4,7 +4,8 @@
 
 .hero-section {
   background-size: cover;
-  height: 550px;
+  background-position: center top;
+  height: 650px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -33,36 +34,15 @@
   }
 }
 .hero-section .banner-paragraph {
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-@media (min-width: 768px) {
-  .hero-section .banner-paragraph {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 1024px) {
-  .hero-section .banner-paragraph {
-    font-size: 1.1rem;
-  }
-}
 .hero-section .banner-paragraph-2 {
-  font-size: 0.75rem;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.6;
-}
-@media (min-width: 768px) {
-  .hero-section .banner-paragraph-2 {
-    font-size: 0.9rem;
-  }
-}
-@media (min-width: 1024px) {
-  .hero-section .banner-paragraph-2 {
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
 }
 .hero-section .banner-buttons {
   display: flex;
@@ -103,7 +83,7 @@
 }
 @media (min-width: 1024px) {
   .hero-section {
-    background-position: center;
+    background-position: center top;
     background-attachment: fixed;
   }
 }
@@ -131,7 +111,7 @@ article {
 
 .container-one {
   display: grid;
-  grid-template-columns: 30% 25% 35% 5%;
+  grid-template-columns: 30% 35% 25% 5%;
   align-items: center;
   justify-content: center;
   padding: 20px 5px;
@@ -152,7 +132,11 @@ article {
 
 .column {
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
+}
+
+#main > div.content-grid > div.column.column-one > p:nth-child(2) {
+  padding: 0 10px;
 }
 
 .entry-title a {
@@ -168,7 +152,7 @@ article {
 }
 
 .dropdown-content {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .notes {
@@ -264,7 +248,7 @@ article {
 }
 
 .comments-container {
-  padding: 20px 10px;
+  padding: 0px 10px;
 }
 
 .comments-container p {
@@ -356,7 +340,6 @@ article {
     width: 75%;
   }
   .dropdown-content {
-    font-size: 14px;
     padding: 20px 10px;
   }
   .navigate-button {
@@ -392,15 +375,15 @@ body.no-scroll {
 }
 .colleges .college-info-container {
   display: grid;
-  grid-template-columns: 30% 25% 35% 5%;
-  padding: 20px 5px;
+  grid-template-columns: 30% 35% 35%;
+  padding: 20px 10px;
   gap: 5px;
   align-items: center;
   justify-content: center;
 }
 .colleges .college-info-container p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   text-align: left;
 }
 .colleges .college-info-container .college-name {
@@ -1302,17 +1285,20 @@ footer .footer-copy {
 .header .nav-list {
   display: flex;
   flex-direction: row;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .header .nav-list .nav-item {
   margin-left: 20px;
+  display: flex;
+  gap: 5px;
 }
 .header .nav-list .nav-item .nav-link {
   text-decoration: none;
   color: #333;
-  font-size: 12px;
+  font-size: 14px;
   transition: color 0.3s ease;
 }
 .header .nav-list .nav-item .nav-link:hover {
@@ -1388,13 +1374,10 @@ footer .footer-copy {
 .header #main-menu .menu-item.menu-item-4916 a {
   color: #ffffff !important;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   display: block;
 }
 @media (max-width: 768px) {
-  .header {
-    padding: 0;
-  }
   .header .logo-nav-wrapper {
     flex-direction: column;
     align-items: center;
@@ -1538,6 +1521,7 @@ footer .footer-copy {
 .styled-layout .content-grid .column h2 {
   margin-bottom: 15px;
   font-size: 1.5rem;
+  padding: 0 10px;
 }
 
 /* Feedback Form */
@@ -1577,13 +1561,19 @@ footer .footer-copy {
   background-color: #f9f9f9;
   color: #333;
 }
+@media (max-width: 768px) {
+  #user_role {
+    width: 100%;
+  }
+}
 
 .social-sharing {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  gap: 15px; /* Space between icons */
+  gap: 15px;
+  padding: 0 20px;
 }
 
 .social-icon {
