@@ -897,7 +897,8 @@ section > p {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  line-height: 1; /* Ensure the tick is centered */
+  line-height: 1;
+  /* Ensure the tick is centered */
 }
 
 .sort-by {
@@ -985,7 +986,8 @@ label {
   opacity: 1;
 }
 
-#clear-filters {
+#clear-filters,
+#clear-filters-mobile {
   background-color: #af2244;
   color: white;
   border: none;
@@ -997,7 +999,8 @@ label {
   transition: background-color 0.3s ease;
 }
 
-#clear-filters:hover {
+#clear-filters:hover,
+#clear-filters-mobile:hover {
   background-color: #8c1b36;
 }
 

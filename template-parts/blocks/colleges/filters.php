@@ -11,15 +11,15 @@
                 'hide_empty' => false,
             ]); ?>
             <?php if (!empty($states) && !is_wp_error($states)): ?>
-            <?php foreach ($states as $state): ?>
-            <div class="checkbox">
-                <label for="state_<?php echo esc_attr($state->slug); ?>">
-                    <input type="checkbox" name="state[]" class="filter-input"
-                        id="state_<?php echo esc_attr($state->slug); ?>" value="<?php echo esc_attr($state->slug); ?>">
-                    <?php echo esc_html($state->name); ?>
-                </label>
-            </div>
-            <?php endforeach; ?>
+                <?php foreach ($states as $state): ?>
+                    <div class="checkbox">
+                        <label for="state_<?php echo esc_attr($state->slug); ?>">
+                            <input type="checkbox" name="state[]" class="filter-input"
+                                id="state_<?php echo esc_attr($state->slug); ?>" value="<?php echo esc_attr($state->slug); ?>">
+                            <?php echo esc_html($state->name); ?>
+                        </label>
+                    </div>
+                <?php endforeach; ?>
             <?php endif; ?>
         </div>
     </div>
@@ -36,13 +36,13 @@
                 'private' => 'Private',
             ]; ?>
             <?php foreach ($type_1_choices as $value => $label): ?>
-            <div class="checkbox">
-                <label for="type_1_<?php echo esc_attr($value); ?>">
-                    <input type="checkbox" name="type_1[]" class="filter-input"
-                        id="type_1_<?php echo esc_attr($value); ?>" value="<?php echo esc_attr($value); ?>">
-                    <?php echo esc_html($label); ?>
-                </label>
-            </div>
+                <div class="checkbox">
+                    <label for="type_1_<?php echo esc_attr($value); ?>">
+                        <input type="checkbox" name="type_1[]" class="filter-input"
+                            id="type_1_<?php echo esc_attr($value); ?>" value="<?php echo esc_attr($value); ?>">
+                        <?php echo esc_html($label); ?>
+                    </label>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>
@@ -80,13 +80,13 @@
                 'excellent' => 'Excellent',
             ]; ?>
             <?php foreach ($presence_choices as $value => $label): ?>
-            <div class="checkbox">
-                <label for="presence_<?php echo esc_attr($value); ?>">
-                    <input type="checkbox" name="presence[]" class="filter-input"
-                        id="presence_<?php echo esc_attr($value); ?>" value="<?php echo esc_attr($value); ?>">
-                    <?php echo esc_html($label); ?>
-                </label>
-            </div>
+                <div class="checkbox">
+                    <label for="presence_<?php echo esc_attr($value); ?>">
+                        <input type="checkbox" name="presence[]" class="filter-input"
+                            id="presence_<?php echo esc_attr($value); ?>" value="<?php echo esc_attr($value); ?>">
+                        <?php echo esc_html($label); ?>
+                    </label>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>

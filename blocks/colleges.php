@@ -9,11 +9,11 @@ $hide_sort_by = get_field('hide_sort_by');
     <div class="column-one">
         <h3>Filters</h3>
         <?php if (!$hide_search): ?>
-        <?php get_template_part('template-parts/blocks/colleges/search'); ?>
+            <?php get_template_part('template-parts/blocks/colleges/search'); ?>
         <?php endif; ?>
 
         <?php if (!$hide_filters): ?>
-        <?php get_template_part('template-parts/blocks/colleges/filters'); ?>
+            <?php get_template_part('template-parts/blocks/colleges/filters'); ?>
         <?php endif; ?>
     </div>
 
@@ -23,7 +23,7 @@ $hide_sort_by = get_field('hide_sort_by');
         </button>
         <h3>Filters</h3>
         <?php if (!$hide_filters): ?>
-        <?php get_template_part('template-parts/blocks/colleges/filters-mobile'); ?>
+            <?php get_template_part('template-parts/blocks/colleges/filters-mobile'); ?>
         <?php endif; ?>
     </div>
     <div class="modal-overlay" id="modalOverlay"></div>
@@ -33,11 +33,11 @@ $hide_sort_by = get_field('hide_sort_by');
 
     <div class="column-two">
         <?php if (!$hide_sort_by): ?>
-        <?php get_template_part('template-parts/blocks/colleges/sort-by'); ?>
+            <?php get_template_part('template-parts/blocks/colleges/sort-by'); ?>
         <?php endif; ?>
         <div class="search-section">
             <?php if (!$hide_search): ?>
-            <?php get_template_part('template-parts/blocks/colleges/search'); ?>
+                <?php get_template_part('template-parts/blocks/colleges/search-mobile'); ?>
             <?php endif; ?>
         </div>
         <div class="college-info-container">
