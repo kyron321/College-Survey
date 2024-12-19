@@ -17,12 +17,20 @@
 }
 
 .search-form input[type='text'] {
-    width: 90%;
+    width: 100%;
     padding: 10px 15px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+
+    @media (max-width: 1024px) {
+        padding-left: 30px;
+    }
+}
+
+.search-form input[type='text']:focus {
+    border-color: #333333;
 }
 
 .search-form input[type='text']:focus {
