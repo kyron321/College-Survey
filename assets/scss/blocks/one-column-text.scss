@@ -1,4 +1,8 @@
 .one-column-text {
+    p {
+        line-height: 1.5rem;
+    }
+
     &.bg-white {
         background-color: #f9f9f9;
         color: #333333;
