@@ -55,7 +55,7 @@
     <div class="dropdown-container">
         <div id="dropdown-<?php the_ID(); ?>" class="dropdown-content" style="display: none;">
             <div class="freedom">
-                <p>Freedom from Trans Activism:</p>
+                <p>Trans Activism:</p>
                 <p class="<?php echo strtolower($presence); ?>">
                     <?php echo ucfirst(strtolower(esc_html($presence))); ?>
                 </p>

@@ -46,12 +46,12 @@ $hide_sort_by = get_field('hide_sort_by');
             <p class="religious">Religious</p>
             <p class="state">State</p>
             <p class="presence">
-                Freedom
-                <i class="fa fa-info-circle tooltip-icon" aria-hidden="true"></i>
+                Trans Ideology
+                <!-- <i class="fa fa-info-circle tooltip-icon" aria-hidden="true"></i>
                 <span class="tooltip-text">
                     A rating for each college, ranging from Limited to Moderate to Widespread, based
                     on how free it is from trans activism.
-                </span>
+                </span> -->
             </p>
             <p class="more-info"></p>
         </div>
