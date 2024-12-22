@@ -233,7 +233,6 @@ article {
   font-weight: 500;
 }
 
-/* Red for poor */
 .freedom .poor {
   color: #a94442;
   background-color: #f2dede;
@@ -707,19 +706,15 @@ section .wpcf7 .wpcf7-response-output {
   margin-top: 15px;
   padding: 10px;
   border-radius: 5px;
-  display: none;
 }
 section .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok {
   display: block;
-  background-color: #dff0d8;
-  color: #3c763d;
-  border: 1px solid #d6e9c6;
+  border: none;
 }
 section .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ng {
   display: block;
-  background-color: #f2dede;
   color: #a94442;
-  border: 1px solid #ebccd1;
+  border: none;
 }
 section .wpcf7 .screen-reader-response {
   position: absolute;
@@ -985,6 +980,15 @@ label {
   position: relative;
 }
 
+.fa-info-circle:before {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .fa-info-circle:before {
+    display: block;
+  }
+}
+
 .presence {
   position: relative;
   padding: 0 10px;
@@ -1023,6 +1027,7 @@ label {
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
 }
 
 .feedback-button:hover {
@@ -1498,7 +1503,6 @@ footer .footer-copy {
   font-weight: 500;
 }
 
-/* Red for poor */
 .single-presence .poor,
 .single-presence-two .poor {
   color: #a94442;

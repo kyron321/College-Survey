@@ -79,20 +79,16 @@ section {
             margin-top: 15px;
             padding: 10px;
             border-radius: 5px;
-            display: none;
 
             &.wpcf7-mail-sent-ok {
                 display: block;
-                background-color: #dff0d8;
-                color: #3c763d;
-                border: 1px solid #d6e9c6;
+                border: none
             }
 
             &.wpcf7-mail-sent-ng {
                 display: block;
-                background-color: #f2dede;
                 color: #a94442;
-                border: 1px solid #ebccd1;
+                border: none;
             }
         }
 

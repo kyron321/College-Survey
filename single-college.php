@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <?php
+
 $background_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 if (!$background_url) {
     $background_url = '/wp-content/uploads/2024/12/Untitled-design-3.png';
@@ -99,12 +100,28 @@ if (!$background_url) {
                     <?php echo ucfirst(esc_html(get_field('presence'))); ?>
                 </p>
             </div>
+            <div class="feedback-container">
+            <?php
+$state = get_field('state');
+$state_name = $state ? get_term($state)->name : '';
+?>
+                <p class="feedback-text">
+                    If you have noticed any misrepresentations or missing information for this college, or if you have
+                    links or resources you'd like us to review, please share the details
+                    <a
+                        href="/feedback-form/?article_name=<?php echo urlencode(get_the_title()); ?>&state=<?php echo urlencode(get_term($state)->name); ?>">
+                        here
+                    </a>.
+                </p>
+            </div>
         </div>
+
+       
 
         <!-- Column 2 -->
         <div class="column column-two">
             <h2>What parents, students, and staff are saying:</h2>
-            <div class="comments-container">
+            <div class="comments-container" id="comments">
                 <?php
                     $comments = get_comments([
                         'post_id' => get_the_ID(),
@@ -127,7 +144,7 @@ if (!$background_url) {
     </div>
 
     <!-- Feedback Form -->
-    <div class="feedback-form-container">
+    <div class="feedback-form-container" id="comments-form">
         <h2>Leave Feedback for <?php the_title(); ?></h2>
         <p>We’d love to hear about your experiences with <?php the_title(); ?>. Please use this form to share feedback,
             insights, or interactions you’ve had with this college.</p>

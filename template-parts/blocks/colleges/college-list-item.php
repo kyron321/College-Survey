@@ -99,17 +99,19 @@
                     );
                     echo '</div>';
                 } else {
-                    echo '<p>No comments yet.</p>';
+                    echo '<p>No feedback yet.</p>';
+                    echo '<a href="' . esc_url(get_permalink()) . '#comments-form" class="feedback-button">Submit Feedback</a>';
                 }
                 $comments_count = get_comments_number();
                 if ($comments_count > 2) {
-                    $comments_link = get_permalink() . '#all-comments';
-
-                    echo '<a href="' .
-                        esc_url($comments_link) .
-                        '" class="feedback-button">View all feedback</a>';
+                    $comments_link = get_permalink();
+                            // Output the 'View all feedback' button
+                    echo '<a href="' . esc_url($comments_link) . '#comments" class="feedback-button">View all feedback</a>';
+                  
+                    echo '<a href="' . esc_url($comments_link) . '#comments-form" class="feedback-button">Submit Feedback</a>';
                 }
                 ?>
+                
             </div>
 
             <div class="navigate-container">
@@ -117,12 +119,12 @@
                     If you have noticed any misrepresentations or missing information for this college, or if you have
                     links or resources you'd like us to review, please share the details
                     <a
-                        href="http://college-survey.local/feedback-form/?article_name=<?php echo urlencode(get_the_title()); ?>&state=<?php echo urlencode(get_term($state)->name); ?>">
+                        href="/feedback-form/?article_name=<?php echo urlencode(get_the_title()); ?>&state=<?php echo urlencode(get_term($state)->name); ?>">
                         here
                     </a>.
                 </p>
                 <div class="navigate-button">
-                    <a href="<?php echo esc_url(get_permalink() . '#comments-form'); ?>" class="button">
+                    <a href="<?php echo esc_url(get_permalink()); ?>" class="button">
                         College Details
                     </a>
                 </div>

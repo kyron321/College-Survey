@@ -243,6 +243,14 @@ label {
     position: relative;
 }
 
+.fa-info-circle:before {
+    display: none  ;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+}
+
 .presence {
     position: relative;
     padding: 0 10px;
@@ -282,6 +290,7 @@ label {
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
 }
 
 .feedback-button:hover {

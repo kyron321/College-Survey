@@ -49,7 +49,7 @@ $hide_sort_by = get_field('hide_sort_by');
                 Freedom
                 <i class="fa fa-info-circle tooltip-icon" aria-hidden="true"></i>
                 <span class="tooltip-text">
-                    A rating for each college, ranging from Excellent to Moderate to Poor, based
+                    A rating for each college, ranging from Limited to Moderate to Widespread, based
                     on how free it is from trans activism.
                 </span>
             </p>

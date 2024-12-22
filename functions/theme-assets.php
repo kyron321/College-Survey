@@ -1,6 +1,6 @@
 <?php
 // Define theme version
-define('THEME_VERSION', '1.0.1');
+define('THEME_VERSION', '1.0.4');
 
 // Enqueue scripts and main styles
 function theme_enqueue_assets()
