@@ -75,9 +75,9 @@
         </label>
         <div class="accordion-content">
             <?php $presence_choices = [
-                'poor' => 'Poor',
+                'limited' => 'Limited',
                 'moderate' => 'Moderate',
-                'excellent' => 'Excellent',
+                'widespread' => 'Widespread',
             ]; ?>
             <?php foreach ($presence_choices as $value => $label): ?>
                 <div class="checkbox">
