@@ -1,4 +1,4 @@
-<?php
+<?php 
 if (defined('WP_CLI') && WP_CLI) {
     WP_CLI::add_command('import_csv', function () {
         // Clear existing 'college' posts
@@ -15,9 +15,7 @@ if (defined('WP_CLI') && WP_CLI) {
         WP_CLI::success("All existing 'college' posts have been deleted.");
 
         // Dynamically get the file path using get_stylesheet_directory()
-        $file =
-            get_stylesheet_directory() .
-            '/data/all_states_college_survey_full.csv';
+        $file = get_stylesheet_directory() . '/data/all_states_college_survey_full.csv';
 
         if (!file_exists($file) || !is_readable($file)) {
             WP_CLI::error('File not found or not readable.');
@@ -62,22 +60,26 @@ if (defined('WP_CLI') && WP_CLI) {
 
             // Update other ACF fields
             update_field('type_1', $row['TYPE'], $post_id); // Update 'TYPE'
-            $religious_value =
-                strtolower($row['RELIGIOUS']) === 'yes' ? true : false;
+            $religious_value = strtolower($row['RELIGIOUS']) === 'yes' ? true : false;
             update_field('religious', $religious_value, $post_id); // Update 'RELIGIOUS'
 
             // Map CSV values to ACF select field options for 'presence'
             $presence_mapping = [
-                'Poor' => 'Poor',
-                'Moderate' => 'Moderate',
-                'Excellent' => 'Excellent',
+                'limited' => 'limited',
+                'moderate' => 'moderate',
+                'widespread' => 'widespread',
             ];
 
-            $presence_value = $row['FREEDOM FROM TRANS IDEOLOGY'];
-            $presence_acf_value = isset($presence_mapping[$presence_value])
-                ? $presence_mapping[$presence_value]
-                : 'N/A';
-            update_field('presence', $presence_acf_value, $post_id); // Update 'IDEOLOGY PRESENCE'
+            $presence_value = strtolower($row['TRANSACTIVISM']);
+            WP_CLI::log("Processing '{$row['NAME']}' with TRANS ACTIVISM value '{$presence_value}'");
+
+            $presence_acf_value = isset($presence_mapping[$presence_value]) ? $presence_mapping[$presence_value] : 'N/A';
+            WP_CLI::log("Mapped TRANS ACTIVISM value '{$presence_value}' to ACF value '{$presence_acf_value}'");
+
+            $update_result = update_field('presence', $presence_acf_value, $post_id); // Update 'TRANS ACTIVISM'
+            if (!$update_result) {
+                WP_CLI::warning("Failed to update 'presence' field for {$row['NAME']}");
+            }
 
             update_field('notes', $row['NOTES'], $post_id); // Update 'NOTES'
             update_field('college_link', $row['WEBSITE'], $post_id); // Update 'WEBSITE'
