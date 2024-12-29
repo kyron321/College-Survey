@@ -39,12 +39,14 @@
         </div>
 
         <div class="column presence">
-            <?php if ($presence): ?>
-            <p><?php echo ucfirst(strtolower(esc_html($presence))); ?></p>
-            <?php else: ?>
-            <p>N/A</p>
-            <?php endif; ?>
-        </div>
+    <?php if ($presence): ?>
+        <p class="<?php echo strtolower(esc_attr($presence)); ?>">
+            <?php echo ucfirst(strtolower(esc_html($presence))); ?>
+        </p>
+    <?php else: ?>
+        <p>N/A</p>
+    <?php endif; ?>
+</div>
 
         <div class="column more-info">
             <div>

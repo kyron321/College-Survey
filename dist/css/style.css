@@ -111,7 +111,7 @@ article {
 
 .container-one {
   display: grid;
-  grid-template-columns: 30% 35% 25% 5%;
+  grid-template-columns: 25% 30% 35% 5%;
   align-items: center;
   justify-content: center;
   padding: 20px 5px;
@@ -132,7 +132,7 @@ article {
 
 .column {
   text-align: left;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #main > div.content-grid > div.column.column-one > p:nth-child(2) {
@@ -206,7 +206,52 @@ article {
   padding-bottom: 20px;
 }
 
-.freedom .excellent {
+.widespread {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; /* Ensures proper width wrapping */
+  width: 100px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0 auto; /* Centers the element horizontally */
+}
+
+.limited {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; /* Ensures proper width wrapping */
+  width: 100px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0 auto; /* Centers the element horizontally */
+}
+
+.moderate {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; /* Ensures proper width wrapping */
+  width: 100px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0 auto; /* Centers the element horizontally */
+}
+
+.freedom .limited {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
@@ -233,7 +278,7 @@ article {
   font-weight: 500;
 }
 
-.freedom .poor {
+.freedom .widespread {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
@@ -374,7 +419,7 @@ body.no-scroll {
 }
 .colleges .college-info-container {
   display: grid;
-  grid-template-columns: 30% 35% 35%;
+  grid-template-columns: 25% 30% 35% 5%;
   padding: 20px 10px;
   gap: 5px;
   align-items: center;
@@ -382,7 +427,7 @@ body.no-scroll {
 }
 .colleges .college-info-container p {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 .colleges .college-info-container .college-name {
@@ -1474,8 +1519,8 @@ footer .footer-copy {
   padding: 20px 0;
 }
 
-.single-presence .excellent,
-.single-presence-two .excellent {
+.single-presence .limited,
+.single-presence-two .limited {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
@@ -1503,8 +1548,8 @@ footer .footer-copy {
   font-weight: 500;
 }
 
-.single-presence .poor,
-.single-presence-two .poor {
+.single-presence .Widespread,
+.single-presence-two .Widespread {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;

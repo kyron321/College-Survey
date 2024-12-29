@@ -88,7 +88,7 @@ $instagram = get_field('instagram', 'option');
             home_url('/privacy-policy')
         ); ?>">Privacy Policy</a>
     </div>
-    <div class="footer-copy">Genspect College Survey &copy; <?php echo date(
+    <div class="footer-copy">College Rankings    &copy; <?php echo date(
         'Y'
     ); ?></div>
 </footer>
