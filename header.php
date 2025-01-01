@@ -5,13 +5,13 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
-    <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/wp-content/uploads/2024/12/open-graph-card-1.png'); ?>" />
+    <meta property="og:image" content="https://college.genspect.org/wp-content/uploads/2025/01/open-graph-card-1.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="<?php wp_title(''); ?>" />
     <meta name="twitter:description" content="<?php echo get_bloginfo('description'); ?>" />
-    <meta name="twitter:image" content="<?php echo esc_url(get_template_directory_uri() . '/wp-content/uploads/2024/12/open-graph-card-1.png'); ?>" />
+    <meta name="twitter:image" content="https://college.genspect.org/wp-content/uploads/2025/01/open-graph-card-1.png" />
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
     <title><?php wp_title(''); ?></title>
     <?php wp_head(); ?>
