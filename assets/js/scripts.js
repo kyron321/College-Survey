@@ -134,7 +134,19 @@ document.addEventListener('DOMContentLoaded', function() {
     modalOverlay.addEventListener('click', hideModal);
 });
 
+// write a script which gets the value of the select user_role id and if the value is Student, remove the display none style and make it display block
+document.addEventListener('DOMContentLoaded', function() {
+    const userRoleSelect = document.getElementById('user_role');
+    const studentStatusContainer = document.querySelector('.comment-form-student-status');
 
+    userRoleSelect.addEventListener('change', function() {
+        if (this.value === 'student') {
+            studentStatusContainer.style.display = 'block';
+        } else {
+            studentStatusContainer.style.display = 'none';
+        }
+    });
+});
 
 
 

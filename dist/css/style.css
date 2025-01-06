@@ -1601,6 +1601,7 @@ footer .footer-copy {
 
 .feedback-form-container p {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .feedback-form-container .comment-form {
@@ -1611,8 +1612,21 @@ footer .footer-copy {
   display: none;
 }
 
-#user_role {
-  width: 25%;
+.comment-form-role-container {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .comment-form-role-container {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+#user_role,
+#student_status {
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1622,7 +1636,8 @@ footer .footer-copy {
   color: #333;
 }
 @media (max-width: 768px) {
-  #user_role {
+  #user_role,
+  #student_status {
     width: 100%;
   }
 }
